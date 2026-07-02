@@ -33,9 +33,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Quartz plugins
+        # 从 quartz.config.yaml 解析并安装插件到 .quartz/plugins/
+        # （npm ci 不触发 prebuild，需显式安装）
+        run: npx quartz plugin install --from-config
+
       - name: Build Quartz
-        # prebuild (install-plugins) 会随 npm run 自动触发，
-        # 也可显式：npx quartz plugin install --from-config && npx quartz build
         run: npx quartz build
 
       - name: Upload Pages artifact
