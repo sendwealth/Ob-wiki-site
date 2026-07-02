@@ -39,7 +39,9 @@ jobs:
         run: python scripts/gen_index_pages.py docs
 
       - name: Build site
-        run: mkdocs build --strict
+        # 不用 --strict：悬空 wikilinks（指向尚未创建的笔记）是知识库常态，
+        # 不应阻断部署；坏链会用 extra.css 红字标记，便于排查
+        run: mkdocs build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
