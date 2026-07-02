@@ -1,12 +1,15 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-06-28
+updated: 2026-07-02
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-02: 新增 `entities/dribbble.md` — Dribbble 深度研究。来源：抓取 dribbble.com 首页 + WebSearch 补充（fastlancer 评测、官方 Stories 战略文章）。覆盖：定位（全球顶尖设计师发现与雇佣平台）、2025–2026 战略重心（一切功能服务于"帮设计师获客转化"，官方原话）、双边市场结构（客户端 Start Project Brief/Browse Profiles/Explore Services + 设计师端 Browse Briefs/Add Service/Send Outbound Proposal 新功能）、内容形式 Shot + 8 大设计分类、质量管控 Dribbble Select 年度榜单、商业模式（Pro 订阅/交易服务费/广告/全职招聘）、技术栈（Vite+Vue.js/Cloudflare/Stripe/GA4）、与 Behance 对比、对独立开发者的启示（单一焦点战略）。更新 `index.md`（+1 entity、页数 130→131）。
+- 关联 [[make-indie-maker-blueprint]]、[[fiverr]]
 
 - 2026-06-28: 新增 `concepts/skill-architect-methodology.md` + `raw/yitang/skill-architect-jialaoshi-原文整理.md` — 贾老师（子莫先生）·Skill 架构师方法论。来源：一堂飞书 Wiki（飞书 API 提取，3113字）。方法论源自飞叔对花叔前端设计 Skill 的拆解。覆盖：核心诊断（Skill 写不好的根源=把 Skill 当提示词模板，写的是知识不是程序；好 Skill 是可执行程序）、五层架构模型（L5触发层穷举说法+明确不适用场景 / L4角色层具体职业身份+关系+边界 / L3原则层每条必须有反例+冲突时编号小优先 / L2流程层输入→动作→输出→检查点+异常处理表 / L1资源层 assets/references/scripts）、两种模式（审查模式100分制+必须等确认才改防越权 / 创建模式7步法则逐引导）、四条有效性原因（解决AI默认值问题/经验变可执行规则/检查点机制/量化标准）。核心洞察：**反例是原则的锚点（没反例是"注意一下"，有反例是"上次翻车了"）；与 [[diary-to-book-skill]] 完全同构（姬恒"规则变中断点"是执行AI视角，本文"程序非知识"是架构师视角，同一洞察两面）**。更新 `index.md`（+1 concept、+1 raw、页数 129→130）。
 - 关联 [[diary-to-book-skill]]、[[superpowers]]、[[skill-self-evolution]]、[[adapted-6plus1-rss-obsidian-kb]]
