@@ -1,7 +1,0 @@
-nav:
-  - index.md
-  - 概念: concepts
-  - 实体: entities
-  - 对比: comparisons
-  - 操作日志: log.md
-  - 规范: SCHEMA.md
