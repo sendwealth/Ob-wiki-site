@@ -1,4 +1,4 @@
-name: Deploy Quartz to GitHub Pages
+name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
@@ -22,29 +22,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # created-modified-date 插件需要完整 git 历史来读取日期
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: 22
+          python-version: "3.x"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
-        run: npm ci
+        run: pip install -r requirements.txt
 
-      - name: Install Quartz plugins
-        # 从 quartz.config.yaml 解析并安装插件到 .quartz/plugins/
-        # （npm ci 不触发 prebuild，需显式安装）
-        run: npx quartz plugin install --from-config
+      - name: Generate section index pages
+        # 从 frontmatter 生成 concepts/entities/comparisons 的列表页
+        run: python scripts/gen_index_pages.py docs
 
-      - name: Build Quartz
-        run: npx quartz build
+      - name: Build site
+        run: mkdocs build --strict
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: site
 
   deploy:
     needs: build

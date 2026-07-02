@@ -1,0 +1,20 @@
+/* Ob-wiki 自定义样式 */
+
+/* 坏链 / 未解析的 wikilink 红色标记，便于排查 */
+a.ezlinks_not_found,
+a.wikilink:not([href]),
+a[href="#"].wikilink {
+  color: #d63031 !important;
+  text-decoration: line-through;
+}
+
+/* 顶部标题栏标题加粗 */
+.md-header__title {
+  font-weight: 600;
+}
+
+/* 正文行距更舒展（中文阅读优化） */
+.md-content p,
+.md-content li {
+  line-height: 1.8;
+}

@@ -1,0 +1,92 @@
+site_name: Ob-wiki
+site_description: 产品调研、竞品分析、技术架构、AI Agent 生态知识库
+site_url: https://sendwealth.github.io/Ob-wiki-site/
+docs_dir: docs
+repo_url: https://github.com/sendwealth/Ob-wiki
+repo_name: 笔记源仓
+edit_uri: ""
+
+# ──────────────────────────────────────────────
+# 主题
+# ──────────────────────────────────────────────
+theme:
+  name: material
+  language: zh
+  font:
+    text: Noto Sans SC       # 中文正文
+    code: JetBrains Mono
+  features:
+    - navigation.tabs        # 顶部 tab 分区
+    - navigation.tabs.sticky # 滚动时 tab 固定
+    - navigation.sections
+    - navigation.expand      # 侧栏默认展开
+    - navigation.indexes     # 目录首页（配合 awesome-pages）
+    - navigation.top         # 返回顶部
+    - search.suggest         # 搜索联想
+    - search.highlight       # 命中高亮
+    - content.code.copy      # 代码一键复制
+    - content.code.annotate
+    - toc.follow             # 右侧目录跟随滚动
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+  icon:
+    repo: fontawesome/brands/github
+
+# ──────────────────────────────────────────────
+# 插件
+# ──────────────────────────────────────────────
+plugins:
+  - search:
+      lang:
+        - en
+        - ja                # jieba 无独立 lang key，靠 ja 触发 CJK 分词；中文由 jieba 接管
+  - awesome-pages           # 自动从目录生成 nav，新增笔记零配置
+  - roamlinks:
+  - callouts
+
+# ──────────────────────────────────────────────
+# Markdown 扩展
+# ──────────────────────────────────────────────
+markdown_extensions:
+  - admonition              # !!! 提示框（callouts 插件把 > [!x] 转成这个）
+  - pymdownx.details        # 可折叠块
+  - pymdownx.superfences    # 嵌套语法
+  - pymdownx.highlight:     # 代码高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - nl2br                   # 单换行也成段（Obsidian 习惯）
+  - md_in_html
+  - toc:
+      permalink: true       # 标题锚点，配合 [[笔记#章节]]
+
+extra_css:
+  - css/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sendwealth/Ob-wiki
+      name: 笔记源仓

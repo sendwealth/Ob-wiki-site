@@ -1,0 +1,5 @@
+mkdocs-material==9.7.6
+mkdocs-roamlinks-plugin==0.3.2
+mkdocs-callouts==1.16.1
+mkdocs-awesome-pages-plugin==2.10.1
+jieba==0.42.1
