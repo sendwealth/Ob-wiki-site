@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-04 | Total pages: 133
+> Last updated: 2026-07-04 | Total pages: 134
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -101,6 +101,7 @@ tags: [index]
 - [[threejs-game-skills]] — 9 个 AI Agent 游戏开发技能包，让 Codex/Claude Code 从零构建 AAA 级 3D 网页游戏（导演路由 + 10 维度评分卡 + Tripo/Gemini/ElevenLabs 集成）
 - [[leaferjs]] — 国产开源 Canvas 2D 渲染引擎 + UI 框架：百万级图形 + 局部渲染 + 内置编辑器，适合 AI 无限画布/图形编辑器/组态可视化
 - [[openmontage]] — 世界首个开源 Agentic 视频生产系统：12 pipelines + 52 tools + 500+ skills，把 AI 编程助手变成端到端制片流水线（无代码编排器，Agent 即编排器）
+- [[ai-job-search]] — 让 Claude 跑完求职全流程的 Agent Skill 框架：/setup /scrape /apply 7 步流水线 + PDF 视觉验证闭环 + 起草-审阅双代理
 
 - [[yitang-ai-director-method]] — 王欢·AI导演方法论：演员vs导演身份切换、BTICOE提示词框架、上下文工程三层、AI业务档案、生成/验收分离、飞轮设计（一堂专家分享）
 

@@ -1,6 +1,6 @@
 # 实体
 
-共 70 篇。
+共 71 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -66,6 +66,7 @@
 - [[zed-agent-architecture|Zed Agent 架构深度分析]]
 - [[zed|Zed — 高性能多人协作代码编辑器]]
 - [[zenml|ZenML]]
+- [[ai-job-search|ai-job-search]]
 - [[awesome-design-md|awesome-design-md]]
 - [[gstack|gstack — Garry Tan 的 AI 软件工厂]]
 - [[llama-cpp|llama.cpp]]

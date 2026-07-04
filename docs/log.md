@@ -503,3 +503,12 @@ tags: [log]
 - **内容**: 世界首个开源 Agentic 视频生产系统（calesthio/OpenMontage，AGPL-3.0，32k+ stars，2026-03 创建）。核心理念「Agent-First 无代码编排器，AI 编程助手即编排器」；12 条流水线（research→proposal→script→scene_plan→assets→edit→compose）；三层知识架构（tools/pipeline_defs "存在什么" + skills "怎么用" + .agents/skills "原理是啥"）；Backlot 活故事板（真实审批闸门 + 回放）；质量门禁（Delivery Promise / 预合成校验 / 渲染后自审 / 7 维 scored selector / 预算治理）；Provider 生态（视频 14 家 + 图片 10 家 + TTS 4 家 + 音乐 + Remotion/HyperFrames 合成），零 Key 也能出真视频（Piper + 免费素材 + CLIP 检索纪录片）；与 Agent Skill 范式关系
 - **来源**: [GitHub](https://github.com/calesthio/OpenMontage), [AGENT_GUIDE](https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md), [ARCHITECTURE](https://github.com/calesthio/OpenMontage/blob/main/docs/ARCHITECTURE.md)
 - **关联**: [[leaferjs]], [[design-as-code]], [[awesome-design-md]]
+
+---
+
+## 2026-07-04 · ai-job-search
+- **操作**: 创建 ai-job-search entity 页
+- **文件**: entities/ai-job-search.md
+- **内容**: MadsLorentzen/ai-job-search（3.4k Star，TypeScript + Claude Code + LaTeX + Bun），把求职编码成 /setup → /scrape → /apply 命令流水线。/apply 7 步：解析→匹配评估→LaTeX 起草→独立审阅→修改→编译+视觉检查→呈现。三大差异化：① PDF 视觉验证循环（编译→Claude 读渲染页→改 LaTeX→重编译，循环到完美）② 起草-审阅双代理（独立审阅无思维惯性，草稿内联传递省 token）③ 相关性加权简历删减（相关性×独特性×求职信支撑三维度评分）。其他命令 /expand（扫 GitHub/Kaggle 补画像）/upskill（技能差距热力图+学习计划）/reset。作为 Agent Skill 范式与 OpenMontage 个人 vs 生产场景对偶
+- **来源**: [GitHub](https://github.com/MadsLorentzen/ai-job-search), [微信公众号](https://mp.weixin.qq.com/s/9PZeMQpvdIJn6XOU-nnFjA)
+- **关联**: [[openmontage]], [[leaferjs]], [[design-as-code]]
