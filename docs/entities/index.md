@@ -1,6 +1,6 @@
 # 实体
 
-共 68 篇。
+共 69 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -38,6 +38,7 @@
 - [[langchain|LangChain / LangGraph]]
 - [[langflow|LangFlow]]
 - [[langfuse|Langfuse]]
+- [[leaferjs|LeaferJS]]
 - [[llama-index|LlamaIndex]]
 - [[mlflow|MLflow]]
 - [[metaflow|Metaflow]]
