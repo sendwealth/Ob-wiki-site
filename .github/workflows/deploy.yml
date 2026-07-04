@@ -15,6 +15,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# reusable build（构建一次，artifact 供 deploy / 重试复用）
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,6 +56,62 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # GitHub Pages 的 deploy-pages 偶发瞬时失败（"Deployment failed, try again later"）。
+  # 重试几乎总能成功。这里串行重试 2 次，避免失败邮件。
+  # 注意：deploy-pages 只能用同一次 workflow run 内上传的 artifact，
+  # 所以重试 job 要重新 build + upload + deploy（artifact run 间不共享）。
+  retry-1:
+    needs: deploy
+    if: failure()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+      - run: python scripts/gen_index_pages.py docs
+      - run: mkdocs build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  retry-2:
+    needs: retry-1
+    if: failure()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+      - run: python scripts/gen_index_pages.py docs
+      - run: mkdocs build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
