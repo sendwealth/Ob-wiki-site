@@ -494,3 +494,12 @@ tags: [log]
 - **内容**: 国产开源 Canvas 2D 渲染引擎 + UI 框架（1.0 于 2024 发布），核心特性（场景树/分层渲染/脏矩形 partRender/虚拟化/内置交互编辑器/跨平台/TS 原生），核心包对比（leafer 全量 / leafer-ui 核心 70KB / leafer-draw 仅绘图），关键概念（Leafer 单画布 / App 应用管理 / @leafer-in/* 插件），快速上手（npm + 最小可拖拽示例），与 PixiJS/Konva/Fabric 横向选型对比，学习路径
 - **来源**: [官网](https://www.leaferjs.com/), [GitHub](https://github.com/leaferjs/leafer-ui), [1.0 发布](https://juejin.cn/post/7389651690306355241), [局部渲染解析](https://juejin.cn/post/7256386855721074747)
 - **关联**: [[design-as-code]], [[design-md-spec]], [[awesome-design-md]]
+
+---
+
+## 2026-07-04 · openmontage
+- **操作**: 创建 OpenMontage entity 页
+- **文件**: entities/openmontage.md
+- **内容**: 世界首个开源 Agentic 视频生产系统（calesthio/OpenMontage，AGPL-3.0，32k+ stars，2026-03 创建）。核心理念「Agent-First 无代码编排器，AI 编程助手即编排器」；12 条流水线（research→proposal→script→scene_plan→assets→edit→compose）；三层知识架构（tools/pipeline_defs "存在什么" + skills "怎么用" + .agents/skills "原理是啥"）；Backlot 活故事板（真实审批闸门 + 回放）；质量门禁（Delivery Promise / 预合成校验 / 渲染后自审 / 7 维 scored selector / 预算治理）；Provider 生态（视频 14 家 + 图片 10 家 + TTS 4 家 + 音乐 + Remotion/HyperFrames 合成），零 Key 也能出真视频（Piper + 免费素材 + CLIP 检索纪录片）；与 Agent Skill 范式关系
+- **来源**: [GitHub](https://github.com/calesthio/OpenMontage), [AGENT_GUIDE](https://github.com/calesthio/OpenMontage/blob/main/AGENT_GUIDE.md), [ARCHITECTURE](https://github.com/calesthio/OpenMontage/blob/main/docs/ARCHITECTURE.md)
+- **关联**: [[leaferjs]], [[design-as-code]], [[awesome-design-md]]

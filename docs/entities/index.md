@@ -1,6 +1,6 @@
 # 实体
 
-共 69 篇。
+共 70 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -49,6 +49,7 @@
 - [[newsguard|NewsGuard]]
 - [[nuwax|Nuwax]]
 - [[open-design|Open Design 项目亮点分析]]
+- [[openmontage|OpenMontage]]
 - [[openshell|OpenShell]]
 - [[orloj|Orloj]]
 - [[prefect|Prefect]]
