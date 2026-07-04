@@ -512,3 +512,12 @@ tags: [log]
 - **内容**: MadsLorentzen/ai-job-search（3.4k Star，TypeScript + Claude Code + LaTeX + Bun），把求职编码成 /setup → /scrape → /apply 命令流水线。/apply 7 步：解析→匹配评估→LaTeX 起草→独立审阅→修改→编译+视觉检查→呈现。三大差异化：① PDF 视觉验证循环（编译→Claude 读渲染页→改 LaTeX→重编译，循环到完美）② 起草-审阅双代理（独立审阅无思维惯性，草稿内联传递省 token）③ 相关性加权简历删减（相关性×独特性×求职信支撑三维度评分）。其他命令 /expand（扫 GitHub/Kaggle 补画像）/upskill（技能差距热力图+学习计划）/reset。作为 Agent Skill 范式与 OpenMontage 个人 vs 生产场景对偶
 - **来源**: [GitHub](https://github.com/MadsLorentzen/ai-job-search), [微信公众号](https://mp.weixin.qq.com/s/9PZeMQpvdIJn6XOU-nnFjA)
 - **关联**: [[openmontage]], [[leaferjs]], [[design-as-code]]
+
+---
+
+## 2026-07-04 · yitang-dual-triangle
+- **操作**: 创建一堂双三角 concept 页 + 原始学习笔记
+- **文件**: concepts/yitang-dual-triangle.md, raw/yitang/一堂双三角-学习笔记.md
+- **内容**: 一堂Live254《重新理解AI双三角》。时隔八年第二次公司级背书（上一次 2018 创业五步法）。五步推导：人类三角（审美/体系/创造力）× AI三角（场景/数据/基本功）→ 整合成双三角 → 飞轮 → AI原生本质。关键论断"AI原生是结果不是因，双三角才是科学内核"（类比"年入千万是结果，五步法才是因"）。三阶六变落地场景：X光（拆解）/心法（口喷）/画布（筹备）/拼图（分工）/地图（训练）/底牌（战略）。十年爬山地图 L1-L5。Before/After 心态转变（AI PPT 案例：试遍 Gamma/SlideV/NotebookLM 都放弃 → 自建 Hermes + Feishu2Slide，3 人 + 10 Agent 跑 1000 页）。Feature 思维 vs Skill 思维预告。一堂版 FDE 设想。抓取方式：复用 browser-data Cookie + Playwright 全量截图（66 张）+ macOS Vision OCR（65780 字）
+- **来源**: [直播Live第254场](https://yitang.top/fs-doc/5aa0fe3427204946260cd88f38ed2bf7/NJbRdK0gfo6MQhx3uKjcZYchn9g)
+- **关联**: [[yitang-advanced-modeling]], [[roi-decision-framework]], [[yitang-ai-data-first-lesson]]
