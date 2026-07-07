@@ -1,12 +1,25 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-04
+updated: 2026-07-07
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-02: 新增 `entities/opengeni.md` — Cloudgeni-ai OpenGeni 深度调研（源自 GitHub Cloudgeni-ai/opengeni + opengeni.ai + docs/architecture.md + agent/README.md）。覆盖：定位（自托管"托管 Agent 服务"/"The open agent runtime"，substrate 非 Agent）、架构（Hono API + Temporal 编排 + OpenAI Agents SDK Worker + Postgres/pgvector + NATS 实时总线 + MinIO/S3/Azure/GCS + 独立 Rust Connected Machine workspace）、七大 load-bearing 设计不变式（Postgres 真相源/NATS 只扇出、token 流不进 Temporal history、turn 不可重试 activity 重配上限3、无运行时长上限按症状约束、三内存存储三职责、workspace 边界+强制 RLS+三访问模式、contracts 包为 wire 真相源）、核心差异化卖点 Connected Machine（自带机与云沙箱对等一等公民、dial-out 不投凭证、minisign+sha256 双验自更新 Rust agent）、monorepo 结构（apps api/worker/web + packages contracts/db/core/sdk/events/config/deployment/react/agent-proto）、能力目录（packs+MCP Registry 发现+加密凭据头）、部署（Helm+三云 Terraform+preflight）。与 [[polos]] 做了逐维对比（OpenGeni 借力 Temporal/OpenAI SDK、工程成熟度更高、自带机/多租户/计费齐全）。
+- 关联 [[polos]]、[[temporal]]、[[temporal-durability-stability]]、[[openshell]]、[[agent-sandbox]]、[[langfuse]]、[[ai-workflow-deep-comparison]]、[[langchain]]、[[crew-ai]]、[[dagster]]
+
+- 2026-07-02: 新增 `entities/polos.md` — Polos 开源 AI Agent 持久化执行运行时深度调研（源自 GitHub polos-dev/polos + polos.dev/docs + 作者 Neha Deodhar LinkedIn 文章）。覆盖：项目定位（"给 Agent 用的 Temporal"，把 durable execution 专为 LLM 场景优化）、核心痛点（LLM 调用昂贵不可重入/长时任务易中断/危险操作缺沙箱审批/触发零散/可观测靠 grep）、Orchestrator-Worker 架构（Rust+Postgres / Py/TS SDK，与 Temporal 同构）、六大支柱（沙箱内置工具/持久化+Prompt 缓存 60-80%省钱/HITL 多渠道审批/Webhook+Cron+Slack 触发器/OTel 全链路/Bring Your Stack 含 LangGraph CrewAI Mastra）、编程模型（No DAGs，普通代码）、CLI 体验、与 Temporal/LangGraph/Dagster/Dify 等的交叉地带定位图、设计取舍表、适用场景。强调"已完成的 LLM 调用永不重跑、不付两次钱"的核心价值。
+- 关联 [[temporal]]、[[temporal-durability-stability]]、[[openshell]]、[[agent-sandbox]]、[[langfuse]]、[[ai-workflow-deep-comparison]]、[[langchain]]、[[crew-ai]]、[[dagster]]
+
+- 2026-06-30: 新增 `concepts/claude-code-execution-security.md` — Claude Code 代码执行安全机制深度研究（源自 ~/Projects/claw-code Rust 复刻源码 + Anthropic 官方文档）。覆盖：四层纵深防御架构（权限策略闸门→命令静态校验→OS 沙箱包装→执行时护栏）、PermissionMode 五态与 allow/deny/ask 规则评估顺序、bash_validation 四步 pipeline（模式/sed/破坏性/路径校验 + sudo/env 穿透）、Linux unshare 命名空间沙箱（user/mount/net/pid 隔离 + filesystemMode + SandboxStatus 可观测性）、执行护栏（超时智能分类 test.hung + stdin null + 16KB UTF-8 安全截断）、各层协同的纵深防御价值表、与真实 Claude Code 差异、与 OpenShell/agent-sandbox 隔离技术对比。含质量警示（claw-code 疑似 AI 批量生成）。
+- 关联 [[claude-code-workflow]]、[[superpowers]]、[[swarmclaw]]、[[openshell]]、[[agent-sandbox]]、[[heuristic-learning]]
+
+---
+## 远程历史条目（origin/main）
+
 
 - 2026-07-02: 新增 `entities/dribbble.md` — Dribbble 深度研究。来源：抓取 dribbble.com 首页 + WebSearch 补充（fastlancer 评测、官方 Stories 战略文章）。覆盖：定位（全球顶尖设计师发现与雇佣平台）、2025–2026 战略重心（一切功能服务于"帮设计师获客转化"，官方原话）、双边市场结构（客户端 Start Project Brief/Browse Profiles/Explore Services + 设计师端 Browse Briefs/Add Service/Send Outbound Proposal 新功能）、内容形式 Shot + 8 大设计分类、质量管控 Dribbble Select 年度榜单、商业模式（Pro 订阅/交易服务费/广告/全职招聘）、技术栈（Vite+Vue.js/Cloudflare/Stripe/GA4）、与 Behance 对比、对独立开发者的启示（单一焦点战略）。更新 `index.md`（+1 entity、页数 130→131）。
 - 关联 [[make-indie-maker-blueprint]]、[[fiverr]]
@@ -458,6 +471,52 @@ tags: [log]
 - **代码规模**: 47,700 LoC / 302 文件 / 3,699 节点 / 9,604 边
 - **许可**: AGPL-3.0（扩展）+ MIT（库）
 - **关联**: [[claude-code-workflow]], [[ecc]], [[ruflo]], [[n8n]], [[langflow]], [[context-mode]]
+
+## 2026-07-06 update | concepts/langflow-architecture.md
+
+- **操作**: 更新 Langflow 架构分析，补充 2026-07 源码演进（非新建，避免重复）
+- **文件**: concepts/langflow-architecture.md（updated 2026-05-15 → 2026-07-06）
+- **新增内容**: 新增第 0 节"架构演进"，记录 7 大变化——
+  1. **内核外化**：`lfx` 成为真正的执行内核，`backend/base/langflow/graph/` 退化为 re-export shim（全文引用）
+  2. **服务工厂反射 DI**：`ServiceFactory` 用 `get_type_hints(create)` 自动推断依赖，签名即配置
+  3. **三通道可插拔注册**：配置文件 > 装饰器 > entry points，优先级与场景表
+  4. **RBAC 四阶段**：`BaseAuthorizationService` 抽象 + 四元组请求模型 + Phase 3 share-aware fetch（`supports_cross_user_fetch` 分支 + `deny_to_404`）+ Phase 4 审计 API + foundations 迁移种子三角色
+  5. **数据驱动图调度**：`RunnableVerticesManager` 四集合动态推进，支持 cycle/分支/续跑，非静态 DAG
+  6. **多执行后端**：v2 Workflow API（sync/stream/background）+ langflow-stepflow（JSON→YAML 翻译）
+  7. **SDK 与 Bundle**：`langflow_sdk` 同步/异步 HTTP 客户端 + `bundles/` 重依赖拆包
+- **技术债记录**: `deps.py` get_service 懒注册 workaround、FastAPI `eval_str=True` 强制 import 外置
+- **关联**: [[opensource-project-practices-from-langflow]]、[[opensource-project-practices-from-temporal]]、[[ai-workflow-landscape]]、[[langflow]]
+
+## 2026-07-06 03:15 — LobeChat 多智能体协作架构概念创建
+
+- **操作**: 创建 LobeChat 多智能体协作架构概念文件
+- **文件**: concepts/lobechat-multi-agent-architecture.md
+- **内容**: LobeChat 多智能体协作深度分析（源自 /home/rowan/Projects/lobehub 本地源码 + CodeGraph + context-mode 批量探索）
+- **覆盖**: 三层 Plan→Execute 循环（单 Agent / 多 Agent 自相似）、GroupOrchestrationRuntime 三角色架构（Supervisor 状态机 + Executor + Runtime）、确定性状态机决策逻辑（init→call_supervisor→speak/broadcast/delegate/execute_task/finish）、工具即协作触发器（stop:true + afterCompletion 回调解耦）、三种执行后端（client/gateway/hetero 统一抽象 + selectRuntimeType 集中路由）、异构执行器（Claude Code/Codex CLI + 6 种 auth 失败识别 + device/sandbox/local 目标）、三种用户入口（callSubAgent/callAgent/@agent 统一 AgentInvocationIntent）、前端协作 UI（AssistantGroup/AgentTasks/metadata.isSupervisor）、可观测性栈（tracing/signal/audit/subagentMetrics）、tagged union 类型驱动、与 CrewAI/AutoGen/LangGraph 横向对比
+- **关键洞察**: LLM 不确定性隔离在工具调用层，编排逻辑确定性可测；Group Orchestration 把 Agent 当 Executor 复用而非另造体系
+- **长度**: ~12KB，~280 行
+- **关联**: [[lobechat-architecture]], [[lobechat-highlights]], [[opensource-practices-from-lobechat]], [[e2e-practices-from-lobechat]], [[crew-ai]], [[auto-gen]], [[langchain]], [[claude-code-workflow]], [[acp-protocol]], [[a2a-protocol]]
+
+## 2026-07-07 — Flowise 技术架构深度调研
+
+- **操作**: 创建 Flowise 技术架构概念页 + 更新 Flowise 实体页
+- **文件**:
+  - 新建 `concepts/flowise-architecture.md`（~24KB，~530 行）
+  - 更新 `entities/flowise.md`（修正过时信息：多租户/部署/对比表，加交叉链接）
+  - 更新 `index.md`（新增条目，页数 116→117，日期更新）
+- **数据源**: `~/Projects/Flowise`（v3.1.3，commit bb773ffa，2026-07 拉取）一手源码
+- **覆盖**: monorepo 六包组织（pnpm+turbo）、278 节点 / 25 类的文件系统动态注册机制（`module.exports={nodeClass}`，零装饰器）、INode 契约（inputs/init/run + baseClasses 类型系统 + loadMethods 异步选项）、**自研 BFS 图解释器**（constructGraphs 邻接表 + buildFlow 逐节点 require+init+resolveVariables，与 Langflow 编译型 Runnable 的关键分野）、executeFlow 五步流水线、buildAgentGraph（LangGraph 式 sequential agents）、TypeORM 四库 + 23 实体、enterprise 子模块多租户（Org/Workspace/RBAC/SSO）、BullMQ 三队列 + Web/Worker 分离 + Redis pub/sub SSE 中继、OpenTelemetry + Arize/Phoenix/Opik 可观测、MCP 双向（server+client）、Agent 编排三层演进、agentflow/observe 可嵌入 SDK 包、与 Langflow/Dify 六维对比表、11 条可借鉴工程实践
+- **关键洞察**:
+  1. Flowise 不编译图成单个 Runnable，而是**逐节点 init() 实例化 + 终点 run() 触发执行**——换来自中断/逐节点观测/Loop/Condition 控制流能力
+  2. 节点注册靠**文件系统递归扫描 + 动态 require**，加节点零改框架，撑起 278 内置 + Marketplace 社区节点
+  3. baseClasses 字符串数组即画布类型系统，判连线合法性
+  4. 企业能力独立成包，开源核心保持单租户简单
+- **修正**: entities/flowise.md 原写「无多租户」「单进程不依赖 Redis」「生产级功能较少」——v3.1.3 实际已有企业多租户、BullMQ 可选队列、MCP/Agent/评估等生产级能力，已更新
+- **关联**: [[flowise]], [[langflow-architecture]], [[langflow]], [[dify]], [[langchain]], [[lobechat-architecture]], [[ai-workflow-landscape]]
+
+---
+
+## 远程历史条目（origin/main）
 
 ## 2026-06-14 create | concepts/skill-self-evolution.md
 - **操作**: 创建 Skill 自进化闭环概念页

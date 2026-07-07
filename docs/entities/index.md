@@ -1,6 +1,6 @@
 # 实体
 
-共 71 篇。
+共 73 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -49,9 +49,11 @@
 - [[newsguard|NewsGuard]]
 - [[nuwax|Nuwax]]
 - [[open-design|Open Design 项目亮点分析]]
+- [[opengeni|OpenGeni]]
 - [[openmontage|OpenMontage]]
 - [[openshell|OpenShell]]
 - [[orloj|Orloj]]
+- [[polos|Polos]]
 - [[prefect|Prefect]]
 - [[ruflo|Ruflo — Multi-Agent AI Orchestration Platform]]
 - [[slack|Slack 深度研究笔记]]

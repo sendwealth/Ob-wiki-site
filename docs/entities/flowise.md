@@ -1,17 +1,22 @@
 ---
 title: Flowise
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-07-07
 type: entity
-tags: [llm, workflow, low-code, nodejs, langchain]
+tags: [llm, workflow, low-code, nodejs, langchain, express, react, multi-tenant, mcp, observability]
 sources:
   - https://github.com/FlowiseAI/Flowise
-confidence: 0.85
+  - ~/Projects/Flowise (v3.1.3, commit bb773ffa)
+confidence: 0.9
+related:
+  - "[[flowise-architecture]]"
+  - "[[langflow]]"
+  - "[[dify]]"
 ---
 
 # Flowise
 
-> 低代码 LLM 应用构建器 — 基于 LangChain.js 的拖拽式 LLM 平台，快速原型首选。
+> 低代码 LLM 应用构建器 — 基于 LangChain.js 的拖拽式 LLM 平台，快速原型首选。技术架构详见 [[flowise-architecture]]。
 
 ---
 
@@ -182,11 +187,14 @@ const result = await client.createPrediction({
 
 ## 五、关键设计决策
 
-1. **LangChain.js 封装** — 不自研 LLM 抽象，直接封装 LangChain.js 组件
-2. **节点即组件** — 每个节点对应 LangChain.js 的一个组件类
-3. **JSON 图存储** — 工作流保存为 JSON，可版本控制
-4. **轻量优先** — SQLite 默认，单进程部署，不依赖 Redis/消息队列
-5. **无代码导出** — 不支持导出为代码（与 [[langflow]] 的关键区别）
+1. **LangChain.js + LlamaIndex.ts 双引擎封装** — 不自研 LLM 抽象，直接封装两个生态的组件
+2. **节点即组件** — 每个节点对应 LangChain.js/LlamaIndex 的一个组件类，278 个内置节点（25 类）
+3. **JSON 图存储** — 工作流保存为 React Flow 的 JSON（nodes+edges），可版本控制
+4. **自研 BFS 图解释器** — 不编译成单个 Runnable，而是逐节点 `init()` + `run()`，支持 Loop/Condition 控制流节点
+5. **轻量起步、按需扩展** — SQLite 默认 + 单进程零依赖起步；配 Redis 后启用 BullMQ 队列 + Web/Worker 分离水平扩展
+6. **企业能力独立成包** — 开源核心保持简单，多租户（Org/Workspace/RBAC/SSO）通过可选的 `enterprise/` 子模块叠加
+7. **无代码导出** — 不支持导出为代码（与 [[langflow]] 的关键区别）
+8. **MCP 双向** — 既消费外部 MCP 工具，也把 chatflow 暴露成 MCP tool 供 Claude Desktop 等调用
 
 ## 六、开发命令速查
 
@@ -213,20 +221,27 @@ docker run -d -p 3000:3000 flowiseai/flowise
 
 | 维度 | Flowise | [[langflow]] | [[dify]] |
 |------|---------|-------------|----------|
-| 底层框架 | LangChain.js | LangChain Python | 自研 |
-| 语言 | TypeScript | Python | Python + TS |
+| 底层框架 | LangChain.js + LlamaIndex.ts | LangChain Python（内核 `lfx`） | 自研 + LangChain |
+| 语言 | TypeScript / Node.js | Python / FastAPI | Python + TS |
+| 执行模型 | 自研 BFS 解释器（逐节点 init/run） | 图编译成单个 Runnable | 自研工作流引擎 |
 | 代码导出 | 无 | Python/JSON | 无 |
-| 部署复杂度 | 低（单进程） | 中 | 高（多服务） |
-| 多租户 | 无 | 无 | 原生 |
-| 生产级功能 | 较少 | 中等 | 丰富 |
-| 适合场景 | 快速原型 | 开发者工具 | 生产平台 |
+| 部署起步 | `npx flowise start`（零依赖单进程） | `langflow run`（需 Redis） | docker compose（多服务） |
+| 多租户 | 企业包（Org/Workspace/RBAC/SSO） | 无 / v2 规划中 | 原生 |
+| Agent 编排 | 三层（经典/Multi/Sequential Agents） | LangGraph | 自研 |
+| MCP | 双向（server + client） | 双向 | 客户端 |
+| 生产级功能 | 中等（企业版补齐） | 中等 | 丰富 |
+| 适合场景 | 快速原型 → 可生产（企业版） | 开发者工具 | 全栈 LLMOps 平台 |
+
+> 完整架构对比见 [[flowise-architecture]] 第 10 节。
 
 ---
 
 ## 相关
 
+- [[flowise-architecture]] — 深度技术架构分析（v3.1.3 源码，monorepo/节点系统/执行引擎/队列/多租户/前端）
 - [[langchain]] — 底层框架
-- [[langflow]] — 可视化 LangChain 工作流编辑器（竞品）
+- [[langflow]] / [[langflow-architecture]] — 可视化 LangChain 工作流编辑器（竞品，Python 侧）
 - [[dify]] — 全栈 LLMOps 平台
 - [[n8n]] — 开源自动化工作流工具
+- [[lobechat-architecture]] — 另一类 JS AI 应用架构
 - [[ai-workflow-landscape]] — AI Workflow 开源项目全景调研

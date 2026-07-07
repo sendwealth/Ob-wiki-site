@@ -1,6 +1,6 @@
 # 概念
 
-共 79 篇。
+共 82 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -17,10 +17,12 @@
 - [[browser-use-architecture|Browser-Use 技术架构深度解析]]
 - [[cli-anything|CLI-Anything — 将任何软件转化为 AI Agent 可用的 CLI]]
 - [[claude-code-workflow|Claude Code Workflow]]
+- [[claude-code-execution-security|Claude Code 代码执行安全机制]]
 - [[context-mode|Context Mode]]
 - [[design-md-spec|DESIGN.md 规范]]
 - [[design-as-code|Design as Code]]
 - [[devin-ai|Devin AI - 首个 AI 软件工程师]]
+- [[flowise-architecture|Flowise 项目架构分析]]
 - [[geo-brand-foundation|GEO 品牌地基搭建]]
 - [[heuristic-learning|Heuristic Learning (HL) — 超越梯度的学习范式]]
 - [[humanizer-skill|Humanizer Skill]]
@@ -30,6 +32,7 @@
 - [[kubernetes-crd|Kubernetes CRD (Custom Resource Definition)]]
 - [[lm-evaluation-harness|LM Evaluation Harness — 评估框架与最佳实践]]
 - [[langflow-architecture|Langflow 项目架构分析]]
+- [[lobechat-multi-agent-architecture|LobeChat 多智能体协作架构]]
 - [[loop-engineering|Loop Engineering：AI系统化循环工程方法]]
 - [[make-indie-maker-blueprint|MAKE: The Indie Maker Blueprint]]
 - [[multica-acp-workflow|Multica ACP 工作流程详解]]

@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-07-04
+updated: 2026-07-07
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-04 | Total pages: 135
+> Last updated: 2026-07-07 | Total pages: 135
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -22,6 +22,8 @@ tags: [index]
 - [[voicebox]] — 25.5K⭐ 开源 AI 语音工作室，7 TTS 引擎，23 语言，MCP 语音 I/O
 - [[minimind-o]] — ~0.1B 超小规模端到端 Omni 多模态模型（文本/语音/图像输入 + 流式语音输出），核心代码仅 2400 行纯 PyTorch
 - [[stripe-hosted-checkout]] — Stripe 托管支付页面：低代码、125+ 支付方式、PCI 自动合规、Connect 分账
+- [[polos]] — 开源 AI Agent 持久化执行运行时（Rust Orchestrator + Py/TS Worker）：沙箱执行、durable log 重放、HITL 审批、触发器、OTel 可观测，"给 Agent 用的 Temporal"
+- [[opengeni]] — Cloudgeni 自托管"托管 Agent 服务"（Hono+Temporal+OpenAI Agents SDK+Postgres/pgvector+NATS+MinIO + Rust Connected Machine agent）：双计算模型（云沙箱/自带机对等）、强制 RLS 多租户、exactly-once SSE、Stripe 计费，"The open agent runtime"
 
 - [[multica-cli]] — Multica CLI v0.3.1，AI 原生任务管理
 - [[swarmclaw]] — 开源自托管 AI Agent 运行时与多 Agent 编排框架，23+ LLM、12+ 连接器、MCP/Skills/Mission
@@ -70,6 +72,7 @@ tags: [index]
 - [[agent-world]] — Agent World 智能体世界设计：生存沙盒 + A2A 协作 + 进化系统
 - [[humanizer-skill]] — Humanizer：29种AI写作痕迹检测+消除方法论（基于Wikipedia AI Cleanup）
 - [[browser-use-architecture]] — Browser-Use 技术架构：LLM + CDP 事件驱动浏览器自动化，Watchdog 服务群 + Pydantic v2
+- [[flowise-architecture]] — Flowise 技术架构（v3.1.3）：pnpm+turbo monorepo、文件系统动态注册的 278 节点系统、自研 BFS 图解释器（逐节点 init/run）、BullMQ 队列、企业多租户、MCP 双向、OTel 可观测
 - [[browser-use-highlights]] — Browser-Use 十大技术亮点：事件解耦、AX+DOM双树、O(n²)修护、变量检测、LLM自裁判、消息压缩、Session池、签名归一化、浏览器面板、循环检测
 - [[roi-decision-framework]] — ROI科学决策：三角形模型（宽度·深度·高度）+ 三个场景 + 一页纸工作流
 - [[ai-design-fundamentals-yitang]] — 一堂Live76 AI设计基本功Part2：口喷作图心法、四种改图方法、风格锁定、电商/线下实战
@@ -89,12 +92,14 @@ tags: [index]
 - [[openshell-documentation-system]] — OpenShell 文档管理体系：Fern v5.23 + MDX + 三层文档（发布/架构/Crate）+ NVIDIA 品牌定制 + PR 自动预览 + Agent 技能驱动更新
 - [[openshell-usage-guide]] — OpenShell 使用指南：安装、沙箱管理、YAML 策略配置、凭据提供者、推理路由、TUI 监控、常用工作流
 - [[claude-code-workflow]] — Claude Code Workflow：确定性多 agent 编排引擎，JS 脚本控制 pipeline/parallel/loop，五大编排模式，8 阶段成熟度模型
+- [[claude-code-execution-security]] — Claude Code 代码执行安全机制：四层纵深防御（权限策略→命令校验→OS 沙箱→执行护栏），unshare 命名空间隔离，16KB 截断
+- [[lobechat-multi-agent-architecture]] — LobeChat 多智能体协作架构：Supervisor-Executor 双层状态机 + 工具触发编排 + 三种异构执行后端（client/gateway/hetero）
+
 - [[skill-self-evolution]] — Skill自进化闭环：darwin-skill × skill-evolver × EmbodiSkill 三件套互优化，无需更强模型，只需更好"操作说明书"
 - [[multica-loop-agent]] — Multica Loop Agent 实践：基于 loop-engineering 理论的全闭环 AI 编排系统（感知→验证→停滞检查→分配→反馈五阶段）
 
 - [[yitang-huazong-ama-cost-ai-landing]] — 花总AMA商业突破大航海：双三角方法论、成本与AI落地、数学题vs语文题分类法、14个行业问答精华
-81|
-82|- [[yitang-ai-data-first-lesson]] — 一堂AI数据第一课（Live251）：ADAPTED 6+1 模型、三层价值假设、湖仓思维、8类AI数据、能力段位图
+- [[yitang-ai-data-first-lesson]] — 一堂AI数据第一课（Live251）：ADAPTED 6+1 模型、三层价值假设、湖仓思维、8类AI数据、能力段位图
 - [[yitang-advanced-modeling]] — 一堂高阶建模第一课（Live253）：三阶建模体系（流程→抽象→本质）、千人广场模型、六步建模工作流、十年爬山地图
 - [[yitang-dual-triangle]] — 一堂双三角（Live254，公司级背书）：人类三角（审美/体系/创造力）× AI三角（场景/数据/基本功），五步推导飞轮与AI原生本质，三阶六变落地场景（X光/心法/画布/拼图/地图/底牌）
 - [[yitang-business-formula]] — 一堂业务公式拆解（孔源）：三个条件（看得清/想得透/做得准）、四个认知突破、参数冰山L1-L6、先切分再转化、+ vs ×

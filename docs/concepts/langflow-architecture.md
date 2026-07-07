@@ -1,9 +1,9 @@
 ---
 title: Langflow 项目架构分析
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-07-06
 type: concept
-tags: [architecture, python, react, fastapi, monorepo, ai, workflow-engine, component-system]
+tags: [architecture, python, react, fastapi, monorepo, ai, workflow-engine, component-system, lfx, rbac, plugin-architecture]
 sources:
   - https://github.com/langflow-ai/langflow
   - ~/Projects/langflow
@@ -11,15 +11,163 @@ confidence: high
 related:
   - "[[opensource-project-practices-from-langflow]]"
   - "[[opensource-project-practices-from-temporal]]"
+  - "[[ai-workflow-landscape]]"
 ---
 
 # Langflow 项目架构分析
 
 > Langflow 是一个视觉化 AI 工作流构建平台，用户通过拖拽组件构建 AI Agent 和工作流。本文从整体架构、后端、前端、执行引擎和包管理五个维度分析其架构设计。
+>
+> **⚠️ 2026-07-06 架构演进**：核心执行引擎已外化到独立包 `lfx`，`backend/base/langflow/graph/` 现为空壳（仅 `re-export` `lfx.graph.*`）。新增 `langflow-stepflow`（备用执行后端）、`langflow_sdk`（HTTP 客户端）、`bundles/`（可选集成）。RBAC 授权层四阶段落地。下文第 0 节为本次演进补充，第 1-8 节为 2026-05-15 原始分析（保留历史视角）。
 
 ---
 
-## 1. 整体架构概览
+## 0. 架构演进（2026-07-06 补充）
+
+### 0.1 内核/外壳分离：`lfx` 成为真正的执行内核
+
+原先 `lfx` 被定位为"轻量无状态 CLI"，但 2026-07 源码显示**它已是整个项目的执行内核**，主包 `langflow-base` 反而成了壳：
+
+```
+src/
+├── backend/base/langflow/   # langflow-base：FastAPI 服务 + 路由 + DB + 服务实现
+│   ├── graph/__init__.py    # ⚠️ 空壳 —— 仅 from lfx.graph.* re-export Graph/Edge/Vertex
+│   ├── api/{v1,v2}/         # HTTP 路由层
+│   ├── services/            # 服务实现 + deps.py（FastAPI 依赖注入）
+│   ├── custom/              # 自定义组件框架
+│   └── components/          # 内置组件
+├── lfx/src/lfx/             # ⭐ 真正的内核：图引擎 + 组件库 + 服务接口
+│   ├── graph/{graph,vertex,edge,flow_builder,state}/
+│   ├── services/            # 服务抽象基类（Base*Service）+ 插件注册
+│   ├── components/           # 80+ 供应商集成组件
+│   └── custom/              # Component 基类 + code_parser
+├── langflow-stepflow/        # Langflow→Stepflow 翻译器（备用执行后端）
+├── sdk/                      # langflow_sdk：HTTP 客户端 SDK
+└── bundles/{duckduckgo,arxiv,ibm,docling}/  # 可选集成 bundle
+```
+
+`backend/base/langflow/graph/__init__.py` 全文就是 shim：
+
+```python
+from lfx.graph.edge.base import Edge
+from lfx.graph.graph.base import Graph
+from lfx.graph.vertex.base import Vertex
+from lfx.graph.vertex.vertex_types import CustomComponentVertex, InterfaceVertex, StateVertex
+__all__ = ["CustomComponentVertex", "Edge", "Graph", "InterfaceVertex", "StateVertex", "Vertex"]
+```
+
+**设计含义**：`lfx` 是"无 UI、无 FastAPI 依赖"的纯执行内核，既能被 `langflow serve` 用，也能被 `lfx serve` / `lfx run` 作为轻量 CLI 直接跑 flow。这是典型的**内核/外壳分离**——AGENTS.md 文档滞后于代码，仍把 graph 描述为 backend 模块。
+
+### 0.2 服务层：工厂反射 DI + 三通道可插拔注册
+
+**`ServiceFactory`**（`factory.py`）用 `get_type_hints(create)` **反射推断依赖**——工厂的 `create()` 参数类型即声明了它依赖哪些其他服务（自动解析为 `ServiceType` 枚举）。依赖不需要手写列表，签名即配置。
+
+```python
+class ServiceFactory:
+    def __init__(self, service_class: type[Service]):
+        self.service_class = service_class
+        self.dependencies = infer_service_types(self, import_all_services_into_a_dict())
+    def create(self, *args, **kwargs) -> Service:
+        return self.service_class(*args, **kwargs)
+```
+
+**可插拔服务机制**（`PLUGGABLE_SERVICES.md`）三种注册途径，优先级为 **配置文件 > 装饰器 > entry points**：
+
+| 通道 | 机制 | 优先级 | 场景 |
+|------|------|--------|------|
+| 配置文件 | `lfx.toml` / `pyproject.toml` `[tool.lfx.*]` | 最高（部署期覆盖） | 现场替换不需改代码 |
+| 装饰器 | `@register_service`（import 时即时注册，`override=True` 默认） | 中 | 代码内声明 |
+| Entry points | `lfx.<type>.adapters` Python entry point | 最低 | 第三方包分发 |
+
+实例懒创建、单例缓存、随 `ServiceManager` 关闭自动 `teardown`。OSS 版与商业版共用同一壳，只替换 `auth_service` / `authorization_service` 等实现。Adapter 注册同样三通道（`@register_adapter(AdapterType.DEPLOYMENT, "local")`）。
+
+**已知技术债**：`deps.py` 的 `get_service()` 里有 `are_factories_registered()` 检查 + 懒注册 workaround，注释自承 "not optimal, but it works"——启动顺序存在循环依赖隐患。另外 FastAPI 的 `eval_str=True` 强制部分 import 放在 `TYPE_CHECKING` 之外（注释明确指出），削弱了延迟 import 的收益。
+
+### 0.3 RBAC 授权层（四阶段落地，认证 vs 授权严格分离）
+
+授权是独立于认证的**可插拔层**，定义在 `lfx/services/authorization/base.py`：
+
+```
+BaseAuthorizationService (抽象)
+├── SUPPORTS_CROSS_USER_FETCH: ClassVar[bool]  # 是否支持跨用户取资源
+├── is_enabled() → bool
+├── enforce(user_id, domain, obj, action) → 决策
+└── invalidate_user/invalidate_all()           # 缓存失效
+```
+
+OSS 默认 `LANGFLOW_AUTHZ_ENABLED=false`，注册 **pass-through stub**（`LangflowAuthorizationService`）——所有检查返回 allow，但路由守卫和审计行仍照常走通。真正决策需注册插件读 `authz_*` admin 表、写编译规则到 `casbin_rule`。
+
+**请求模型**是四元组 `(subject, domain, object, action)`：
+
+| 维度 | 取值 |
+|------|------|
+| subject | `user:{uuid}` |
+| domain | `project:{uuid} → workspace:{uuid} → *`（更具体的域优先） |
+| object | `flow:{uuid}` / `deployment:{uuid}` / `flow:*` 等 |
+| action | `read / write / create / delete / execute / deploy` |
+
+**路由守卫**（`services/authorization/guards.py`）按资源类型分函数：`ensure_flow_permission` / `ensure_deployment_permission` / `ensure_project_permission` / `ensure_knowledge_base_permission` / `ensure_variable_permission` / `ensure_file_permission` / `ensure_share_permission`，外加列表过滤 `filter_visible_resources`。
+
+**Phase 3 Share-aware fetch** 是安全关键设计：路由 fetcher 调用 `supports_cross_user_fetch()` 分支。OSS stub 返回 `False` → 保留 owner-scoped 查询；插件返回 `True` → 按 id 加载，由 `ensure_*_permission` 决策，且 `deny_to_404` 工具把 403 转成 404 以保护 UUID 隐私。这避免了"开启 AUTHZ 但没装插件反而放大可见性"的安全回归。
+
+配套：`authz_audit_log`（Phase 4 审计查询 API，超管专用，页大小上限 200）、`authz_share` CRUD（OSS floor：资源 owner 或超管才能管理 share 行）、`7c8d9e0f1a2b_authz_foundations` 迁移种子三个系统角色（viewer/developer/admin，`is_system=True`，`"{resource}:{action}"` 权限 slug）。
+
+### 0.4 图执行引擎：数据驱动调度（非静态 DAG）
+
+引擎核心在 `lfx/graph/`，`Graph` 类约 2500 行：
+
+- **`Graph`**（`graph/graph/base.py`）：`async_start()` / `start()` / `arun()` / `astep()`。执行流：`initialize_run` → 按 `RunnableVerticesManager` 取下一批可运行点 → `build_vertex` 构建并 `process` → 推进 → 事件回调。
+- **`Vertex`**：`VertexStates` 状态机。四种子类型（`vertex_types.py`）：`CustomComponentVertex`（用户代码）、`ComponentVertex` / `InterfaceVertex`（内置/入出接口）、`StateVertex`（状态节点）。
+- **`Edge`**：`CycleEdge` 支持循环图，不只是 DAG。
+- **`RunnableVerticesManager`**：用 `run_map`（后继）、`run_predecessors`（前驱）、`vertices_to_run`（就绪集）、`vertices_being_run`（运行中）四个集合动态推进，支持 cycle 检测与 `ran_at_least_once` 跟踪。这是**数据驱动的调度器**，而非静态拓扑排序——天然支持循环、条件分支、人工中断后续跑。
+- **事件流**：`ag_ui.core` 的 `StepStartedEvent` / `StepFinishedEvent` + `EventManager`，前端 SSE 实时收每步构建结果。`build_vertex` 内置 `get_cache_func` / `set_cache_func` 钩子，节点级结果可缓存。
+
+执行模型本质是**异步、流式、增量调度**：每个 vertex 构建完触发 `get_next_runnable_vertices` 计算下一批，`_execute_tasks` 并发执行。`create_subgraph` 支持子图流式迭代。
+
+### 0.5 多执行后端：v2 Workflow API + Stepflow
+
+- **v1**（`api/v1/`，40+ 路由）：完整 CRUD——flows、deployments、projects、folders、knowledge_bases、variables、files、traces、mcp、authz_* 全家桶。
+- **v2**（`api/v2/`）：精简执行导向 API，核心 `workflow.py`：`POST /workflow`（sync/stream/background 三模式）、`GET /workflow`（按 job_id 查状态）、`POST /workflow/stop`。300s 同步超时、Developer API 保护、API key 认证。`workflow_reconstruction.py` 从已存 flow 重建可执行图。
+- **Stepflow 备用后端**（`langflow-stepflow/`）：`LangflowConverter` 把 Langflow JSON 翻译成 Stepflow YAML（`dependency_analyzer` 做依赖分析、`schema_mapper` 做字段映射、`node_processor` 处理节点），再由 `worker/core_executor.py` 用 `stepflow_py.worker.FlowBuilder` 执行。这是**并行执行后端**，可能是未来替换内置引擎的伏笔，或为特定部署场景（wasm/边缘）准备。
+
+### 0.6 SDK 与 Bundle
+
+- **`langflow_sdk`**（`sdk/`）：同步 + 异步 HTTP 客户端（`client.py` / `_async_client.py` / `_client_common.py`），含 `background_job.py`、`serialization.py`、`testing.py`。让用户用代码而非 UI 驱动 flow。
+- **`bundles/`**：duckduckgo / arxiv / ibm / docling 等重依赖集成拆成独立 workspace 包，主包按需引入——避免默认安装拖入巨大依赖。
+
+### 0.7 一句话总结
+
+Langflow 用"**内核外化 + 服务工厂反射 DI + 可插拔 RBAC + 数据驱动图调度**"四件套，把可视化 AI 工作流产品拆成了"可独立复用的引擎 + 可替换的服务实现 + 可插拔的执行后端"，OSS 与商业版共用同一壳。
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  frontend (React 19 + @xyflow + Zustand)                    │
+└───────────────┬─────────────────────────────────────────────┘
+                │ HTTP/SSE
+┌───────────────▼─────────────────────────────────────────────┐
+│  langflow-base (FastAPI 壳)                                 │
+│  ├─ api/v1 (CRUD 40+ 路由)   ├─ api/v2 (workflow 执行)      │
+│  ├─ services/deps.py → Depends 注入                          │
+│  └─ services/authorization/guards.py (RBAC 守卫)            │
+└───────────────┬─────────────────────────────────────────────┘
+                │  ServiceManager 单例 + 工厂反射 DI
+┌───────────────▼─────────────────────────────────────────────┐
+│  lfx (执行内核，无 Web 依赖)                                 │
+│  ├─ graph/   Graph + Vertex(4 类) + Edge(cycle) + 调度器    │
+│  ├─ services/  Base*Service 抽象 + @register_service 插件   │
+│  ├─ custom/   Component 基类 + code_parser                  │
+│  └─ components/  80+ 供应商集成                              │
+└───────────────┬─────────────────────────────────────────────┘
+                │  可选并行后端
+┌───────────────▼────────────────┐  ┌─────────────────────────┐
+│  langflow-stepflow              │  │  langflow_sdk (HTTP)    │
+│  JSON→YAML 翻译 + worker 执行   │  │  sync/async 客户端      │
+└─────────────────────────────────┘  └─────────────────────────┘
+```
+
+---
+
+## 1. 整体架构概览（2026-05-15 原始分析）
 
 ```
 ┌─────────────────────────────────────────────────────────┐
