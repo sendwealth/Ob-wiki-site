@@ -8,6 +8,9 @@ tags: [log]
 
 # Wiki Log
 
+- 2026-07-11: 新增 `concepts/yitang-ai-content-industrialization.md` + `raw/yitang/ai-content-industrialization-xixi-原文整理.md` — 熙熙（孙熙霁）·AI 内容工业化生产。来源：一堂飞书 Wiki（截图 + macOS Vision OCR，30935字，正文图片型渲染）。覆盖：借假修真（用小红书练 AI 内容工业化能力）、内容工业化定义（面对高度不确定的工作持续高质量交付）、六阶段演进（手工作坊→WorkBuddy 写稿 agent→接一堂知识库 YAI→Codex 进项目→多 partner 工位裂变→飞书多维表格选题-创作-复盘-回流闭环）、底层范式一堂双三角、三大核心方法论（焦糖布丁 JTBD 选题法/爆炸式研究建审美/审美六看+What-How-Why 分层）、写稿 8 步工作流、避雷清单。核心洞察：**内容工业化本质=批量消灭不确定性；工具升级≠系统升级，真正决定结果的因是双三角这个系统；把隐性判断显性化（蒸馏老手）才能工业化**。更新 `index.md`（+1 concept、+1 raw、页数 136→137）。
+- 关联 [[yitang-dual-triangle]]、[[content-growth-loop]]、[[kecheng-to-ai-tool]]
+
 - 2026-07-02: 新增 `entities/opengeni.md` — Cloudgeni-ai OpenGeni 深度调研（源自 GitHub Cloudgeni-ai/opengeni + opengeni.ai + docs/architecture.md + agent/README.md）。覆盖：定位（自托管"托管 Agent 服务"/"The open agent runtime"，substrate 非 Agent）、架构（Hono API + Temporal 编排 + OpenAI Agents SDK Worker + Postgres/pgvector + NATS 实时总线 + MinIO/S3/Azure/GCS + 独立 Rust Connected Machine workspace）、七大 load-bearing 设计不变式（Postgres 真相源/NATS 只扇出、token 流不进 Temporal history、turn 不可重试 activity 重配上限3、无运行时长上限按症状约束、三内存存储三职责、workspace 边界+强制 RLS+三访问模式、contracts 包为 wire 真相源）、核心差异化卖点 Connected Machine（自带机与云沙箱对等一等公民、dial-out 不投凭证、minisign+sha256 双验自更新 Rust agent）、monorepo 结构（apps api/worker/web + packages contracts/db/core/sdk/events/config/deployment/react/agent-proto）、能力目录（packs+MCP Registry 发现+加密凭据头）、部署（Helm+三云 Terraform+preflight）。与 [[polos]] 做了逐维对比（OpenGeni 借力 Temporal/OpenAI SDK、工程成熟度更高、自带机/多租户/计费齐全）。
 - 关联 [[polos]]、[[temporal]]、[[temporal-durability-stability]]、[[openshell]]、[[agent-sandbox]]、[[langfuse]]、[[ai-workflow-deep-comparison]]、[[langchain]]、[[crew-ai]]、[[dagster]]
 

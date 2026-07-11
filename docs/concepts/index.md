@@ -1,6 +1,6 @@
 # 概念
 
-共 83 篇。
+共 84 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -80,6 +80,7 @@
 - [[kecheng-to-ai-tool|把课程变成 AI 工具]]
 - [[yitang-problem-os|拆书会203：Problem OS——用《提问的智慧》构建问题操作系统]]
 - [[yitang-organization-as-product|泛产品设计做组织（一堂·兰毅）]]
+- [[yitang-ai-content-industrialization|熙熙·AI内容工业化生产：从手工作坊到工业化生产线的六阶段演进]]
 - [[yitang-ai-director-method|王欢·AI导演方法论：从演员到导演的六阶段实操体系]]
 - [[user-pain-points|用户痛点发现方法论]]
 - [[yitang-huazong-ama-cost-ai-landing|花总AMA｜商业突破大航海 — 成本与AI落地]]
