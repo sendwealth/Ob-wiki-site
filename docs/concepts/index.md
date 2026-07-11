@@ -1,6 +1,6 @@
 # 概念
 
-共 82 篇。
+共 83 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -67,6 +67,7 @@
 - [[yitang-business-formula|yitang-business-formula]]
 - [[yitang-ai-data-first-lesson|一堂AI数据第一课（Live251）— ADAPTED 6+1 模型]]
 - [[yitang-dual-triangle|一堂双三角（Live254）]]
+- [[yitang-cd-loop|一堂落地之夜第255场：业务公式 × 转化率（C×D）实战循环]]
 - [[yitang-advanced-modeling|一堂高阶建模第一课（Live253）]]
 - [[experience-extraction-agent|业务流程经验萃取（Coco Agent）]]
 - [[yitang-ai-tools-workflow-ama|于陆：AI工具×工作流疑难问答｜商业突破大航海]]

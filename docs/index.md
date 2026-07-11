@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-07-07
+updated: 2026-07-11
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-07 | Total pages: 135
+> Last updated: 2026-07-11 | Total pages: 136
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -103,6 +103,7 @@ tags: [index]
 - [[yitang-advanced-modeling]] — 一堂高阶建模第一课（Live253）：三阶建模体系（流程→抽象→本质）、千人广场模型、六步建模工作流、十年爬山地图
 - [[yitang-dual-triangle]] — 一堂双三角（Live254，公司级背书）：人类三角（审美/体系/创造力）× AI三角（场景/数据/基本功），五步推导飞轮与AI原生本质，三阶六变落地场景（X光/心法/画布/拼图/地图/底牌）
 - [[yitang-business-formula]] — 一堂业务公式拆解（孔源）：三个条件（看得清/想得透/做得准）、四个认知突破、参数冰山L1-L6、先切分再转化、+ vs ×
+- [[yitang-cd-loop]] — 一堂落地之夜第255场（Live255）：业务公式(C)×转化率(D)循环方法论，三个行业实战复盘（叶文彬·射箭馆四关模型/董原·少儿舞蹈续班率/谢泽丰·服装店二次试穿）
 
 - [[threejs-game-skills]] — 9 个 AI Agent 游戏开发技能包，让 Codex/Claude Code 从零构建 AAA 级 3D 网页游戏（导演路由 + 10 维度评分卡 + Tripo/Gemini/ElevenLabs 集成）
 - [[leaferjs]] — 国产开源 Canvas 2D 渲染引擎 + UI 框架：百万级图形 + 局部渲染 + 内置编辑器，适合 AI 无限画布/图形编辑器/组态可视化

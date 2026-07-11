@@ -514,6 +514,12 @@ tags: [log]
 - **修正**: entities/flowise.md 原写「无多租户」「单进程不依赖 Redis」「生产级功能较少」——v3.1.3 实际已有企业多租户、BullMQ 可选队列、MCP/Agent/评估等生产级能力，已更新
 - **关联**: [[flowise]], [[langflow-architecture]], [[langflow]], [[dify]], [[langchain]], [[lobechat-architecture]], [[ai-workflow-landscape]]
 
+## 2026-07-11 — 一堂落地之夜第255场（C×D 实战循环）
+
+- **yitang-cd-loop.md** — 一堂「落地之夜第六场」学习笔记（concepts/）。来源：yitang.top fs-doc Playwright 抓取 + 累积式正文提取（解决飞书文档虚拟化导致正文不全）。核心：业务公式(C)找战场 × 转化率(D)打节点的循环方法论（D打不动→退回C重找参数→回D打穿），配三个操盘手复盘——叶文彬·射箭馆（四关模型16字口诀/回流礼品卡/七环裂变乘法/科学型组织四步）、董原·少儿舞蹈学校（续班率从「相关当因果」的坑→业务公式拆出新生×新老师分层参数）、谢泽丰·服装店（线下数人头建数据闭环→创新参数「二次试穿」转化率11%→18%→Magic Number音量80→假设驱动管理）。含可迁移 Checklist 与 YAI 两个教练工具。
+- **raw/yitang/落地之夜第255场-原文整理.md** — 抓取到的干净全文（约 5.8 万字，176KB）。
+- 关联 [[yitang-business-formula]]、[[yitang-dual-triangle]]、[[yitang-ai-data-first-lesson]]、[[raw/yitang/落地之夜第255场-原文整理]]
+
 ---
 
 ## 远程历史条目（origin/main）
