@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-11 | Total pages: 137
+> Last updated: 2026-07-12 | Total pages: 138
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -43,6 +43,7 @@ tags: [index]
 - [[automaton]] — 自给自足主权 AI 运行时（Conway Research）：67K 行 TS，有自己的以太坊钱包/赚 USDC/付服务器费/改源码/繁殖后代，生存分级决定模型档位，三层宪法 + 六层防御
 - [[agno-documentation-system]] — Agno 五层文档体系：外部文档站 + Cookbook 可运行示例 + AI Agent 指令层 + CI 强制门禁
 - [[agentic-rag]] — Agentic RAG 代理式检索增强生成：概念、框架、架构、生态
+- [[superagent]] — SuperAgent 长时域智能体架构：编排层 + 沙箱 + 三层记忆 + 技能市场 + 工具中心 + 消息网关，子代理并行协作跑小时级长任务（参考 deer-flow）
 - [[multica-runtime-discovery]] — Multica Runtime 发现机制：CLI 探测、注册、心跳、健康状态、自动恢复
 - [[adk-multica-http-runtime]] — ADK Agent 以 HTTP 服务接入 Multica Runtime 体系的完整集成方案
 - [[oscar-research-methodology]] — OSCAR调研五步法 + 18张卡牌

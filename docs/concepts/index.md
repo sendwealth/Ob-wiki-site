@@ -1,6 +1,6 @@
 # 概念
 
-共 84 篇。
+共 85 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -49,6 +49,7 @@
 - [[roi-decision-framework|ROI科学决策方法论]]
 - [[skill-architect-methodology|Skill 架构师方法论（一堂·贾老师/子莫先生）]]
 - [[skill-self-evolution|Skill 自进化闭环：darwin-skill × skill-evolver × EmbodiSkill]]
+- [[superagent|SuperAgent 长时域智能体架构]]
 - [[temporal-durability-stability|Temporal 稳定性与持久性实现机制分析]]
 - [[zed-agent-modular-design|Zed Agent 系统模块化设计分析]]
 - [[zed-documentation-system|Zed 文档管理体系]]
