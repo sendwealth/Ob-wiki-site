@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-07-11
+updated: 2026-07-12
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-12 | Total pages: 139
+> Last updated: 2026-07-12 | Total pages: 140
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -121,6 +121,8 @@ tags: [index]
 - [[ai-prototype-design-cross-domain]] — Bill·跨行业新手用AI做交互原型：双三角模型（AI三角诊断+人类三角创造力补审美），提示词迭代V01→V05，拉升审美三招（AI萃取建模/换助理对比/组织AI评审），核心"审美是人类能力AI无法替代但可间接拉升"（一堂专家分享）
 - [[skill-architect-methodology]] — 贾老师·Skill架构师方法论：写不好Skill的根源是"把Skill当提示词模板（写知识非程序）"，五层架构（触发/角色/原则含反例/流程含检查点/资源）+7步创建法则+100分审查制，"每条原则必须有反例"+"让AI无法做错的系统"（一堂专家分享）
 - [[yitang-ai-content-industrialization]] — 熙熙·AI内容工业化生产：从手工作坊到工业化生产线六阶段演进（借假修真/双三角落地/写稿8步工作流/飞书多维表格闭环）（一堂专家分享）
+
+- [[codex-ai-ppt-fangzhenyi]] — 方振义(Lester)·用 Codex 做 PPT：HTML 版 PPT（guizang-ppt-skill）八步工作流 + Image 版 PPT（GPT Image 2/Image Gen）六步工作流，对比两条 AI 做 PPT 路线，映射一堂双三角（一堂专家分享）
 
 ## Comparisons
 - [[truth-verification-competitors]] — 真实性验证平台竞品全景对比
