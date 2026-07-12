@@ -1,6 +1,6 @@
 # 实体
 
-共 73 篇。
+共 74 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -70,6 +70,7 @@
 - [[zenml|ZenML]]
 - [[ai-job-search|ai-job-search]]
 - [[awesome-design-md|awesome-design-md]]
+- [[deer-flow|deer-flow]]
 - [[gstack|gstack — Garry Tan 的 AI 软件工厂]]
 - [[llama-cpp|llama.cpp]]
 - [[n8n|n8n]]

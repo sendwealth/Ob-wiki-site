@@ -82,9 +82,11 @@ confidence: medium
 > - 多 Agent 通信协议见 [[a2a-protocol]]；
 > - 全闭环编排思路可对照 [[multica-loop-agent]]；
 > - 记忆 / 检索增强可参考 [[agentic-rag]]；
-> - 沙箱隔离技术可对照 [[openshell]]、[[agent-sandbox]]、[[polos]]。
+> - 沙箱隔离技术可对照 [[openshell]]、[[agent-sandbox]]、[[polos]]；
+> - **最贴近的真实开源实现见 [[deer-flow]]**（字节跳动 Super Agent Harness，已克隆至 `~/Projects/deer-flow` 并做了源码级架构分析；其营销文章有多处夸大，需以代码为准）。
 
 ## Wikilinks
+- [[deer-flow]]
 - [[a2a-protocol]]
 - [[multica-loop-agent]]
 - [[agentic-rag]]
