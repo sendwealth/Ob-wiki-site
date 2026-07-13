@@ -1,6 +1,6 @@
 # 实体
 
-共 74 篇。
+共 75 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -15,6 +15,7 @@
 - [[bitnet|BitNet (bitnet.cpp)]]
 - [[blitz|Blitz]]
 - [[cc-wf-studio|CC Workflow Studio]]
+- [[caveman|Caveman (caveman skill)]]
 - [[chatdev|ChatDev (DevAll)]]
 - [[claude-code-game-studios|Claude Code Game Studios — 单会话虚拟游戏工作室]]
 - [[codegraph|CodeGraph — AI 编码助手的预索引代码知识图谱]]

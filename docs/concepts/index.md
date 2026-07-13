@@ -1,6 +1,6 @@
 # 概念
 
-共 86 篇。
+共 87 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -72,6 +72,7 @@
 - [[yitang-advanced-modeling|一堂高阶建模第一课（Live253）]]
 - [[experience-extraction-agent|业务流程经验萃取（Coco Agent）]]
 - [[yitang-ai-tools-workflow-ama|于陆：AI工具×工作流疑难问答｜商业突破大航海]]
+- [[opensource-project-practices-from-caveman|从 Caveman 项目学习开源分发与运营实践]]
 - [[opensource-project-practices-from-langflow|从 Langflow 项目学习开源开发维护实践]]
 - [[opensource-project-practices-from-multica|从 Multica 项目学习开源开发维护实践]]
 - [[opensource-practices-from-open-design|从 Open Design 学习开源项目实践]]

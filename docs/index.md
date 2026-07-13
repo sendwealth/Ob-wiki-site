@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-12 | Total pages: 140
+> Last updated: 2026-07-13 | Total pages: 142
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -31,6 +31,7 @@ tags: [index]
 - [[openshell]] — NVIDIA 开源 AI Agent 安全沙箱平台：Rust 16 crate workspace、多层隔离（Landlock+seccomp+namespace+OPA）、4 计算驱动、Z3 形式化验证、OCSF 日志
 - [[agno-docs-site]] — Agno 官方文档站源码（agno-agi/docs）：Mintlify 构建，3927 MDX 页面，7 导航 Tab，95+ 可复用 Snippet，严格风格指南
 - [[ecc]] — 197K⭐ 跨 harness AI 代理优化系统（ECC），63 agents + 249 skills + 12 语言生态，覆盖 Claude Code/Codex/Cursor/Gemini 等
+- [[caveman]] — 面向 30+ AI 编码代理的"省 token"技能包：提示词约束压缩输出 65%，hook 自动开启，MIT，零遥测
 - [[nuwax]] — AI Agent 全生命周期管理平台前端（React 18 + Umi.js），40+ 页面、Web IDE、工作流编辑器、MCP 市场、订阅支付
 - [[agents-cli]] — Google 官方 CLI + Skills 工具链，为编码 Agent 提供 ADK Agent 构建/评估/部署全生命周期（v0.2.1，Pre-GA）
 - [[superpowers]] — AI 编码 Agent 行为塑造技能插件（零依赖），14 技能 + Hook 自动注入，TDD/系统化调试/协作设计等强制工程流程
@@ -66,6 +67,7 @@ tags: [index]
 - [[opensource-project-practices-from-multica]] — 从 Multica 学习开源项目实践：monorepo 治理、CI 漂移防护、API 兼容性、Worktree 隔离
 - [[openhuman-architecture]] — OpenHuman 技术架构：Rust核心 + React/Tauri壳、事件总线、域驱动设计、控制器注册表、进程内运行模型
 - [[opensource-project-practices-from-openhuman]] — 从 OpenHuman 学习开源实践：三路覆盖率硬门、Agent调试工具链、双语言栈CI、文档即规范、CEF零注入安全
+- [[opensource-project-practices-from-caveman]] — 从 Caveman 学习开源分发与运营：跨 harness 原生分发、单一 Node 安装器、诚实营销、零遥测、生态矩阵
 - [[openhuman-highlights]] — OpenHuman 十大技术亮点：TokenJuice 压缩、零序列化事件总线、声明式RPC注册表、分层记忆树、智能模型路由、协作式节流、进程内生命周期、Legacy双写、隐私功能目录、Composio代理集成
 
 - [[gstack-sprint-flow]] — gstack 冲刺流程：Think → Plan → Build → Review → Test → Ship → Reflect

@@ -1,12 +1,18 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-07
+updated: 2026-07-13
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-13: 新增 `entities/caveman.md` — Caveman 项目深度调研（GitHub JuliusBrussee/caveman，88.9K⭐，v1.9.1，MIT）。覆盖：定位（面向 30+ AI 编码代理的"省 token"技能包，压缩代理"说"的内容而非"知道"的内容）、技术架构（提示词约束层 + Claude Code/Codex/Gemini hook 自动写 flag 文件开启 + 命令集 /caveman[级别]/commit/review/stats/compress + caveman-shrink MCP 中间件 + cavecrew-* 子代理 + lite/full/ultra/wenyan 六级 + 安装器 shim 收敛为单一 Node 脚本 bin/install.js 防双线漂移 issue#249）、指标（输出 token 平均 -65%，区间 22–87%，caveman-compress 记忆文件 -46% 输入）、隐私（零遥测零后端）、生态矩阵（caveman-code/cavemem/cavekit/cavegemma + skills 合集）。核心洞察：**提示词即产品、跨 harness 用原生扩展点分发、诚实营销建立信任**。更新 `index.md`（+1 entity、页数 140→141）。confidence: high。
+- 关联 [[ecc]]、[[superpowers]]、[[context-mode]]、[[opensource-project-practices-from-caveman]]
+
+- 2026-07-13: 新增 `concepts/opensource-project-practices-from-caveman.md` — 从 Caveman 学习开源分发与运营实践。覆盖：跨 harness 原生分发（Claude Code plugin marketplace / Gemini extension / npx skills registry / OpenClaw SOUL.md 注入，不发明新格式）、跨平台安装器（shell/ps1 退化为 shim，真逻辑单一 Node 脚本防漂移）、诚实营销（HONEST-NUMBERS.md + 可复现 benchmarks/evals，主动暴露整会话可能净负）、隐私即卖点（零遥测写进 SECURITY.md）、文档即治理（CLAUDE.md 维护者指南 + 完整治理文件）、生态矩阵（一个洞察拆多个独立可组合 repo + 合集）、赞助而非付费墙（GitHub Sponsors + Caveman 2 SaaS）。更新 `index.md`（+1 concept、页数 141→142）。confidence: high。
+- 关联 [[caveman]]、[[opensource-project-practices-from-multica]]、[[opensource-project-practices-from-openhuman]]
 
 - 2026-07-11: 新增 `concepts/yitang-ai-content-industrialization.md` + `raw/yitang/ai-content-industrialization-xixi-原文整理.md` — 熙熙（孙熙霁）·AI 内容工业化生产。来源：一堂飞书 Wiki（截图 + macOS Vision OCR，30935字，正文图片型渲染）。覆盖：借假修真（用小红书练 AI 内容工业化能力）、内容工业化定义（面对高度不确定的工作持续高质量交付）、六阶段演进（手工作坊→WorkBuddy 写稿 agent→接一堂知识库 YAI→Codex 进项目→多 partner 工位裂变→飞书多维表格选题-创作-复盘-回流闭环）、底层范式一堂双三角、三大核心方法论（焦糖布丁 JTBD 选题法/爆炸式研究建审美/审美六看+What-How-Why 分层）、写稿 8 步工作流、避雷清单。核心洞察：**内容工业化本质=批量消灭不确定性；工具升级≠系统升级，真正决定结果的因是双三角这个系统；把隐性判断显性化（蒸馏老手）才能工业化**。更新 `index.md`（+1 concept、+1 raw、页数 136→137）。
 - 关联 [[yitang-dual-triangle]]、[[content-growth-loop]]、[[kecheng-to-ai-tool]]
