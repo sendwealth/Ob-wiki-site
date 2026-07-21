@@ -1,6 +1,6 @@
 # 实体
 
-共 80 篇。
+共 82 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -38,6 +38,7 @@
 - [[adk-python|Google ADK (Agent Development Kit) Python]]
 - [[agents-cli|Google Agents CLI]]
 - [[graphify|Graphify — 代码知识图谱生成器]]
+- [[jina-reader|Jina Reader: 极简 URL→LLM 友好输入服务]]
 - [[kagent|Kagent — Kubernetes 原生 AI Agent 框架]]
 - [[kestra|Kestra]]
 - [[kubeflow|Kubeflow]]
@@ -63,6 +64,7 @@
 - [[polos|Polos]]
 - [[prefect|Prefect]]
 - [[ruflo|Ruflo — Multi-Agent AI Orchestration Platform]]
+- [[scrapegraph|ScrapeGraphAI: 基于 LangChain 的 LLM 驱动爬虫流水线]]
 - [[slack|Slack 深度研究笔记]]
 - [[snopes|Snopes]]
 - [[stripe-hosted-checkout|Stripe Hosted Checkout]]

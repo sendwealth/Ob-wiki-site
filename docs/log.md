@@ -8,6 +8,12 @@ tags: [log]
 
 # Wiki Log
 
+- 2026-07-22: 新增 `entities/scrapegraph.md` — ScrapeGraphAI 基于 LangChain 的 LLM 驱动爬虫流水线深度解析。来源：GitHub 官方仓库（ScrapeGraphAI/Scrapegraph-ai）+ 核心源码（scrapegraphai/graphs/、nodes/、docloaders/）。覆盖：产品定位（You Only Scrape Once，自然语言描述→自动爬虫流水线）、核心能力（SmartScraper/SearchGraph/SpeechGraph/OmniScraper/多模态/ScriptCreator/MultiGraph/Markdownify/Screenshot）、架构（AbstractGraph/BaseGraph 图执行引擎、节点模型、SmartScraperGraph 流水线 Fetch→Parse→GenerateAnswer、ChromiumLoader、LLM 集成、RAGNode、提示词模板、遥测）、关键实现（自然语言→结构化数据、schema 约束、搜索增强、多模态）、商业模式、与 Firecrawl/Crawl4AI/Browser-Use 对比。关键洞察：**LangChain Graph 节点模型 + 自然语言接口 + schema 约束输出** 是 ScrapeGraphAI 的鲜明特色。更新 `index.md`（+1 entity，页数 149→150）。confidence: high。
+- 关联 [[firecrawl]]、[[crawl4ai]]、[[browser-use]]、[[jina-reader]]、[[web-data-api-comparison]]、[[llm-ready-data]]、[[ai-agent-ecosystem]]
+
+- 2026-07-22: 新增 `entities/jina-reader.md` — Jina Reader 极简 URL→Markdown 服务深度解析。来源：GitHub 官方仓库（jina-ai/reader）+ 核心源码（src/api/crawler.ts、searcher.ts、services/）。覆盖：产品定位（Your LLMs deserve better input，r.jina.ai / s.jina.ai）、核心能力（Read URL→Markdown、Search、PDF/Office 解析、VLM、ReaderLM、Chunking、Preset）、架构（Koa HTTP/2 服务、tsyringe 依赖注入、civkit 框架、Crawl/Search 独立入口、抓取双引擎 Puppeteer/curl-impersonate、页面快照、Markify 自定义 Markdown 转换、搜索实现、CrawlerOptions 枚举、存储层、安全合规）、关键实现（极简 URL 前缀、ReaderLM、PDF/Office、Preset 预设）、商业模式、与竞品对比。关键洞察：**极简接口 + 双引擎 + 自研 ReaderLM + 无状态开源** 是 Jina Reader 的护城河。更新 `index.md`（+1 entity，页数 150→151）。confidence: high。
+- 关联 [[firecrawl]]、[[crawl4ai]]、[[scrapegraph]]、[[browser-use]]、[[web-data-api-comparison]]、[[llm-ready-data]]、[[ai-agent-ecosystem]]
+
 - 2026-07-22: 新增 `entities/crawl4ai.md` — Crawl4AI 开源 LLM 友好型 Web 爬虫框架深度解析。来源：GitHub 官方仓库（unclecode/crawl4ai）+ 核心源码（crawl4ai/ 目录）。覆盖：产品定位（可嵌入 Python 库 + Docker 服务）、核心能力（arun/arun_many/Deep Crawl/Markdown 生成/LLM 与 CSS/XPath 抽取/内容过滤/表格与 PDF 提取/Docker API/监控面板）、架构（配置驱动策略模式：BrowserConfig/CrawlerRunConfig/LLMConfig/SeedingConfig/ProxyConfig/DomainMapperConfig、AsyncCrawlerStrategy、ContentScrapingStrategy、ExtractionStrategy、MarkdownGenerationStrategy、ContentFilterStrategy、ChunkingStrategy、Dispatcher、DeepCrawlStrategy、CacheContext、DockerClient）、关键实现（策略模式、自适应调度、BFS/DFS/Best-First 深度爬取、DomainMapper 安全、Docker API 安全强化）、商业模式、与 Firecrawl 对比。关键洞察：**策略模式 + 配置驱动 + 安全默认** 是 Crawl4AI 的核心设计哲学。更新 `index.md`（+1 entity，页数 147→148）。confidence: high。
 - 关联 [[firecrawl]]、[[browser-use]]、[[web-data-api-comparison]]、[[llm-ready-data]]、[[ai-agent-ecosystem]]
 
