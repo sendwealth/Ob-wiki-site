@@ -9,9 +9,10 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-21 | Total pages: 144
+> Last updated: 2026-07-22 | Total pages: 147
 
 ## Entities
+- [[firecrawl]] — Firecrawl 开源 Web 数据 API：search/scrape/crawl/map/interact 多引擎瀑布，154k+ Stars，LLM-ready 输出
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
 - [[agno]] — 全栈 AI Agent 平台 SDK（Python），40.4K Stars，50+ 模型供应商，100+ 工具，20+ 向量数据库，内置生产运行时
 - [[gstack]] — Garry Tan (YC CEO) 的开源 AI 软件工厂，18 人虚拟工程团队
@@ -127,6 +128,7 @@ tags: [index]
 - [[codex-ai-ppt-fangzhenyi]] — 方振义(Lester)·用 Codex 做 PPT：HTML 版 PPT（guizang-ppt-skill）八步工作流 + Image 版 PPT（GPT Image 2/Image Gen）六步工作流，对比两条 AI 做 PPT 路线，映射一堂双三角（一堂专家分享）
 
 ## Comparisons
+- [[web-data-api-comparison]] — Web 数据 API 竞品对比：Firecrawl vs Crawl4AI vs ScrapeGraphAI vs Jina Reader
 - [[truth-verification-competitors]] — 真实性验证平台竞品全景对比
 - [[leetcode-ai-tutor-competitors]] — AI 算法刷题教练竞品调研
 - [[ruflo-vs-gstack]] — Ruflo vs gstack：基础设施 vs 工作流

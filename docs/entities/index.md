@@ -1,6 +1,6 @@
 # 实体
 
-共 77 篇。
+共 78 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -27,6 +27,7 @@
 - [[dribbble|Dribbble]]
 - [[ecc|ECC (Everything Claude Code)]]
 - [[fast-gpt|FastGPT]]
+- [[firecrawl|Firecrawl: 开源 Web 数据 API 深度解析]]
 - [[fiverr|Fiverr]]
 - [[flowise|Flowise]]
 - [[flyte|Flyte]]

@@ -1,12 +1,24 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-13
+updated: 2026-07-22
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-22: 新增 `entities/firecrawl.md` — Firecrawl 开源 Web 数据 API 深度解析。来源：GitHub 官方仓库（firecrawl/firecrawl）+ 核心源码（apps/api/src/）+ 官方文档。覆盖：产品定位（Web Context API）、核心能力（Search/Scrape/Crawl/Map/Batch/Interact/Agent/Extract）、Monorepo 架构（apps/api 主 API + 9 语言 SDK + 前端 + Playwright/Go/Rust 服务）、核心源码（controllers/routes/scraper/search/services/lib）、多引擎瀑布（x-twitter/wikipedia/index/fire-engine/playwright/fetch/document/pdf/exchange）、请求处理流水线（鉴权→威胁防护→robots→引擎→后处理→转换器）、HTML→Markdown 实现（Go 共享库 + Rust 辅助）、LLM 抽取与 Agent 架构、队列与 worker（BullMQ/NuQ）、搜索与 Crawl/Map 实现、自部署与 Cloud 分层。关键洞察：**多引擎瀑布 + LLM-ready 统一输出 + MCP/Skill/CLI 三层 Agent 接入** 是 Firecrawl 的核心护城河。更新 `index.md`（+1 entity，页数 144→145）。confidence: high。
+- 关联 [[ai-workflow-landscape]]、[[browser-use-architecture]]、[[ai-agent-ecosystem]]、[[llm-ready-data]]
+
+- 2026-07-22: 新增 `comparisons/web-data-api-comparison.md` — Web 数据 API 竞品对比。来源：GitHub API + README + 核心源码。覆盖：7 款产品（Firecrawl / Crawl4AI / ScrapeGraphAI / Jina Reader / Browser-Use / Apify+Crawlee / Browserless）分类、核心指标对比表、各产品详细优劣势、选型建议、对探真/国内项目的 5 条启示。更新 `index.md`（+1 comparison，页数 145→146）。confidence: high。
+- 关联 [[firecrawl]]、[[browser-use-architecture]]、[[ai-workflow-landscape]]、[[ai-agent-ecosystem]]、[[truth-verification-competitors]]
+
+- 2026-07-22: 新增 `concepts/ai-agent-ecosystem.md` — AI Agent 生态概览（stub）。定位 Agent 框架、编排平台、工具协议、能力层、基础设施五层结构。更新 `index.md`（+1 concept，页数 146→147）。confidence: medium。
+- 关联 [[firecrawl]]、[[browser-use-architecture]]、[[a2a-protocol]]、[[mcp-native]]（待补充）
+
+- 2026-07-22: 新增 `concepts/llm-ready-data.md` — LLM-ready 数据概念（stub）。定义 Markdown/JSON 结构化、token 友好、可追溯数据。更新 `index.md`（+1 concept）。confidence: medium。
+- 关联 [[firecrawl]]、[[web-data-api-comparison]]
 
 - 2026-07-13: 新增 `entities/caveman.md` — Caveman 项目深度调研（GitHub JuliusBrussee/caveman，88.9K⭐，v1.9.1，MIT）。覆盖：定位（面向 30+ AI 编码代理的"省 token"技能包，压缩代理"说"的内容而非"知道"的内容）、技术架构（提示词约束层 + Claude Code/Codex/Gemini hook 自动写 flag 文件开启 + 命令集 /caveman[级别]/commit/review/stats/compress + caveman-shrink MCP 中间件 + cavecrew-* 子代理 + lite/full/ultra/wenyan 六级 + 安装器 shim 收敛为单一 Node 脚本 bin/install.js 防双线漂移 issue#249）、指标（输出 token 平均 -65%，区间 22–87%，caveman-compress 记忆文件 -46% 输入）、隐私（零遥测零后端）、生态矩阵（caveman-code/cavemem/cavekit/cavegemma + skills 合集）。核心洞察：**提示词即产品、跨 harness 用原生扩展点分发、诚实营销建立信任**。更新 `index.md`（+1 entity、页数 140→141）。confidence: high。
 - 关联 [[ecc]]、[[superpowers]]、[[context-mode]]、[[opensource-project-practices-from-caveman]]

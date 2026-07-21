@@ -1,6 +1,6 @@
 # 对比
 
-共 7 篇。
+共 8 篇。
 
 - [[ai-workflow-landscape|AI Workflow 开源项目全景调研]]
 - [[ai-workflow-deep-comparison|AI Workflow 开源项目深度对比分析]]
@@ -8,4 +8,5 @@
 - [[gstack-vs-gbrain-vs-ruflo|Garry Tan AI 工具三件套对比]]
 - [[kubernetes-agent-platforms|Kubernetes 原生 AI Agent 管理平台竞品对比]]
 - [[ruflo-vs-gstack|Ruflo 与 gstack 对比]]
+- [[web-data-api-comparison|Web 数据 API 竞品对比：Firecrawl vs Crawl4AI vs ScrapeGraphAI vs Jina Reader]]
 - [[truth-verification-competitors|真实性验证平台竞品对比]]

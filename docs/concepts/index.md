@@ -1,12 +1,13 @@
 # 概念
 
-共 87 篇。
+共 89 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
 - [[acp-protocol|ACP (Agent Client Protocol) 深度技术参考]]
 - [[adapted-6plus1-rss-obsidian-kb|ADAPTED 6+1 AI 知识库方法论（一堂·徐聪）]]
 - [[adk-multica-http-runtime|ADK Agent ↔ Multica HTTP Runtime 集成方案]]
+- [[ai-agent-ecosystem|AI Agent 生态概览]]
 - [[ai-short-drama-workflow|AI 短剧工作流封装]]
 - [[ai-design-fundamentals-yitang|AI设计基本功 Part2（一堂Live76）]]
 - [[agent-world|Agent World — 智能体世界项目设计]]
@@ -30,6 +31,7 @@
 - [[kagent-crd-limitations|Kagent CRD 能力边界分析]]
 - [[kagent-documentation-system|Kagent 文档体系深度分析]]
 - [[kubernetes-crd|Kubernetes CRD (Custom Resource Definition)]]
+- [[llm-ready-data|LLM-ready 数据：概念与实践]]
 - [[lm-evaluation-harness|LM Evaluation Harness — 评估框架与最佳实践]]
 - [[langflow-architecture|Langflow 项目架构分析]]
 - [[lobechat-multi-agent-architecture|LobeChat 多智能体协作架构]]
