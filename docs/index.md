@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-21 | Total pages: 143
+> Last updated: 2026-07-21 | Total pages: 144
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -146,6 +146,7 @@ tags: [index]
 - [[newsguard]] — B2B媒体可靠性评级，年费$10万+
 - [[snopes]] — 最老牌事实核查网站（1994）
 - [[tanzhen]] — 探真：悬赏验证交易平台
+- [[openbb]] — OpenBB 开源金融数据平台：统一接入金融数据源，同时输出 Python SDK / REST API / MCP Server / Excel / Workspace
 - [[x-community-notes]] — X社区笔记，无偿众包核查
 - [[china-rumor-platform]] — 中国互联网联合辟谣平台
 - [[awesome-design-md]] — VoltAgent 维护的 73 个现成 DESIGN.md 集合（75K+ ⭐）
