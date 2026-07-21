@@ -8,6 +8,12 @@ tags: [log]
 
 # Wiki Log
 
+- 2026-07-22: 新增 `entities/crawl4ai.md` — Crawl4AI 开源 LLM 友好型 Web 爬虫框架深度解析。来源：GitHub 官方仓库（unclecode/crawl4ai）+ 核心源码（crawl4ai/ 目录）。覆盖：产品定位（可嵌入 Python 库 + Docker 服务）、核心能力（arun/arun_many/Deep Crawl/Markdown 生成/LLM 与 CSS/XPath 抽取/内容过滤/表格与 PDF 提取/Docker API/监控面板）、架构（配置驱动策略模式：BrowserConfig/CrawlerRunConfig/LLMConfig/SeedingConfig/ProxyConfig/DomainMapperConfig、AsyncCrawlerStrategy、ContentScrapingStrategy、ExtractionStrategy、MarkdownGenerationStrategy、ContentFilterStrategy、ChunkingStrategy、Dispatcher、DeepCrawlStrategy、CacheContext、DockerClient）、关键实现（策略模式、自适应调度、BFS/DFS/Best-First 深度爬取、DomainMapper 安全、Docker API 安全强化）、商业模式、与 Firecrawl 对比。关键洞察：**策略模式 + 配置驱动 + 安全默认** 是 Crawl4AI 的核心设计哲学。更新 `index.md`（+1 entity，页数 147→148）。confidence: high。
+- 关联 [[firecrawl]]、[[browser-use]]、[[web-data-api-comparison]]、[[llm-ready-data]]、[[ai-agent-ecosystem]]
+
+- 2026-07-22: 新增 `entities/browser-use.md` — Browser-Use 开源 AI 浏览器自动化 Agent 深度解析。来源：GitHub 官方仓库（browser-use/browser-use）+ 核心源码（browser_use/ 目录）。覆盖：产品定位（让网站对 AI Agent 可访问）、核心能力（自然语言任务/浏览器操作/多标签/截图/文件系统/结构化输出/裁判系统/消息压缩/Skills/MCP）、架构（Agent 主循环/事件驱动 BrowserSession/CDP/AX+DOM 双树/DomService/工具系统 Tools/MessageManager/系统提示词/Watchdog/裁判系统/变量复用/多模型封装）、关键实现（视觉模式、Flash 模式、Skills、MCP、遥测）、商业模式、与 Firecrawl/Crawl4AI 对比。关键洞察：**事件驱动浏览器 + 结构化动作输出 + 消息压缩 + 裁判系统** 是 Browser-Use  autonomy 的核心。更新 `index.md`（+1 entity，页数 148→149）。confidence: high。
+- 关联 [[browser-use-architecture]]、[[browser-use-highlights]]、[[firecrawl]]、[[crawl4ai]]、[[web-data-api-comparison]]、[[ai-agent-ecosystem]]
+
 - 2026-07-22: 新增 `entities/firecrawl.md` — Firecrawl 开源 Web 数据 API 深度解析。来源：GitHub 官方仓库（firecrawl/firecrawl）+ 核心源码（apps/api/src/）+ 官方文档。覆盖：产品定位（Web Context API）、核心能力（Search/Scrape/Crawl/Map/Batch/Interact/Agent/Extract）、Monorepo 架构（apps/api 主 API + 9 语言 SDK + 前端 + Playwright/Go/Rust 服务）、核心源码（controllers/routes/scraper/search/services/lib）、多引擎瀑布（x-twitter/wikipedia/index/fire-engine/playwright/fetch/document/pdf/exchange）、请求处理流水线（鉴权→威胁防护→robots→引擎→后处理→转换器）、HTML→Markdown 实现（Go 共享库 + Rust 辅助）、LLM 抽取与 Agent 架构、队列与 worker（BullMQ/NuQ）、搜索与 Crawl/Map 实现、自部署与 Cloud 分层。关键洞察：**多引擎瀑布 + LLM-ready 统一输出 + MCP/Skill/CLI 三层 Agent 接入** 是 Firecrawl 的核心护城河。更新 `index.md`（+1 entity，页数 144→145）。confidence: high。
 - 关联 [[ai-workflow-landscape]]、[[browser-use-architecture]]、[[ai-agent-ecosystem]]、[[llm-ready-data]]
 

@@ -9,10 +9,12 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-22 | Total pages: 147
+> Last updated: 2026-07-22 | Total pages: 149
 
 ## Entities
 - [[firecrawl]] — Firecrawl 开源 Web 数据 API：search/scrape/crawl/map/interact 多引擎瀑布，154k+ Stars，LLM-ready 输出
+- [[crawl4ai]] — Crawl4AI 开源 LLM 友好型 Python 爬虫框架：策略驱动配置、Deep Crawl、LLM 抽取、Docker 服务
+- [[browser-use]] — Browser-Use 开源 AI 浏览器自动化 Agent：自然语言操作网页、CDP/Playwright、MCP 支持
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
 - [[agno]] — 全栈 AI Agent 平台 SDK（Python），40.4K Stars，50+ 模型供应商，100+ 工具，20+ 向量数据库，内置生产运行时
 - [[gstack]] — Garry Tan (YC CEO) 的开源 AI 软件工厂，18 人虚拟工程团队

@@ -1,6 +1,6 @@
 # 实体
 
-共 78 篇。
+共 80 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -15,11 +15,13 @@
 - [[automaton|Automaton — 自给自足的主权 AI Agent 运行时]]
 - [[bitnet|BitNet (bitnet.cpp)]]
 - [[blitz|Blitz]]
+- [[browser-use|Browser-Use: AI 浏览器自动化 Agent]]
 - [[cc-wf-studio|CC Workflow Studio]]
 - [[caveman|Caveman (caveman skill)]]
 - [[chatdev|ChatDev (DevAll)]]
 - [[claude-code-game-studios|Claude Code Game Studios — 单会话虚拟游戏工作室]]
 - [[codegraph|CodeGraph — AI 编码助手的预索引代码知识图谱]]
+- [[crawl4ai|Crawl4AI: 开源 LLM 友好型 Web 爬虫与采集框架]]
 - [[crew-ai|CrewAI]]
 - [[dagster|Dagster]]
 - [[deer-flow|DeerFlow（字节跳动开源 Super Agent Harness）]]
