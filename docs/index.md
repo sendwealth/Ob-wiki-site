@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-13 | Total pages: 142
+> Last updated: 2026-07-21 | Total pages: 143
 
 ## Entities
 - [[agno-demo-os]] — Agno 官方多 Agent 演示系统：14 Agent + 9 Team + 5 Workflow + 3 多框架 Agent，覆盖 50+ 框架特性
@@ -136,6 +136,7 @@ tags: [index]
 - [[ai-workflow-deep-comparison]] — AI Workflow 开源项目深度对比分析（架构哲学、设计权衡、选型逻辑）
 
 ## Entities
+- [[agentspace]] — 开源 agent-native 协作 workspace：数字员工 + AgentRouter 归一 8 harness + 治理四件套（TS monorepo + PG，Apache-2.0）
 - [[temporal]] — Temporal：持久化执行平台，分布式 Workflow 编排（Go，源自 Uber Cadence）
 - [[multica]] — AI原生任务管理平台（开源 Linear + Agent 管理，Go + Next.js monorepo）
 - [[deer-flow]] — 字节跳动开源 Super Agent Harness（LangGraph+LangChain 重写 2.0）：lead_agent 编排 + 8 道 Middleware + 子代理并行 + 沙箱隔离 + 技能渐进加载 + 长期记忆 + IM 渠道

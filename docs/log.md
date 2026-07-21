@@ -604,3 +604,12 @@ tags: [log]
 - **内容**: 一堂Live254《重新理解AI双三角》。时隔八年第二次公司级背书（上一次 2018 创业五步法）。五步推导：人类三角（审美/体系/创造力）× AI三角（场景/数据/基本功）→ 整合成双三角 → 飞轮 → AI原生本质。关键论断"AI原生是结果不是因，双三角才是科学内核"（类比"年入千万是结果，五步法才是因"）。三阶六变落地场景：X光（拆解）/心法（口喷）/画布（筹备）/拼图（分工）/地图（训练）/底牌（战略）。十年爬山地图 L1-L5。Before/After 心态转变（AI PPT 案例：试遍 Gamma/SlideV/NotebookLM 都放弃 → 自建 Hermes + Feishu2Slide，3 人 + 10 Agent 跑 1000 页）。Feature 思维 vs Skill 思维预告。一堂版 FDE 设想。抓取方式：复用 browser-data Cookie + Playwright 全量截图（66 张）+ macOS Vision OCR（65780 字）
 - **来源**: [直播Live第254场](https://yitang.top/fs-doc/5aa0fe3427204946260cd88f38ed2bf7/NJbRdK0gfo6MQhx3uKjcZYchn9g)
 - **关联**: [[yitang-advanced-modeling]], [[roi-decision-framework]], [[yitang-ai-data-first-lesson]]
+
+---
+
+## 2026-07-21 · agentspace
+- **操作**: 创建 AgentSpace entity 页（深度学习本机 ~/Projects/AgentSpace 源码）
+- **文件**: entities/agentspace.md
+- **内容**: 开源 agent-native 协作 workspace（TS monorepo + PG，Apache-2.0）。核心理念「Agent 是员工不是工具」——数字员工有 identity/owner/skills/knowledge，可在组织内招募/共享/转移/审计。四大能力：调度（AgentRouter 归一 8 harness：Claude Code/Codex/Antigravity/OpenCode/OpenClaw/Hermes/Gemini/NanoBot）、能力共享（Digital Employee Board）、多 Agent 协作（频道/inbox/任务看板/runtime 产物）、治理（权限 control plane + TabTabTab 审批 + 三层预算 + audit_log）。架构 5 包 2 app：apps/web(Next.js 16 + React 19 Server Actions)、apps/cli(agent-space CLI + openagent-persona ed25519 签名)、@agent-space/domain(纯类型 runtime-agnostic)、@agent-space/db(PG schema v23 ~60 表 + schema-lock)、@agent-space/services(~40 领域服务)、agent-space-daemon(远端执行 + agent-router 子包)、@agent-space/sandbox(local+cube)。数据流：task queue(PG) → daemon poll → provider-runtime 组 AgentRouterRunRequest → spawn CLI → normalize JSONL events → runtime-output manifest + 统一 provider.* diagnostics → 写回 services/预算扣减/审批 bridge。7 大设计权衡：AgentRouter 是归一层非运行时(双路径技术债)、远端 daemon 解耦执行、domain 包 runtime-agnostic、PG-only + schema-lock、persona 默认脱敏、托管/自托管同源无功能差、治理优先于更聪明 chatbot。开源亮点：AgentRouter 跨 8 harness 统一执行契约 + 结构化 provider diagnostics + Digital Employee 一等公民 + OpenAgent persona-card 互操作(含 did:key) + 治理四件套全内置 + IM 集成治理不外泄(飞书已合并/Slack 测试) + TODO-as-design-log。对标 [[orloj]](架构表亲)/[[temporal]](queue 精神原型)/[[polos]](durable+HITL+沙箱)/[[kagent]]/[[multica]]/[[deer-flow]]
+- **来源**: [~/Projects/AgentSpace 源码](~/Projects/AgentSpace), [README](~/Projects/AgentSpace/README.md), [packages/daemon/README](~/Projects/AgentSpace/packages/daemon/README.md)
+- **关联**: [[orloj]], [[temporal]], [[polos]], [[kagent]], [[multica]], [[deer-flow]], [[zed-agent-architecture]]
