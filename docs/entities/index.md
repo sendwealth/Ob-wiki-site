@@ -1,6 +1,6 @@
 # 实体
 
-共 82 篇。
+共 83 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -82,5 +82,6 @@
 - [[gstack|gstack — Garry Tan 的 AI 软件工厂]]
 - [[llama-cpp|llama.cpp]]
 - [[n8n|n8n]]
+- [[slime|slime]]
 - [[china-rumor-platform|中国辟谣平台]]
 - [[tanzhen|探真产品设计]]
