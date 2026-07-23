@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-07-12
+updated: 2026-07-23
 tags: [index]
 ---
 
@@ -9,9 +9,10 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-22 | Total pages: 151
+> Last updated: 2026-07-23 | Total pages: 152
 
 ## Entities
+- [[slime]] — THUDM/Z.ai 开源 LLM 后训练 RL 框架（Megatron+SGLang+Ray），GLM-4.5~5.2 官方训练基础设施，SGLang-native 透传设计
 - [[firecrawl]] — Firecrawl 开源 Web 数据 API：search/scrape/crawl/map/interact 多引擎瀑布，154k+ Stars，LLM-ready 输出
 - [[crawl4ai]] — Crawl4AI 开源 LLM 友好型 Python 爬虫框架：策略驱动配置、Deep Crawl、LLM 抽取、Docker 服务
 - [[browser-use]] — Browser-Use 开源 AI 浏览器自动化 Agent：自然语言操作网页、CDP/Playwright、MCP 支持

@@ -1,12 +1,16 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-22
+updated: 2026-07-23
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-23: 新增 `entities/slime.md` — slime 开源 LLM 后训练 RL 框架深度解析。来源：GitHub 官方仓库（THUDM/slime）+ README + 核心源码（slime/、slime_plugins/）+ docs。覆盖：产品定位（Megatron+SGLang+Ray 的 RL scaling 框架，GLM-4.5~5.2 官方训练基础设施）、核心能力（高性能训练 + 灵活数据生成）、整体架构（train.py/train_async.py driver → PlacementGroup/RayTrainGroup/RolloutManager → SGLang engines + DataSource）、核心组件（placement_group GPU 拓扑排序、RayTrainGroup async_train/update_weights、RolloutManager generate/eval/offload/check_weights/health monitor、sglang_rollout async generate、DataSource 抽象、base_types 数据生成契约、agent 模块 TurnRecord/MessageNode/TrajectoryManager 线性化为训练样本、4 种权重同步策略 tensor/distributed/disk/disk_delta）、数据流（同步/异步 rollout 执行序列）、Delta Weight Sync（disk-transport, xor+zstd+xxh3）、项目结构、技术栈、构建测试、设计权衡（单一 rollout 后端 vs 多后端抽象、引擎参数透传、显式数据流、统一路径不 fork 内核、delta 仅磁盘）。关键洞察：**SGLang-native 透传 + 统一 train/rollout/data-buffer 路径 + 显式 RL 数据流 + agentic TurnRecord→训练样本** 是 slime 的核心设计哲学。更新 `index.md`（+1 entity，页数 151→152）。confidence: high。
+  关联 [[codegraph]]、[[graphify]]、[[context-mode]]、[[mlflow]]、[[zenml]]、[[langfuse]]、[[heuristic-learning]]、[[agno]]、[[ruflo]]
+
 
 - 2026-07-22: 新增 `entities/scrapegraph.md` — ScrapeGraphAI 基于 LangChain 的 LLM 驱动爬虫流水线深度解析。来源：GitHub 官方仓库（ScrapeGraphAI/Scrapegraph-ai）+ 核心源码（scrapegraphai/graphs/、nodes/、docloaders/）。覆盖：产品定位（You Only Scrape Once，自然语言描述→自动爬虫流水线）、核心能力（SmartScraper/SearchGraph/SpeechGraph/OmniScraper/多模态/ScriptCreator/MultiGraph/Markdownify/Screenshot）、架构（AbstractGraph/BaseGraph 图执行引擎、节点模型、SmartScraperGraph 流水线 Fetch→Parse→GenerateAnswer、ChromiumLoader、LLM 集成、RAGNode、提示词模板、遥测）、关键实现（自然语言→结构化数据、schema 约束、搜索增强、多模态）、商业模式、与 Firecrawl/Crawl4AI/Browser-Use 对比。关键洞察：**LangChain Graph 节点模型 + 自然语言接口 + schema 约束输出** 是 ScrapeGraphAI 的鲜明特色。更新 `index.md`（+1 entity，页数 149→150）。confidence: high。
 - 关联 [[firecrawl]]、[[crawl4ai]]、[[browser-use]]、[[jina-reader]]、[[web-data-api-comparison]]、[[llm-ready-data]]、[[ai-agent-ecosystem]]
