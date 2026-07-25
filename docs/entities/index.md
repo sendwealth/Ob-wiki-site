@@ -1,6 +1,6 @@
 # 实体
 
-共 84 篇。
+共 85 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -56,6 +56,7 @@
 - [[newsguard|NewsGuard]]
 - [[nuwax|Nuwax]]
 - [[open-design|Open Design 项目亮点分析]]
+- [[open-webui|Open WebUI]]
 - [[openbb|OpenBB: 开源金融数据平台学习笔记]]
 - [[opengeni|OpenGeni]]
 - [[openmontage|OpenMontage]]

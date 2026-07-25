@@ -1,12 +1,16 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-23
+updated: 2026-07-25
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-07-25: 新增 `entities/open-webui.md` — Open WebUI 开源自托管 AI 平台深度解析。来源：GitHub 官方仓库（open-webui/open-webui）+ README + 核心源码（backend/open_webui/、src/lib/）。覆盖：产品定位（可扩展、功能丰富、用户友好的自托管 AI 平台，主打完全离线运行）、核心能力（Ollama/OpenAI 兼容 API 多模型接入、自定义模型与 Agent、RAG、网络搜索、持久记忆、频道协作、日历与自动化、终端/代码执行、企业 RBAC/SSO/审计/OTel、多模态语音/图像）、整体架构（SvelteKit 前端 + FastAPI 后端 + SQLAlchemy async + Redis 可选 + SQLite/PostgreSQL）、核心模块（main.py/config.py/env.py 入口、30+ routers、models 数据层、utils 编排与工具、retrieval RAG、socket 实时层、tasks 任务管理、telemetry 可观测、access_control 权限）、RAG 与检索（9 种向量库、20+ 文档解析器、20+ 网络搜索源、hybrid search）、插件扩展（Functions/Tools/Skills/Pipelines/MCP/OpenAPI，数据库代码热加载 exec()）、安全模型（自托管单租户管理员可信、Tools=root、明确管理员行为不在漏洞范围）、生态项目（Open Terminal/Terminals/cptr/oikb/Desktop App）、技术栈与代码规模（v0.10.2，后端 ~235 文件/30k 行 router、前端 ~666 TS/Svelte 文件）。关键洞察：**「自托管优先」是架构假设、「模型统一层」是核心抽象、「数据库即配置中心」让运行时灵活、「插件=信任边界内的高自由度」** 是 Open WebUI 的核心设计哲学。更新 `index.md`（+1 entity，页数 153→154）。confidence: high。
+  关联 [[ollama]]、[[lobechat-architecture]]、[[dify]]、[[flowise]]、[[mcp-protocol]]、[[a2a-protocol]]、[[langchain]]、[[firecrawl]]、[[browser-use]]、[[ai-workflow-landscape]]、[[ai-agent-ecosystem]]
+
 
 - 2026-07-25: 新增 `entities/openworker.md` — OpenWorker 开源 AI 桌面协作者深度解析。来源：GitHub 官方仓库（andrewyng/openworker）+ README + 核心源码（coworker/、surfaces/gui/、tests/）。覆盖：产品定位（本地优先、完成品导向、模型中立的桌面 coworker）、核心能力（25+ 连接器 / Slack 提及 / 定时自动化 / 审批门控）、整体架构（Tauri+React 桌面壳 → FastAPI Python server → 文件/工具/模型三层）、核心组件（Code/Cowork/Chat/MyHelper/Ops 五 surface、TurnEngine 受控循环、PermissionEngine 五态权限、工具系统 catalog+连接器+MCP+skill、SQLite 记忆、SessionManager 控制中心、Scheduler 自动化与 Slack mention 路由）、安全设计（本地 token / Origin 门控 / workspace trust / 路径作用域 / SecretStore / MCP OAuth 交互授权）、技术栈、与 aisuite/Claude Code/agentspace/Multica 等的关系。关键洞察：**完成品优先 + 本地优先但连接器开放 + 人在环默认 + 模型中立** 是 OpenWorker 的核心设计哲学。更新 `index.md`（+1 entity，页数 152→153）。confidence: high。
   关联 [[aisuite]]、[[claude-code]]、[[browser-use]]、[[agentspace]]、[[multica]]、[[mcp-protocol]]、[[a2a-protocol]]
