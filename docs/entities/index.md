@@ -1,6 +1,6 @@
 # 实体
 
-共 83 篇。
+共 84 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -60,6 +60,7 @@
 - [[opengeni|OpenGeni]]
 - [[openmontage|OpenMontage]]
 - [[openshell|OpenShell]]
+- [[openworker|OpenWorker]]
 - [[orloj|Orloj]]
 - [[polos|Polos]]
 - [[prefect|Prefect]]

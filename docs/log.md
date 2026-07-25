@@ -8,6 +8,10 @@ tags: [log]
 
 # Wiki Log
 
+- 2026-07-25: 新增 `entities/openworker.md` — OpenWorker 开源 AI 桌面协作者深度解析。来源：GitHub 官方仓库（andrewyng/openworker）+ README + 核心源码（coworker/、surfaces/gui/、tests/）。覆盖：产品定位（本地优先、完成品导向、模型中立的桌面 coworker）、核心能力（25+ 连接器 / Slack 提及 / 定时自动化 / 审批门控）、整体架构（Tauri+React 桌面壳 → FastAPI Python server → 文件/工具/模型三层）、核心组件（Code/Cowork/Chat/MyHelper/Ops 五 surface、TurnEngine 受控循环、PermissionEngine 五态权限、工具系统 catalog+连接器+MCP+skill、SQLite 记忆、SessionManager 控制中心、Scheduler 自动化与 Slack mention 路由）、安全设计（本地 token / Origin 门控 / workspace trust / 路径作用域 / SecretStore / MCP OAuth 交互授权）、技术栈、与 aisuite/Claude Code/agentspace/Multica 等的关系。关键洞察：**完成品优先 + 本地优先但连接器开放 + 人在环默认 + 模型中立** 是 OpenWorker 的核心设计哲学。更新 `index.md`（+1 entity，页数 152→153）。confidence: high。
+  关联 [[aisuite]]、[[claude-code]]、[[browser-use]]、[[agentspace]]、[[multica]]、[[mcp-protocol]]、[[a2a-protocol]]
+
+
 - 2026-07-23: 新增 `entities/slime.md` — slime 开源 LLM 后训练 RL 框架深度解析。来源：GitHub 官方仓库（THUDM/slime）+ README + 核心源码（slime/、slime_plugins/）+ docs。覆盖：产品定位（Megatron+SGLang+Ray 的 RL scaling 框架，GLM-4.5~5.2 官方训练基础设施）、核心能力（高性能训练 + 灵活数据生成）、整体架构（train.py/train_async.py driver → PlacementGroup/RayTrainGroup/RolloutManager → SGLang engines + DataSource）、核心组件（placement_group GPU 拓扑排序、RayTrainGroup async_train/update_weights、RolloutManager generate/eval/offload/check_weights/health monitor、sglang_rollout async generate、DataSource 抽象、base_types 数据生成契约、agent 模块 TurnRecord/MessageNode/TrajectoryManager 线性化为训练样本、4 种权重同步策略 tensor/distributed/disk/disk_delta）、数据流（同步/异步 rollout 执行序列）、Delta Weight Sync（disk-transport, xor+zstd+xxh3）、项目结构、技术栈、构建测试、设计权衡（单一 rollout 后端 vs 多后端抽象、引擎参数透传、显式数据流、统一路径不 fork 内核、delta 仅磁盘）。关键洞察：**SGLang-native 透传 + 统一 train/rollout/data-buffer 路径 + 显式 RL 数据流 + agentic TurnRecord→训练样本** 是 slime 的核心设计哲学。更新 `index.md`（+1 entity，页数 151→152）。confidence: high。
   关联 [[codegraph]]、[[graphify]]、[[context-mode]]、[[mlflow]]、[[zenml]]、[[langfuse]]、[[heuristic-learning]]、[[agno]]、[[ruflo]]
 

@@ -9,9 +9,10 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-23 | Total pages: 152
+> Last updated: 2026-07-25 | Total pages: 153
 
 ## Entities
+- [[openworker]] — Andrew Ng 团队开源的本地优先 AI 桌面协作者：模型中立、25+ 连接器、MCP、完成物导向
 - [[slime]] — THUDM/Z.ai 开源 LLM 后训练 RL 框架（Megatron+SGLang+Ray），GLM-4.5~5.2 官方训练基础设施，SGLang-native 透传设计
 - [[firecrawl]] — Firecrawl 开源 Web 数据 API：search/scrape/crawl/map/interact 多引擎瀑布，154k+ Stars，LLM-ready 输出
 - [[crawl4ai]] — Crawl4AI 开源 LLM 友好型 Python 爬虫框架：策略驱动配置、Deep Crawl、LLM 抽取、Docker 服务
