@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-07-25
+updated: 2026-08-03
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-07-25 | Total pages: 154
+> Last updated: 2026-08-03 | Total pages: 155
 
 ## Entities
 - [[open-webui]] — 可扩展、功能丰富、用户友好的自托管 AI 平台（v0.10.2）：Ollama/OpenAI 兼容 API、内置 RAG、MCP/工具/自动化/频道协作
@@ -145,6 +145,7 @@ tags: [index]
 - [[ai-workflow-deep-comparison]] — AI Workflow 开源项目深度对比分析（架构哲学、设计权衡、选型逻辑）
 
 ## Entities
+- [[volcano]] — Kubernetes 原生批量调度系统（CNCF），gang scheduling + 多级队列 + 公平share + 抢占回收，为 AI/ML/大数据批处理扩展 kube-scheduler
 - [[agentspace]] — 开源 agent-native 协作 workspace：数字员工 + AgentRouter 归一 8 harness + 治理四件套（TS monorepo + PG，Apache-2.0）
 - [[temporal]] — Temporal：持久化执行平台，分布式 Workflow 编排（Go，源自 Uber Cadence）
 - [[multica]] — AI原生任务管理平台（开源 Linear + Agent 管理，Go + Next.js monorepo）

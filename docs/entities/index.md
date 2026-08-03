@@ -1,6 +1,6 @@
 # 实体
 
-共 85 篇。
+共 86 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -75,6 +75,7 @@
 - [[temporal|Temporal]]
 - [[threejs-game-skills|Three.js Game Skills]]
 - [[voicebox|Voicebox — 开源 AI 语音工作室]]
+- [[volcano|Volcano]]
 - [[x-community-notes|X社区笔记]]
 - [[zed-agent-architecture|Zed Agent 架构深度分析]]
 - [[zed|Zed — 高性能多人协作代码编辑器]]
