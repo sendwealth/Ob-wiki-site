@@ -22,40 +22,44 @@ confidence: high
 | 架构哲学 | 一切皆插件（Everything is a Plugin）——通过 vendored [Cordis](https://github.com/cordiverse/cordis) 插件框架实现，无特权核心 |
 | 扩展方式 | 插件挂载 + `cordis.yml` 声明式组合（profile/bundle 分层 patch），用户层可覆盖任意配置行 |
 | 模型面 | 按 capability seam 暴露工具（~30 个模型可见工具），事件驱动 loop 而非硬编码流程 |
-| 数据面 | 追加式事件日志（SessionEvent）作为唯一事实源，"模型可见即已记录"运行时不变式 |
+| 数据面 | 追加式事件日志（SessionEvent）作为唯一事实源，「模型可见即已记录」运行时不变式 |
 | 开源策略 | MIT、dev preview 快速迭代（明示 breaking change）、暂不收外部 PR、通过 Discussions/dsh-plugin 生态协作 |
 | 独特卖点 | capability seam 三角色设计（Service Definition / Provider / Consumer），换一个 Provider 即换整个产品行为 |
 
 ## 整体架构
 
 ```
-                 ┌──────────────────────────────────────────────┐
-                 │  dsh CLI (apps/cli) — profile 启动器          │
-                 │  dsh web  /  dsh --profile headless "task"    │
-                 └───────────────────┬──────────────────────────┘
-                                     │ boots profile（bundle 分层 patch）
-                 ┌───────────────────▼──────────────────────────┐
-                 │  Profile 组合：base → web-app│headless         │
-                 │  → profile cordis.patch.yml → 用户 --patch    │
-                 └───────────────────┬──────────────────────────┘
-                                     │ Cordis Loader 挂载插件树
-                 ┌───────────────────▼──────────────────────────┐
-                 │  ctx（Cordis Context = 服务仓库）              │
-                 │  ctx.sessions  ctx.systemPrompt  ctx.tools    │
-                 │  ctx.agents    ctx.agentLoop     ctx.llm      │
-                 │  ctx.shell / fs / subprocess / sandbox / ...  │
-                 └──────────┬───────────────────┬───────────────┘
-                            │                   │
-        ┌───────────────────▼─────┐   ┌─────────▼───────────────┐
-        │  Agent Loop（turn/step） │   │  Capability Seams       │
-        │  agent/* turn/* step/*  │   │  fs/shell/terminal/lsp/  │
-        │  tools/* llm/* 事件瀑布  │   │  skill/web/subagent/    │
-        └───────────────────┬─────┘   │  workflow/jobs/e2b(POC)  │
-                            │         └─────────────────────────┘
-                 ┌──────────▼───────────────────────────────────┐
-                 │  持久化：SessionEvent 日志（JSONL/SQLite）     │
-                 │  SessionHeader 元数据 / flush 批处理 / 崩溃恢复 │
-                 └──────────────────────────────────────────────┘
+                 ┌────────────────────────────────────────────┐
+                 │ dsh CLI（apps/cli）— profile 启动器        │
+                 │ dsh web / dsh --profile headless "task"    │
+                 └────────────────────────────────────────────┘
+                                       │
+                                         装载 profile（bundle 分层 patch）
+                 ┌────────────────────────────────────────────┐
+                 │ Profile 组合：base → web-app / headless    │
+                 │ → profile cordis.patch.yml → 用户 --patch  │
+                 └────────────────────────────────────────────┘
+                                       │
+                                         Cordis Loader 挂载插件树
+                 ┌────────────────────────────────────────────┐
+                 │ ctx（Cordis Context = 服务仓库）           │
+                 │ ctx.sessions  ctx.systemPrompt  ctx.tools  │
+                 │ ctx.agents    ctx.agentLoop     ctx.llm    │
+                 │ ctx.shell / fs / subprocess / sandbox      │
+                 └────────────────────────────────────────────┘
+                                       │
+                                         turn/step 驱动 + 事件瀑布
+                 ┌────────────────────────────────────────────┐
+                 │ Agent Loop + Capability Seams              │
+                 │ agent/* tools/* 事件 · fs/shell/terminal/  │
+                 │ lsp/skill/web/subagent/workflow/jobs       │
+                 └────────────────────────────────────────────┘
+                                       │
+                                         追加模型可见事件
+                 ┌────────────────────────────────────────────┐
+                 │ 持久化：SessionEvent 日志（JSONL/SQLite）  │
+                 │ SessionHeader / flush 批处理 / 崩溃恢复    │
+                 └────────────────────────────────────────────┘
 ```
 
 ## 核心组件
@@ -80,8 +84,8 @@ Web 双半：`packages/host`（webserver、apiproxy、API gateway 的 Host 端�
 - **Plugin** — 实现 Service 的对象（函数 + `inject`/`apply`，或 Service 子类），注册到共享 Context；一切注册都是可逆 effect（卸载即回滚）。
 - **Context** — 服务仓库；服务声明稳定 `ctx.<key>`，插件按 key 发现服务而非 import 具体实现；`inject` 表达依赖，隐式决定加载顺序。
 - **Capability seam** — 可替换能力的三角色：Service Definition（抽象服务/注册表）+ Service Provider + Consumer（通常是模型工具）。换 Provider 即换产品：fs/subprocess Provider 指向远端沙箱，Bash/PTY/LSP 随之迁移。
-- **SessionEvent 日志** — 追加式事件流，`deriveMessages()` 从日志投影模型历史；fork/resume/转写/遥测/持久化全部派生自同一流。"模型可见 ⟺ 已记录"。
-- **Profile / Bundle** — profile 是有名组合（$DSH_HOME/profiles/<name>），bundle 是 Cordis 配置行 + 代码的分发格式；分层 patch 覆盖（整行替换，无深合并）。
+- **SessionEvent 日志** — 追加式事件流，`deriveMessages()` 从日志投影模型历史；fork/resume/转写/遥测/持久化全部派生自同一流。「模型可见 ⟺ 已记录」。
+- **Profile / Bundle** — profile 是有名组合（`$DSH_HOME/profiles/<name>`），bundle 是 Cordis 配置行 + 代码的分发格式；分层 patch 覆盖（整行替换，无深合并）。
 - **Turn / Step** — turn 是输入排水周期（可含 0..n 个 step），step 是一次模型请求 + 其触发的工具执行。
 - **Agent scope** — 每 agent 作用域注册（`agent.ctx`）：作用域工具/提示分区以"最具体者胜"遮蔽全局同名项；setup 窗口在发布前组装 agent 的世界。
 
@@ -141,7 +145,7 @@ deepseek-harness/
 
 | 类别 | 技术 |
 |---|---|
-| 语言/运行时 | TypeScript 6（strict，ESM only）、Node ^22.19 \|\| >=24、pnpm 11.7 workspace |
+| 语言/运行时 | TypeScript 6（strict，ESM only）、Node ^22.19 或 >=24、pnpm 11.7 workspace |
 | 插件框架 | vendored Cordis 4.0.0-rc.7（含 loader/include/hmr/schemastery/cosmokit，rescope 到 @deepseek-ai） |
 | 构建 | tsc -b（host/client 双 face）+ tsdown 打包 + Vite 前端 |
 | 测试 | Vitest 4（unit/coverage 100% 每文件/e2e/snapshot 无 key 回放/Web stress/perf） |
@@ -169,7 +173,7 @@ pnpm dsh --profile headless "task" # 一次性 headless 跑任务
 
 1. **一切皆插件 vs 组合复杂度**：没有特权核心、所有组件可配置替换（含 agent-loop 本身）；代价是引导顺序靠服务依赖隐式表达，需要 `--dump-config` 工具审视组合树。
 2. **Vendored Cordis 源码 vs npm 依赖**：harness 完全拥有框架层（可审计/可 patch/可 pin），发布时随 harness 一起发布框架；代价是 18 项本地修改需在每次 sync 时重放。
-3. **事件日志唯一事实源 vs 格式演进**："模型可见即已记录"不变式保证可回放/可 fork/可遥测；代价是 `SESSION_FORMAT_VERSION=0` 拒绝旧/新格式，无迁移路径（dev preview 明示接受）。
+3. **事件日志唯一事实源 vs 格式演进**：「模型可见即已记录」不变式保证可回放/可 fork/可遥测；代价是 `SESSION_FORMAT_VERSION=0` 拒绝旧/新格式，无迁移路径（dev preview 明示接受）。
 4. **Capability seam 三角色 vs 设计成本**：换 Provider 全局生效（fs/shell 指向远端沙箱即整个执行世界迁移）；每个新能力必须一次设计完三个角色。
 5. **生成目录 + 双构建 face vs 构建顺序约束**：tool/config/persistence/module-graph 目录全部由脚本生成并 CI 保鲜，文档永不漂移；Typert 需严格按 Host→Client→Web 顺序构建。
 6. **Dev preview 姿态**：无兼容承诺、后端拒旧格式、暂不收外部 PR（社区走 Discussions + dsh-plugin 生态）；换取迭代速度。
