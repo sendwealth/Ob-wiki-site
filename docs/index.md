@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-08-03
+updated: 2026-08-14
 tags: [index]
 ---
 
@@ -9,9 +9,10 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-08-03 | Total pages: 155
+> Last updated: 2026-08-14 | Total pages: 156
 
 ## Entities
+- [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
 - [[open-webui]] — 可扩展、功能丰富、用户友好的自托管 AI 平台（v0.10.2）：Ollama/OpenAI 兼容 API、内置 RAG、MCP/工具/自动化/频道协作
 - [[openworker]] — Andrew Ng 团队开源的本地优先 AI 桌面协作者：模型中立、25+ 连接器、MCP、完成物导向
 - [[slime]] — THUDM/Z.ai 开源 LLM 后训练 RL 框架（Megatron+SGLang+Ray），GLM-4.5~5.2 官方训练基础设施，SGLang-native 透传设计

@@ -1,12 +1,16 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-07-25
+updated: 2026-08-14
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-08-14: 新增 `entities/deepseek-harness.md` — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）深度解析。来源：本机 ~/Projects/deepseek-harness 源码 + README + docs/architecture.md + packages/README + 子系统文档 + vendor/README + GitHub。覆盖：产品定位（一切皆插件，无特权核心，Cordis 插件框架驱动，Node/TS，Web GUI + headless CLI + Python SDK 三形态）、核心价值主张、整体架构（CLI → profile/bundle 分层 patch → Cordis Loader → ctx 服务仓库 → Agent Loop + Capability Seams → 事件日志持久化）、核心组件（core/session·system-prompt·tools·agent·agent-loop·scope + llm 双适配器）、能力族 seam（fs/shell/terminal/subprocess/code-runtime/sandbox/lsp/skill/web/subagent/workflow/jobs/e2b）、核心概念（Plugin/Context/capability seam/SessionEvent 日志/profile·bundle/turn·step/agent scope）、turn 数据流、持久化层（SessionEvent 追加日志 + SessionHeader + JSONL/SQLite 后端 + flush checkpoint + 崩溃恢复合成 interrupted turn，SESSION_FORMAT_VERSION=0）、项目结构（219 workspace 包 ~523K LOC TS + vendored Cordis 9 包 + python SDK + native Landlock）、技术栈、构建测试命令、9 大设计权衡（一切皆插件 vs 组合复杂度、vendored 框架 vs 同步成本、事件日志唯一事实源 vs 格式演进、seam 三角色、生成目录+双构建 face、dev preview 姿态、双 LLM 适配器、平台沙箱、patch 整行替换）、~30 模型可见工具、生态（dsh-plugin topic/Discord/ACP/JSON-RPC/MCP/hooks）。关键洞察：**一切皆插件 + capability seam 换 Provider 即换产品 + 事件日志"模型可见即已记录"不变式** 是 DeepSeek Harness 的核心设计哲学。更新 `index.md`（+1 entity，页数 155→156）。confidence: high。
+  关联 [[kagent-agent-harness]]、[[acp-protocol]]、[[loop-engineering]]、[[ai-agent-ecosystem]]、[[claude-code-execution-security]]、[[temporal-durability-stability]]、[[deer-flow]]
+
 
 - 2026-07-25: 新增 `entities/open-webui.md` — Open WebUI 开源自托管 AI 平台深度解析。来源：GitHub 官方仓库（open-webui/open-webui）+ README + 核心源码（backend/open_webui/、src/lib/）。覆盖：产品定位（可扩展、功能丰富、用户友好的自托管 AI 平台，主打完全离线运行）、核心能力（Ollama/OpenAI 兼容 API 多模型接入、自定义模型与 Agent、RAG、网络搜索、持久记忆、频道协作、日历与自动化、终端/代码执行、企业 RBAC/SSO/审计/OTel、多模态语音/图像）、整体架构（SvelteKit 前端 + FastAPI 后端 + SQLAlchemy async + Redis 可选 + SQLite/PostgreSQL）、核心模块（main.py/config.py/env.py 入口、30+ routers、models 数据层、utils 编排与工具、retrieval RAG、socket 实时层、tasks 任务管理、telemetry 可观测、access_control 权限）、RAG 与检索（9 种向量库、20+ 文档解析器、20+ 网络搜索源、hybrid search）、插件扩展（Functions/Tools/Skills/Pipelines/MCP/OpenAPI，数据库代码热加载 exec()）、安全模型（自托管单租户管理员可信、Tools=root、明确管理员行为不在漏洞范围）、生态项目（Open Terminal/Terminals/cptr/oikb/Desktop App）、技术栈与代码规模（v0.10.2，后端 ~235 文件/30k 行 router、前端 ~666 TS/Svelte 文件）。关键洞察：**「自托管优先」是架构假设、「模型统一层」是核心抽象、「数据库即配置中心」让运行时灵活、「插件=信任边界内的高自由度」** 是 Open WebUI 的核心设计哲学。更新 `index.md`（+1 entity，页数 153→154）。confidence: high。
   关联 [[ollama]]、[[lobechat-architecture]]、[[dify]]、[[flowise]]、[[mcp-protocol]]、[[a2a-protocol]]、[[langchain]]、[[firecrawl]]、[[browser-use]]、[[ai-workflow-landscape]]、[[ai-agent-ecosystem]]

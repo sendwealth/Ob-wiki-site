@@ -1,6 +1,6 @@
 # 实体
 
-共 86 篇。
+共 87 篇。
 
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
 - [[agent-zero|Agent Zero]]
@@ -24,6 +24,7 @@
 - [[crawl4ai|Crawl4AI: 开源 LLM 友好型 Web 爬虫与采集框架]]
 - [[crew-ai|CrewAI]]
 - [[dagster|Dagster]]
+- [[deepseek-harness|DeepSeek Harness — 一切皆插件的开源 Agent Harness]]
 - [[deer-flow|DeerFlow（字节跳动开源 Super Agent Harness）]]
 - [[dify|Dify]]
 - [[dribbble|Dribbble]]
