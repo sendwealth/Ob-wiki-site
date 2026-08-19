@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-08-14
+updated: 2026-08-19
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-08-14 | Total pages: 156
+> Last updated: 2026-08-19 | Total pages: 157
 
 ## Entities
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
@@ -79,6 +79,7 @@ tags: [index]
 - [[opensource-project-practices-from-caveman]] — 从 Caveman 学习开源分发与运营：跨 harness 原生分发、单一 Node 安装器、诚实营销、零遥测、生态矩阵
 - [[openhuman-highlights]] — OpenHuman 十大技术亮点：TokenJuice 压缩、零序列化事件总线、声明式RPC注册表、分层记忆树、智能模型路由、协作式节流、进程内生命周期、Legacy双写、隐私功能目录、Composio代理集成
 
+- [[agency-agents]] — The Agency（msitarzewski）：230+ 专业 AI Agent 人格库（17 部门），一次编写 convert.sh 分发到 16 种 AI 编码工具，CI 一致性门禁 + 换皮查重
 - [[gstack-sprint-flow]] — gstack 冲刺流程：Think → Plan → Build → Review → Test → Ship → Reflect
 - [[gstack-browser-architecture]] — gstack 浏览器架构：Bun + Chromium daemon + Ref 系统
 - [[agent-world]] — Agent World 智能体世界设计：生存沙盒 + A2A 协作 + 进化系统
