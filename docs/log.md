@@ -683,3 +683,12 @@ tags: [log]
 - **内容**: Dagents（~/Projects/dagents，sendwealth/dagents，148 commits，Chat-First 异构 coding agent 平台：console→gateway→workflow→CLI agent）开源就绪审计与五阶段发布路线图。审计结论：底子好（CI 含 Postgres service + 并发取消、e2e + Mock LLM、docker-compose 全栈、双语 i18n、git 全历史无真实密钥——15 处模式命中均为测试 mock 占位符）；硬缺口五项（无 LICENSE、vendor/agentflow Apache-2.0 未随附协议文本与上游归属 FlowiseAI/Flowise、5 个跟踪文件含 /Users/rowan 个人路径 + CLAUDE.md 引用本地私有技能、无版本策略（0.0.0/无 tag/无 CHANGELOG）、README 纯中文）。路线图：Phase 0 法律合规硬门（0.5 天：Apache-2.0 + vendor 归属 + 个人痕迹清理）→ Phase 1 治理文件（CONTRIBUTING/CoC/SECURITY/Issue+PR 模板/engines）→ Phase 2 贡献者体验（README 落地页化双语 + 5 分钟体验路径 + 诚实限制文档）→ Phase 3 发布基建（paths-filter CI + CodeQL + tag 驱动 Release + GHCR 镜像）→ Phase 4 社区运营（独立 org 决策 + 发布渠道 + 渐进自动化）。五个待拍板决策：License（推荐 Apache-2.0）、仓库归属（推荐独立 org）、README 语言策略、docs/superpowers 去留（推荐保留作透明开发卖点）、npm 拆包时机（推荐首期只 Docker+源码）。合计 4~6 个工作日达可发布状态
 - **来源**: [~/Projects/dagents](~/Projects/dagents), [[opensource-project-practices-from-multica]], [[opensource-project-practices-from-openhuman]], [[opensource-project-practices-from-langflow]], [[opensource-project-practices-from-temporal]], [[opensource-project-practices-from-caveman]], [[opensource-practices-from-lobechat]]
 - **关联**: [[agentspace]], [[flowise]], [[ai-workflow-landscape]]
+
+---
+
+## 2026-08-20 · dagents-opensource-plan（执行更新）
+- **操作**: 更新执行状态 —— Phase 0~3 全量落地
+- **文件**: concepts/dagents-opensource-plan.md
+- **内容**: 五个决策按推荐拍板（Apache-2.0 / 独立 org / 英文主 README / 保留 superpowers / 首期不发 npm）后在 `feat/opensource-prep` 分支完成四个提交（43 文件 +1759/−415）：①合规硬门（Apache-2.0 全文 + vendor/agentflow LICENSE/NOTICE 归属 Flowise、/Users/rowan 与 multica-ops 私有技能清理、AGENTS/CLAUDE 去个人化）；②治理文件（CONTRIBUTING 双语、CoC 2.1、SECURITY 含零遥测隐私节与历史审计备注、Issue/PR 模板、9 个 package.json 加 engines node>=22 + 版本 0.1.0、Mil-Agents 旧名清理）；③README 落地页双语（诚实限制节从 workflow-engine.md 提炼）+ devcontainer；④CI/CD（ci.yml 加 dorny/paths-filter 文档跳过 + Node 20→22 修正、CodeQL 限 apps/packages、Dependabot 月度分组、release.yml tag 驱动 amd64/arm64 原生 runner 多架构镜像 + GHCR manifest 合并 + 自动 Release、CHANGELOG 0.1.0、docs/opensource-release-checklist.md 发布手册）。验证：YAML/JSON 全语法通过、README 相对链接全存在、contracts 8 用例 + gateway cli-first 8 用例通过、虚构测试示例 auth.test.ts 修正为真实存在的 cli-first.test.ts。剩余发布日动作（org 创建、<owner> 占位符、v0.1.0 tag、渠道分发）在仓库 docs/opensource-release-checklist.md
+- **来源**: [~/Projects/dagents](~/Projects/dagents), 分支 feat/opensource-prep
+- **关联**: [[opensource-project-practices-from-multica]], [[opensource-project-practices-from-caveman]], [[opensource-practices-from-lobechat]]

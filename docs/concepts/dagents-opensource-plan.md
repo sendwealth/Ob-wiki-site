@@ -21,6 +21,9 @@ related:
 
 # Dagents 开源改造与发布计划
 
+> [!summary] 执行状态（2026-08-20）
+> Phase 0~3 已全部落地于 `feat/opensource-prep` 分支（4 个提交，43 文件 +1759/−415）：Apache-2.0 LICENSE + vendor/agentflow 归属、个人痕迹清理、治理四件套（双语）、README 落地页双语、CI 路径感知 + CodeQL + Dependabot + tag 驱动 GHCR 多架构 Release、CHANGELOG 0.1.0。五个决策按推荐执行（Apache-2.0 / 独立 org / 英文主 README / 保留 superpowers / 首期不发 npm）。剩余动作在 `docs/opensource-release-checklist.md`（org 创建、`<owner>` 占位符替换、v0.1.0 打 tag、发布渠道）—— 均需维护者亲自执行。
+
 > Dagents（~/Projects/dagents，git@github.com:sendwealth/dagents，148 commits）是 Chat-First 异构 coding agent 平台：console（Next）→ gateway（Hono）→ workflow 引擎 → CLI agent（claude/codex 等 16+ 种）。本计划基于 2026-08-20 全仓审计 + 六份开源实践笔记（Multica / OpenHuman / Langflow / Temporal / Caveman / LobeChat），给出从现状到公开发布的分阶段路线图。
 
 ---
