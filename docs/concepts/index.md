@@ -1,6 +1,6 @@
 # 概念
 
-共 89 篇。
+共 90 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -21,6 +21,7 @@
 - [[claude-code-execution-security|Claude Code 代码执行安全机制]]
 - [[context-mode|Context Mode]]
 - [[design-md-spec|DESIGN.md 规范]]
+- [[dagents-opensource-plan|Dagents 开源改造与发布计划]]
 - [[design-as-code|Design as Code]]
 - [[devin-ai|Devin AI - 首个 AI 软件工程师]]
 - [[flowise-architecture|Flowise 项目架构分析]]

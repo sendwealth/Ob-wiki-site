@@ -1,7 +1,7 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-08-14
+updated: 2026-08-20
 type: meta
 tags: [log]
 ---
@@ -674,3 +674,12 @@ tags: [log]
 - **内容**: msitarzewski/agency-agents（MIT，2025-10 创建）：230+ 专业 AI Agent 人格库，17 个 divisions（engineering×58 / specialized×57 / marketing×36 含 14 个中国平台原生 agent…）。每个 agent = 带 YAML frontmatter 的 Markdown（人格/关键规则/可交付物模板/工作流/成功指标），lint 强制 name/description/color。核心工程：① convert.sh 一次编写 → 16 工具原生格式（codex TOML / cursor .mdc / SKILL.md / openclaw 工作区 / kimi YAML / roster 合并 / hermes 插件），tools.json 用 format/installKind/scope 三正交轴描述安装契约；② divisions.json + tools.json 双事实源 + CI 四处一致性门禁（check-divisions/check-tools）；③ check-agent-originality.sh 换皮查重——实体中立化 8 词 shingle 重叠，≥40% FAIL，现有库最差同对 ~1.5%；④ NEXUS 编排层（Full/Sprint/Micro 三模式 + 7 阶段 playbooks + MCP memory 版工作流 remember/recall/rollback 替代 copy-paste 交接）；⑤ OpenClaw 转换按章节标题抽 SOUL/body——章节即转换语义。与 [[agentspace]] 的运行期 AgentRouter 归一是编译期转换 vs 运行期归一两解法
 - **来源**: [~/Projects/agency-agents 源码](~/Projects/agency-agents), [GitHub](https://github.com/msitarzewski/agency-agents), [agencyagents.app](https://agencyagents.app)
 - **关联**: [[ecc]], [[gstack]], [[skill-architect-methodology]], [[agentspace]], [[caveman]], [[claude-code-game-studios]]
+
+---
+
+## 2026-08-20 · dagents-opensource-plan
+- **操作**: 创建 Dagents 开源改造与发布计划 concept 页（基于全仓审计 + 六份开源实践笔记综合）
+- **文件**: concepts/dagents-opensource-plan.md
+- **内容**: Dagents（~/Projects/dagents，sendwealth/dagents，148 commits，Chat-First 异构 coding agent 平台：console→gateway→workflow→CLI agent）开源就绪审计与五阶段发布路线图。审计结论：底子好（CI 含 Postgres service + 并发取消、e2e + Mock LLM、docker-compose 全栈、双语 i18n、git 全历史无真实密钥——15 处模式命中均为测试 mock 占位符）；硬缺口五项（无 LICENSE、vendor/agentflow Apache-2.0 未随附协议文本与上游归属 FlowiseAI/Flowise、5 个跟踪文件含 /Users/rowan 个人路径 + CLAUDE.md 引用本地私有技能、无版本策略（0.0.0/无 tag/无 CHANGELOG）、README 纯中文）。路线图：Phase 0 法律合规硬门（0.5 天：Apache-2.0 + vendor 归属 + 个人痕迹清理）→ Phase 1 治理文件（CONTRIBUTING/CoC/SECURITY/Issue+PR 模板/engines）→ Phase 2 贡献者体验（README 落地页化双语 + 5 分钟体验路径 + 诚实限制文档）→ Phase 3 发布基建（paths-filter CI + CodeQL + tag 驱动 Release + GHCR 镜像）→ Phase 4 社区运营（独立 org 决策 + 发布渠道 + 渐进自动化）。五个待拍板决策：License（推荐 Apache-2.0）、仓库归属（推荐独立 org）、README 语言策略、docs/superpowers 去留（推荐保留作透明开发卖点）、npm 拆包时机（推荐首期只 Docker+源码）。合计 4~6 个工作日达可发布状态
+- **来源**: [~/Projects/dagents](~/Projects/dagents), [[opensource-project-practices-from-multica]], [[opensource-project-practices-from-openhuman]], [[opensource-project-practices-from-langflow]], [[opensource-project-practices-from-temporal]], [[opensource-project-practices-from-caveman]], [[opensource-practices-from-lobechat]]
+- **关联**: [[agentspace]], [[flowise]], [[ai-workflow-landscape]]

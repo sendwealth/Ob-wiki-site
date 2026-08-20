@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-08-19
+updated: 2026-08-20
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-08-19 | Total pages: 157
+> Last updated: 2026-08-20 | Total pages: 158
 
 ## Entities
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
@@ -74,6 +74,7 @@ tags: [index]
 - [[a2a-protocol]] — A2A Protocol 深度技术参考：Agent Card、Task 生命周期、三层绑定、安全模型、SDK 生态
 - [[a2a-multica-discovery]] — A2A × Multica 发现机制：Agent Card 替代 CLI 探测、三种发现模式、Task 状态映射、流式桥接
 - [[opensource-project-practices-from-multica]] — 从 Multica 学习开源项目实践：monorepo 治理、CI 漂移防护、API 兼容性、Worktree 隔离
+- [[dagents-opensource-plan]] — Dagents（Chat-First 异构 coding agent 平台）开源改造与发布计划：审计结论 + 五阶段路线图（合规硬门→治理文件→贡献者体验→发布基建→社区运营）
 - [[openhuman-architecture]] — OpenHuman 技术架构：Rust核心 + React/Tauri壳、事件总线、域驱动设计、控制器注册表、进程内运行模型
 - [[opensource-project-practices-from-openhuman]] — 从 OpenHuman 学习开源实践：三路覆盖率硬门、Agent调试工具链、双语言栈CI、文档即规范、CEF零注入安全
 - [[opensource-project-practices-from-caveman]] — 从 Caveman 学习开源分发与运营：跨 harness 原生分发、单一 Node 安装器、诚实营销、零遥测、生态矩阵
