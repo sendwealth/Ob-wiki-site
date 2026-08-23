@@ -1,12 +1,15 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-08-20
+updated: 2026-08-23
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-08-23: 新增 `concepts/yitang-voice-prompting.md` + `raw/yitang/AI口喷必修课-原文整理.md` — 一堂AI口喷必修课（Live260，Truman）。来源：一堂飞书 fs-doc（harness.js Playwright 抓取，33633字，扫码续期 cookie）。覆盖：AI口喷定义（语音输入×AI协作的新人机交互范式，非输入法升级）、五大优势（启动快/信息全/速度快/能流淌/阻力低，口喷优先80-90%）、心法「把AI当人，把人当AI」、新手四大难与破法（错别字→不改直接发、没逻辑→上下文充沛度>>>行文严谨、怕骚扰→组织营造口喷氛围、不稳定→分段喷/流式/文档）、五次飞跃段位图 L1-L6（手敲→语音→被动→主动「九字诀定目标控节奏做纠偏」→简短→拉满「刻意练习1+4，更满/更快/更多线程三挑战」→单项→流淌「OPT+AI能闲人不能闲」→局部→跨界）、极限案例（6小时一晚带10个Codex Agent口喷做360内训课，顶层文档一口气3500字）、战略级基本功三条件（频率极高/全面拉动/练的人少）、口喷vs清单体笔记对比、配套口喷陪练官Partner与双三角画布。核心洞察：**口喷的本质是把人的隐性能力（心路历程/纠结/取舍）流式外化为AI可工作的上下文，是AI刻意练习的第一基本功**。更新 `index.md`（+1 concept、+1 raw、页数 158→159）。confidence: high。
+  关联 [[yitang-dual-triangle]]、[[yitang-advanced-modeling]]、[[yitang-cd-loop]]、[[kecheng-to-ai-tool]]、[[yitang-ai-content-industrialization]]、[[skill-architect-methodology]]
 
 - 2026-08-14: 新增 `entities/deepseek-harness.md` — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）深度解析。来源：本机 ~/Projects/deepseek-harness 源码 + README + docs/architecture.md + packages/README + 子系统文档 + vendor/README + GitHub。覆盖：产品定位（一切皆插件，无特权核心，Cordis 插件框架驱动，Node/TS，Web GUI + headless CLI + Python SDK 三形态）、核心价值主张、整体架构（CLI → profile/bundle 分层 patch → Cordis Loader → ctx 服务仓库 → Agent Loop + Capability Seams → 事件日志持久化）、核心组件（core/session·system-prompt·tools·agent·agent-loop·scope + llm 双适配器）、能力族 seam（fs/shell/terminal/subprocess/code-runtime/sandbox/lsp/skill/web/subagent/workflow/jobs/e2b）、核心概念（Plugin/Context/capability seam/SessionEvent 日志/profile·bundle/turn·step/agent scope）、turn 数据流、持久化层（SessionEvent 追加日志 + SessionHeader + JSONL/SQLite 后端 + flush checkpoint + 崩溃恢复合成 interrupted turn，SESSION_FORMAT_VERSION=0）、项目结构（219 workspace 包 ~523K LOC TS + vendored Cordis 9 包 + python SDK + native Landlock）、技术栈、构建测试命令、9 大设计权衡（一切皆插件 vs 组合复杂度、vendored 框架 vs 同步成本、事件日志唯一事实源 vs 格式演进、seam 三角色、生成目录+双构建 face、dev preview 姿态、双 LLM 适配器、平台沙箱、patch 整行替换）、~30 模型可见工具、生态（dsh-plugin topic/Discord/ACP/JSON-RPC/MCP/hooks）。关键洞察：**一切皆插件 + capability seam 换 Provider 即换产品 + 事件日志"模型可见即已记录"不变式** 是 DeepSeek Harness 的核心设计哲学。更新 `index.md`（+1 entity，页数 155→156）。confidence: high。
   关联 [[kagent-agent-harness]]、[[acp-protocol]]、[[loop-engineering]]、[[ai-agent-ecosystem]]、[[claude-code-execution-security]]、[[temporal-durability-stability]]、[[deer-flow]]

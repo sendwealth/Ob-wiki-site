@@ -1,6 +1,6 @@
 # 概念
 
-共 90 篇。
+共 91 篇。
 
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
@@ -69,6 +69,7 @@
 - [[oscar-research-methodology|oscar-research-methodology]]
 - [[temporal-highlights|temporal-highlights]]
 - [[yitang-business-formula|yitang-business-formula]]
+- [[yitang-voice-prompting|一堂AI口喷必修课（Live260）]]
 - [[yitang-ai-data-first-lesson|一堂AI数据第一课（Live251）— ADAPTED 6+1 模型]]
 - [[yitang-dual-triangle|一堂双三角（Live254）]]
 - [[yitang-cd-loop|一堂落地之夜第255场：业务公式 × 转化率（C×D）实战循环]]
