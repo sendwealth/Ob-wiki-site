@@ -1,12 +1,15 @@
 ---
 title: Wiki Log
 created: 2026-05-04
-updated: 2026-08-23
+updated: 2026-09-19
 type: meta
 tags: [log]
 ---
 
 # Wiki Log
+
+- 2026-09-19: 新增 `concepts/yitang-ai-10x-flywheel.md` + `raw/yitang/26秋马-AI十倍速成长-原文整理.md` — 26秋马：AI十倍速成长上半场（一堂第12届马拉松年度必修课，Truman）。来源：一堂飞书 fs-doc（harness.js Playwright 抓取，66925字，一次通过 validate）。覆盖：Truman 自己的四阶段进化（追工具空虚→PBL项目失败→双三角体系入门→构建飞轮）、核心框架 AI十倍速飞轮四赛段×四飞轮（启动期信心飞轮「争取爽一次」/加速期结果飞轮「人和AI互相加强」/复利期复利飞轮/迁移期跨界飞轮，卡点根源=阶段与飞轮错配）、合成案例Leo（负向循环→一年10倍提效→AIBP负责人）、第一赛段五个0-1案例（温童凯驾校校长截图问AI+传话式编程做校园合伙人平台/张伟强体制内招商研判AI First习惯+1000份一页纸+Coze三层措施/蒋之之跨境电商最小场景×最小Feature从5000字提示词到售后工作台2小时→半小时/叶文彬射箭馆纯小白VibeCoding企业学习平台省10万/廖廖日企知识库机器人13分钟→5秒获一等奖防裁员）、第二赛段三个互相加强案例（砻沣教研新人半年成Partner第一人：数据包四要素+制作流程+状态机Feature+全量复盘提速/郁金星20年顾问人教AI三层交叉验证×AI教人四层分析，8天交付胖东来×医药供应链工作坊/劉衛AI第二大脑：Obsidian三层知识分类实事求是·解放思想·知行合一+四类知识链接反幻觉+北大产品力课2天评分9.9+无人机商业模式重构2个月→1周）、更多小案例（王飞麻将AI陪练/宋子军直播切片30→80分/徐文晶短剧剧本）、YAI产品演化路标（Partner→Feature Agent→数字员工）。核心洞察：**AI落地差距的本质是飞轮系统而非工具技巧；启动期靠信心循环（爽一次），加速期靠双向增强（AI替你完成任务是效率，AI帮你提升能力才是复利）；独家数据是人不可放弃的牌**。更新 `index.md`（+1 concept、+1 raw、页数 159→160）。confidence: high。
+  关联 [[yitang-dual-triangle]]、[[yitang-voice-prompting]]、[[yitang-ai-data-first-lesson]]、[[adapted-6plus1-rss-obsidian-kb]]、[[yitang-cd-loop]]、[[kecheng-to-ai-tool]]、[[experience-extraction-agent]]
 
 - 2026-08-23: 新增 `concepts/yitang-voice-prompting.md` + `raw/yitang/AI口喷必修课-原文整理.md` — 一堂AI口喷必修课（Live260，Truman）。来源：一堂飞书 fs-doc（harness.js Playwright 抓取，33633字，扫码续期 cookie）。覆盖：AI口喷定义（语音输入×AI协作的新人机交互范式，非输入法升级）、五大优势（启动快/信息全/速度快/能流淌/阻力低，口喷优先80-90%）、心法「把AI当人，把人当AI」、新手四大难与破法（错别字→不改直接发、没逻辑→上下文充沛度>>>行文严谨、怕骚扰→组织营造口喷氛围、不稳定→分段喷/流式/文档）、五次飞跃段位图 L1-L6（手敲→语音→被动→主动「九字诀定目标控节奏做纠偏」→简短→拉满「刻意练习1+4，更满/更快/更多线程三挑战」→单项→流淌「OPT+AI能闲人不能闲」→局部→跨界）、极限案例（6小时一晚带10个Codex Agent口喷做360内训课，顶层文档一口气3500字）、战略级基本功三条件（频率极高/全面拉动/练的人少）、口喷vs清单体笔记对比、配套口喷陪练官Partner与双三角画布。核心洞察：**口喷的本质是把人的隐性能力（心路历程/纠结/取舍）流式外化为AI可工作的上下文，是AI刻意练习的第一基本功**。更新 `index.md`（+1 concept、+1 raw、页数 158→159）。confidence: high。
   关联 [[yitang-dual-triangle]]、[[yitang-advanced-modeling]]、[[yitang-cd-loop]]、[[kecheng-to-ai-tool]]、[[yitang-ai-content-industrialization]]、[[skill-architect-methodology]]
