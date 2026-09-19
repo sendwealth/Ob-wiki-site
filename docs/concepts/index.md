@@ -2,7 +2,7 @@
 
 共 92 篇。
 
-- [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长上半场（AI十倍速飞轮）]]
+- [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长（AI十倍速飞轮）]]
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
 - [[a2a-multica-discovery|A2A × Multica 发现机制方案设计]]
 - [[acp-protocol|ACP (Agent Client Protocol) 深度技术参考]]

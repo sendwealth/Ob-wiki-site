@@ -137,7 +137,7 @@ tags: [index]
 - [[yitang-ai-content-industrialization]] — 熙熙·AI内容工业化生产：从手工作坊到工业化生产线六阶段演进（借假修真/双三角落地/写稿8步工作流/飞书多维表格闭环）（一堂专家分享）
 
 - [[codex-ai-ppt-fangzhenyi]] — 方振义(Lester)·用 Codex 做 PPT：HTML 版 PPT（guizang-ppt-skill）八步工作流 + Image 版 PPT（GPT Image 2/Image Gen）六步工作流，对比两条 AI 做 PPT 路线，映射一堂双三角（一堂专家分享）
-- [[yitang-ai-10x-flywheel]] — 26秋马·AI十倍速成长上半场（Truman）：AI十倍速飞轮四阶段框架（启动期信心飞轮/加速期双向加强/复利期封装/迁移期跨界），阶段与飞轮错配是卡点根源；温童凯/张伟强/蒋之之/叶文彬/廖廖五个0-1案例 + 砻沣/郁金星/劉衛三个互相加强案例
+- [[yitang-ai-10x-flywheel]] — 26秋马·AI十倍速成长全篇（Truman）：AI十倍速飞轮四阶段框架（启动期信心飞轮/加速期双向加强/复利期数据·Agent·团队三种复利/迁移期Y模型×双三角跨界），阶段与飞轮错配是卡点根源；11个完整案例：温童凯/张伟强/蒋之之/叶文彬/廖廖（0-1启动）、砻沣/郁金星/劉衛（互相加强）、天末/半肥猫/贺雷（封装复制）、杨晓光/花辣子米/一堂（跨界迁移）
 
 ## Comparisons
 - [[web-data-api-comparison]] — Web 数据 API 竞品对比：Firecrawl vs Crawl4AI vs ScrapeGraphAI vs Jina Reader
