@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-09-19
+updated: 2026-10-07
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-09-19 | Total pages: 160
+> Last updated: 2026-10-07 | Total pages: 161
 
 ## Entities
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
@@ -119,6 +119,7 @@ tags: [index]
 - [[yitang-business-formula]] — 一堂业务公式拆解（孔源）：三个条件（看得清/想得透/做得准）、四个认知突破、参数冰山L1-L6、先切分再转化、+ vs ×
 - [[yitang-cd-loop]] — 一堂落地之夜第255场（Live255）：业务公式(C)×转化率(D)循环方法论，三个行业实战复盘（叶文彬·射箭馆四关模型/董原·少儿舞蹈续班率/谢泽丰·服装店二次试穿）
 - [[yitang-voice-prompting]] — 一堂AI口喷必修课（Live260，Truman）：语音×AI协作的第一战略级基本功，五大优势、心法「把AI当人把人当AI」、新手四大难、五次飞跃段位图（L1-L6）、九字诀、刻意练习1+4、OPT一晚做一套课极限案例
+- [[yitang-y-model]] — 一堂Y模型·重新理解科学理念（行动营第一轮，Truman）：150节课最底层必修课，相信并追求客观因果规律为核心，理论+事实两叉迭代、知行合一/实事求是/解放思想三大姿势、定性定量/科学类比/假设驱动/提炼建模四大工具，22张红蓝卡片团队修炼，「把创业打造成学科」
 
 - [[threejs-game-skills]] — 9 个 AI Agent 游戏开发技能包，让 Codex/Claude Code 从零构建 AAA 级 3D 网页游戏（导演路由 + 10 维度评分卡 + Tripo/Gemini/ElevenLabs 集成）
 - [[leaferjs]] — 国产开源 Canvas 2D 渲染引擎 + UI 框架：百万级图形 + 局部渲染 + 内置编辑器，适合 AI 无限画布/图形编辑器/组态可视化
@@ -210,4 +211,5 @@ tags: [index]
 - raw/yitang/ai-prototype-design-cross-domain-bill-原文整理.md
 - raw/yitang/skill-architect-jialaoshi-原文整理.md
 - raw/yitang/26秋马-AI十倍速成长-原文整理.md
+- raw/yitang/重新理解科学理念-原文整理.md
 
