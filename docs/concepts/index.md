@@ -1,6 +1,6 @@
 # 概念
 
-共 95 篇。
+共 96 篇。
 
 - [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长（AI十倍速飞轮）]]
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
@@ -97,3 +97,4 @@
 - [[yitang-huazong-ama-cost-ai-landing|花总AMA｜商业突破大航海 — 成本与AI落地]]
 - [[ai-prototype-design-cross-domain|跨行业新手用 AI 做交互原型设计（一堂·Bill）]]
 - [[cross-app-ai-knowledge-base|跨账号跨 App AI 知识底座（一堂·李囧囧）]]
+- [[yitang-mayi-ama-ai-hardware|马易AMA：Uppi AI语音键盘开源分享——AI硬件创业方法论]]
