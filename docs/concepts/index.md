@@ -1,6 +1,6 @@
 # 概念
 
-共 97 篇。
+共 98 篇。
 
 - [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长（AI十倍速飞轮）]]
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
@@ -85,6 +85,7 @@
 - [[opensource-practices-from-open-design|从 Open Design 学习开源项目实践]]
 - [[opensource-project-practices-from-openhuman|从 OpenHuman 项目学习开源开发维护实践]]
 - [[opensource-project-practices-from-temporal|从 Temporal 项目学习开源开发维护实践]]
+- [[skill-encapsulation-compass-junlong|俊隆·Skill封装罗盘与案例AMA（AI大航海特别分享）]]
 - [[content-growth-loop|内容增长闭环]]
 - [[yitang-partner-encapsulation|封装一个 Partner（系统提示词）：六阶段方法论（一堂·2026 AI 大航海任务包02）]]
 - [[yitang-skill-encapsulation|封装第一个「非常好用」的 Skill：五阶段方法论（一堂·2026 AI 大航海任务包01）]]
