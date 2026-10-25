@@ -1,6 +1,6 @@
 # 概念
 
-共 96 篇。
+共 97 篇。
 
 - [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长（AI十倍速飞轮）]]
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
@@ -74,6 +74,7 @@
 - [[yitang-ai-data-first-lesson|一堂AI数据第一课（Live251）— ADAPTED 6+1 模型]]
 - [[yitang-y-model|一堂Y模型（科学理念课）]]
 - [[yitang-dual-triangle|一堂双三角（Live254）]]
+- [[yitang-scene-star-model|一堂场景STAR模型：AI场景第一课（Live262）]]
 - [[yitang-cd-loop|一堂落地之夜第255场：业务公式 × 转化率（C×D）实战循环]]
 - [[yitang-advanced-modeling|一堂高阶建模第一课（Live253）]]
 - [[experience-extraction-agent|业务流程经验萃取（Coco Agent）]]

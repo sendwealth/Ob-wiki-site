@@ -1,7 +1,7 @@
 ---
 title: 一堂双三角（Live254）
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-10-25
 type: concept
 tags: [yitang, dual-triangle, ai-native, human-ai-collaboration, methodology, competitiveness-model]
 sources:
@@ -187,3 +187,4 @@ confidence: high
 - [[yitang-advanced-modeling]] — 人类三角"体系"角的修炼路径：建模三阶（流程→抽象→本质）
 - [[roi-decision-framework]] — 双三角"拼图/底牌"场景的决策工具
 - [[yitang-ai-data-first-lesson]] — AI 三角"数据"角的独立必修课
+- [[yitang-scene-star-model]] — AI 三角"场景"角的独立必修课（Live262 场景STAR模型：S探索/T变革/A提速/R落地）

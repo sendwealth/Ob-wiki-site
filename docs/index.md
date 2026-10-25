@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-10-18
+updated: 2026-10-25
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-10-18 | Total pages: 164
+> Last updated: 2026-10-25 | Total pages: 165
 
 ## Entities
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
@@ -122,6 +122,7 @@ tags: [index]
 - [[yitang-y-model]] — 一堂Y模型·重新理解科学理念（行动营第一轮，Truman）：150节课最底层必修课，相信并追求客观因果规律为核心，理论+事实两叉迭代、知行合一/实事求是/解放思想三大姿势、定性定量/科学类比/假设驱动/提炼建模四大工具，22张红蓝卡片团队修炼，「把创业打造成学科」
 - [[yitang-skill-encapsulation]] — 一堂2026 AI大航海任务包01：封装第一个「非常好用」的Skill，五阶段方法论（选场景→做好一次V0→提炼六类规则→封装V1→换材料验证），三类测试（正常/缺信息/边界），「封装Skill本质不是把提示词写长，而是把判断讲清」
 - [[yitang-partner-encapsulation]] — 一堂2026 AI大航海任务包02：封装一个Partner（系统提示词），TCPR角色分类（教学/咨询/实践/研究）+六阶段方法论（场景边界→草稿版双三角→充分打磨加法→充分版双三角排序→跑通封装V1→固定入口换任务复盘），「先把一次对话做成有效解法，再把有效解法固化」
+- [[yitang-scene-star-model]] — 一堂AI场景第一课（Live262，Truman）：场景STAR模型（S探索/合伙人·T变革/大牌·A提速/实习生·R落地/新员工四象限），场景优先vs工具优先、四种驱动逻辑（敏感/想象/算账/攒牌）、第一黄金场景三关、场景评估画布（价值4维×成本4维）、灵感闪现/大胆设想/场景评估三套文档
 
 - [[threejs-game-skills]] — 9 个 AI Agent 游戏开发技能包，让 Codex/Claude Code 从零构建 AAA 级 3D 网页游戏（导演路由 + 10 维度评分卡 + Tripo/Gemini/ElevenLabs 集成）
 - [[leaferjs]] — 国产开源 Canvas 2D 渲染引擎 + UI 框架：百万级图形 + 局部渲染 + 内置编辑器，适合 AI 无限画布/图形编辑器/组态可视化
@@ -218,4 +219,5 @@ tags: [index]
 - raw/yitang/封装第一个好用的Skill-官方任务包01-原文整理.md
 - raw/yitang/封装一个Partner-官方任务包02-原文整理.md
 - raw/yitang/马易-Uppi-AI语音键盘开源分享-原文整理.md
+- raw/yitang/AI场景第一课-原文整理.md
 
