@@ -1,6 +1,6 @@
 # 概念
 
-共 98 篇。
+共 99 篇。
 
 - [[yitang-ai-10x-flywheel|26秋马：AI十倍速成长（AI十倍速飞轮）]]
 - [[a2a-protocol|A2A Protocol (Agent-to-Agent) 深度技术参考]]
@@ -55,6 +55,7 @@
 - [[skill-self-evolution|Skill 自进化闭环：darwin-skill × skill-evolver × EmbodiSkill]]
 - [[superagent|SuperAgent 长时域智能体架构]]
 - [[temporal-durability-stability|Temporal 稳定性与持久性实现机制分析]]
+- [[yitang-truman-ten-ai-tasks|Truman的十大AI任务（上半场任务1-5）：场景梳理·搓Partner·封装Skill·双三角·AI知识库与上下文微操]]
 - [[zed-agent-modular-design|Zed Agent 系统模块化设计分析]]
 - [[zed-documentation-system|Zed 文档管理体系]]
 - [[agent-world-lobechat-pm-analysis|agent-world-lobechat-pm-analysis]]

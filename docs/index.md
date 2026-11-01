@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-10-25
+updated: 2026-11-01
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-10-25 | Total pages: 166
+> Last updated: 2026-11-01 | Total pages: 167
 
 ## Entities
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
@@ -144,6 +144,7 @@ tags: [index]
 - [[codex-ai-ppt-fangzhenyi]] — 方振义(Lester)·用 Codex 做 PPT：HTML 版 PPT（guizang-ppt-skill）八步工作流 + Image 版 PPT（GPT Image 2/Image Gen）六步工作流，对比两条 AI 做 PPT 路线，映射一堂双三角（一堂专家分享）
 - [[yitang-ai-10x-flywheel]] — 26秋马·AI十倍速成长全篇（Truman）：AI十倍速飞轮四阶段框架（启动期信心飞轮/加速期双向加强/复利期数据·Agent·团队三种复利/迁移期Y模型×双三角跨界），阶段与飞轮错配是卡点根源；11个完整案例：温童凯/张伟强/蒋之之/叶文彬/廖廖（0-1启动）、砻沣/郁金星/劉衛（互相加强）、天末/半肥猫/贺雷（封装复制）、杨晓光/花辣子米/一堂（跨界迁移）
 - [[yitang-mayi-ama-ai-hardware]] — 马易·Uppi AI语音键盘开源分享&AMA：AI硬件创业方法论（硬件三阶段技术开发/工程开发/量产生产、翻译笔+麦克风低成本原型、四大痛点验证、1000台成本账90元/台、成本五块论、华强北抄版模型「量不够不抄你」、开发周期benchmark贴牌3月/IC组装6月、Uppi单元经济299/259、碰一碰vs扫一扫步数分析）（一堂专家分享）
+- [[yitang-truman-ten-ai-tasks]] — 揭秘直播：Truman的十大AI任务（上半场任务1-5，案例开放麦）：「回不去」入门标志、场景梳理三维度、Partner磨课搭子三年演进、DeepDebug/全量复盘/Better-Skill五步法、双三角三阶段肌肉记忆、AI知识库新范式「上下文微操」（里程碑模型×上下文×拆解、文档为驱动+严格编号+清单体、里程碑串行内部并行）
 
 ## Comparisons
 - [[web-data-api-comparison]] — Web 数据 API 竞品对比：Firecrawl vs Crawl4AI vs ScrapeGraphAI vs Jina Reader
@@ -222,4 +223,5 @@ tags: [index]
 - raw/yitang/马易-Uppi-AI语音键盘开源分享-原文整理.md
 - raw/yitang/AI场景第一课-原文整理.md
 - raw/yitang/skill-encapsulation-ama-junlong-原文整理.md
+- raw/yitang/Truman十大AI任务-原文整理.md
 
