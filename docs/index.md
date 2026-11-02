@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-11-01
+updated: 2026-11-02
 tags: [index]
 ---
 
@@ -9,9 +9,10 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-11-01 | Total pages: 167
+> Last updated: 2026-11-02 | Total pages: 168
 
 ## Entities
+- [[little-talk]] — 网文写作工具集（自有项目，active）：13 个 story-* Skill + Hook 双守卫 + _tracking-state.json 千章级追踪，《散财成神》至 1210 章、《朕的2027》至 600 章双书并行，直通番茄上传与自动发布
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
 - [[open-webui]] — 可扩展、功能丰富、用户友好的自托管 AI 平台（v0.10.2）：Ollama/OpenAI 兼容 API、内置 RAG、MCP/工具/自动化/频道协作
 - [[openworker]] — Andrew Ng 团队开源的本地优先 AI 桌面协作者：模型中立、25+ 连接器、MCP、完成物导向

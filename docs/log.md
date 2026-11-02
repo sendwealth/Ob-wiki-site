@@ -722,3 +722,12 @@ tags: [log]
 - **内容**: 五个决策按推荐拍板（Apache-2.0 / 独立 org / 英文主 README / 保留 superpowers / 首期不发 npm）后在 `feat/opensource-prep` 分支完成四个提交（43 文件 +1759/−415）：①合规硬门（Apache-2.0 全文 + vendor/agentflow LICENSE/NOTICE 归属 Flowise、/Users/rowan 与 multica-ops 私有技能清理、AGENTS/CLAUDE 去个人化）；②治理文件（CONTRIBUTING 双语、CoC 2.1、SECURITY 含零遥测隐私节与历史审计备注、Issue/PR 模板、9 个 package.json 加 engines node>=22 + 版本 0.1.0、Mil-Agents 旧名清理）；③README 落地页双语（诚实限制节从 workflow-engine.md 提炼）+ devcontainer；④CI/CD（ci.yml 加 dorny/paths-filter 文档跳过 + Node 20→22 修正、CodeQL 限 apps/packages、Dependabot 月度分组、release.yml tag 驱动 amd64/arm64 原生 runner 多架构镜像 + GHCR manifest 合并 + 自动 Release、CHANGELOG 0.1.0、docs/opensource-release-checklist.md 发布手册）。验证：YAML/JSON 全语法通过、README 相对链接全存在、contracts 8 用例 + gateway cli-first 8 用例通过、虚构测试示例 auth.test.ts 修正为真实存在的 cli-first.test.ts。剩余发布日动作（org 创建、<owner> 占位符、v0.1.0 tag、渠道分发）在仓库 docs/opensource-release-checklist.md
 - **来源**: [~/Projects/dagents](~/Projects/dagents), 分支 feat/opensource-prep
 - **关联**: [[opensource-project-practices-from-multica]], [[opensource-project-practices-from-caveman]], [[opensource-practices-from-lobechat]]
+
+---
+
+## 2026-11-02 · little-talk
+- **操作**: 创建 little-talk entity 页，按新确立的「自己探索的项目」管理规范入册（单主页 + raw 子目录 + active 标签；tag 沿用库内既有 active 惯例）
+- **文件**: entities/little-talk.md
+- **内容**: 网文创作全流程工程化工具集（ZCode Skills + Hooks，~/Projects/little-talk）：AGENTS.md 路由 13 个 story-* Skill（long/short-write、long/short-analyze、long/short-scan、deslop、cover、review、import、setup、story 模糊分发 + browser-cdp）；PreToolUse Hook 守卫「无细纲不写正文」，PostToolUse Hook 检查落盘/截断/占位符/工程词泄漏/复读/标题重复，字数由流程末端 chapter check 单点测量；追踪体系以 _tracking-state.json 为唯一结构化权威，派生 7 栏上下文.md（Compact 恢复入口）/伏笔/角色快照/双时间线/逐章记录。双书验证：《散财成神》至第 1210 章（2026-09-17~10-01 返修/清账/裁定/deslop/修正五类 16+ 份备份的密集质检期，上传_番茄 + 自动发布商业化通路），《朕的2027》至第 600 章。探索目标：Skill 化流水线 vs 手写的产能质量、千章级连续性、流程化去 AI 味
+- **来源**: [~/Projects/little-talk](~/Projects/little-talk)
+- **关联**: [[agent-world]], [[humanizer-skill]], [[ai-short-drama-workflow]], [[diary-to-book-skill]], [[adapted-6plus1-rss-obsidian-kb]]

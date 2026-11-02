@@ -1,6 +1,6 @@
 # 实体
 
-共 88 篇。
+共 89 篇。
 
 - [[agency-agents|Agency Agents (The Agency)]]
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
@@ -85,6 +85,7 @@
 - [[ai-job-search|ai-job-search]]
 - [[awesome-design-md|awesome-design-md]]
 - [[gstack|gstack — Garry Tan 的 AI 软件工厂]]
+- [[little-talk|little-talk 网文写作工具集]]
 - [[llama-cpp|llama.cpp]]
 - [[n8n|n8n]]
 - [[slime|slime]]
