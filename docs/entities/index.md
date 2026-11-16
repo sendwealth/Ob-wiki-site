@@ -1,6 +1,6 @@
 # 实体
 
-共 89 篇。
+共 91 篇。
 
 - [[agency-agents|Agency Agents (The Agency)]]
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
@@ -60,6 +60,7 @@
 - [[open-design|Open Design 项目亮点分析]]
 - [[open-webui|Open WebUI]]
 - [[openbb|OpenBB: 开源金融数据平台学习笔记]]
+- [[openevolve|OpenEvolve]]
 - [[opengeni|OpenGeni]]
 - [[openmontage|OpenMontage]]
 - [[openshell|OpenShell]]
@@ -84,6 +85,7 @@
 - [[zenml|ZenML]]
 - [[ai-job-search|ai-job-search]]
 - [[awesome-design-md|awesome-design-md]]
+- [[dsh-superagent|dsh-superagent]]
 - [[gstack|gstack — Garry Tan 的 AI 软件工厂]]
 - [[little-talk|little-talk 网文写作工具集]]
 - [[llama-cpp|llama.cpp]]

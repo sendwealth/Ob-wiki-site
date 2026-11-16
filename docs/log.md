@@ -726,8 +726,22 @@ tags: [log]
 ---
 
 ## 2026-11-02 · little-talk
+- **操作**: 创建 OpenEvolve entity 页（学习本机 ~/Projects/openevolve 源码）
+- **文件**: entities/openevolve.md
+- **内容**: algorithmicsuperintelligence/openevolve —— AlphaEvolve 开源复现（7.6k stars、月下载 1.7 万、数百篇论文引用的 LLM 算法发现标准基线）。核心 ~8.5k 行 Python：database.py（2910 行，MAP-Elites 特征网格 + 岛屿种群 + 惰性迁移 + artifacts 旁路 + 嵌入/LLM-judge 新颖性）、process_parallel.py（1224 行，进程池 + 数据库快照真并行）、evaluator.py（三级级联评估逐级阈值淘汰）、LLM ensemble（OpenAI 兼容 / Claude Code / Copilot CLI / Codex 四后端加权采样）、prompt/sampler.py（diff-based SEARCH/REPLACE 优先 + Double-Selection 采样）。设计取舍：进程级隔离换可复现性、Double-Selection 防视野趋同、惰性迁移减同步点、artifact 回灌下轮 prompt 形成反馈回路、全组件种子化。成果：圆装箱 n=26 SOTA、MLX Metal kernel 2-3× 加速；25 个示例
+- **来源**: [~/Projects/openevolve 源码](~/Projects/openevolve), [GitHub](https://github.com/algorithmicsuperintelligence/openevolve)
+- **关联**: [[opengeni]], [[slime]], [[langchain]]
+
+## 2026-11-16
+- **dsh-superagent** (`entities/dsh-superagent.md`) — 深度调研本地 dsh-superagent-prototype 仓库并建页：理念（注意力经济学）、领域模型、Engine 五 Part 架构、数据流、设计取舍。交叉引用 [[deepseek-harness]]、[[superagent]]。
+=======
+## 2026-11-02 · little-talk
 - **操作**: 创建 little-talk entity 页，按新确立的「自己探索的项目」管理规范入册（单主页 + raw 子目录 + active 标签；tag 沿用库内既有 active 惯例）
 - **文件**: entities/little-talk.md
 - **内容**: 网文创作全流程工程化工具集（ZCode Skills + Hooks，~/Projects/little-talk）：AGENTS.md 路由 13 个 story-* Skill（long/short-write、long/short-analyze、long/short-scan、deslop、cover、review、import、setup、story 模糊分发 + browser-cdp）；PreToolUse Hook 守卫「无细纲不写正文」，PostToolUse Hook 检查落盘/截断/占位符/工程词泄漏/复读/标题重复，字数由流程末端 chapter check 单点测量；追踪体系以 _tracking-state.json 为唯一结构化权威，派生 7 栏上下文.md（Compact 恢复入口）/伏笔/角色快照/双时间线/逐章记录。双书验证：《散财成神》至第 1210 章（2026-09-17~10-01 返修/清账/裁定/deslop/修正五类 16+ 份备份的密集质检期，上传_番茄 + 自动发布商业化通路），《朕的2027》至第 600 章。探索目标：Skill 化流水线 vs 手写的产能质量、千章级连续性、流程化去 AI 味
 - **来源**: [~/Projects/little-talk](~/Projects/little-talk)
 - **关联**: [[agent-world]], [[humanizer-skill]], [[ai-short-drama-workflow]], [[diary-to-book-skill]], [[adapted-6plus1-rss-obsidian-kb]]
+
+---
+
+## 2026-11-11 · openevolve

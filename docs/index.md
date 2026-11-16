@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-11-02
+updated: 2026-11-16
 tags: [index]
 ---
 
@@ -9,10 +9,11 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-11-02 | Total pages: 168
+> Last updated: 2026-11-16 | Total pages: 169
 
 ## Entities
 - [[little-talk]] — 网文写作工具集（自有项目，active）：13 个 story-* Skill + Hook 双守卫 + _tracking-state.json 千章级追踪，《散财成神》至 1210 章、《朕的2027》至 600 章双书并行，直通番茄上传与自动发布
+- [[openevolve]] — AlphaEvolve 开源复现：LLM 变异 + MAP-Elites/岛屿进化 + 级联评估的进化式编码 agent，7.6k stars，LLM 算法发现标准基线
 - [[deepseek-harness]] — DeepSeek AI 开源 agent harness（v0.1.0-rc.5，MIT）：一切皆插件（vendored Cordis）、capability seam 三角色、事件日志唯一事实源、Web/headless/Python SDK 三形态
 - [[open-webui]] — 可扩展、功能丰富、用户友好的自托管 AI 平台（v0.10.2）：Ollama/OpenAI 兼容 API、内置 RAG、MCP/工具/自动化/频道协作
 - [[openworker]] — Andrew Ng 团队开源的本地优先 AI 桌面协作者：模型中立、25+ 连接器、MCP、完成物导向
@@ -55,6 +56,7 @@ tags: [index]
 - [[agno-documentation-system]] — Agno 五层文档体系：外部文档站 + Cookbook 可运行示例 + AI Agent 指令层 + CI 强制门禁
 - [[agentic-rag]] — Agentic RAG 代理式检索增强生成：概念、框架、架构、生态
 - [[superagent]] — SuperAgent 长时域智能体架构：编排层 + 沙箱 + 三层记忆 + 技能市场 + 工具中心 + 消息网关，子代理并行协作跑小时级长任务（参考 deer-flow）
+- [[dsh-superagent]] — DeepSeek Harness 团队研究原型：单 GitHub 仓库主动式编码 agent，Eval→Ticket→Assignment 领域模型，"最少占用人注意力"门禁/单事务 Engine/角色化接口，MIT 研究代码
 - [[multica-runtime-discovery]] — Multica Runtime 发现机制：CLI 探测、注册、心跳、健康状态、自动恢复
 - [[adk-multica-http-runtime]] — ADK Agent 以 HTTP 服务接入 Multica Runtime 体系的完整集成方案
 - [[oscar-research-methodology]] — OSCAR调研五步法 + 18张卡牌
