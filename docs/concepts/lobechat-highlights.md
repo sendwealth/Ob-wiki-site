@@ -1,3 +1,11 @@
+---
+title: "LobeChat 项目亮点深度分析"
+created: 2026-05-19
+updated: 2026-11-20
+type: concept
+tags: [lobechat, architecture, design-patterns, highlights, open-source]
+---
+
 # LobeChat 项目亮点深度分析
 
 > 从 LobeChat (LobeHub) 仓库中挖掘到的工程亮点，涵盖架构设计、设计模式、工程实践等方面。

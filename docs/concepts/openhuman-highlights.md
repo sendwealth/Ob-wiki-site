@@ -1,3 +1,11 @@
+---
+title: "OpenHuman 项目亮点深度解析"
+created: 2026-05-19
+updated: 2026-11-20
+type: concept
+tags: [openhuman, architecture, highlights, open-source, llm]
+---
+
 # OpenHuman 项目亮点深度解析
 
 > 源自 [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) 源码挖掘，2026-05-19

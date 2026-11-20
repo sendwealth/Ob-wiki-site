@@ -1,3 +1,11 @@
+---
+title: "业务公式拆解方法（一堂·孔源）"
+created: 2026-06-15
+updated: 2026-11-20
+type: concept
+tags: [business, methodology, yitang, business-analysis]
+---
+
 # 业务公式拆解方法（一堂·孔源）
 
 > 来源：[专家分享｜如何用业务公式，驱动业务不断提升？（孔源）](../raw/yitang/业务公式驱动业务提升-孔源-原文整理.md)
@@ -86,4 +94,4 @@
 ## 关联概念
 
 - [[yitang-advanced-modeling]] — 高阶建模（同一体系的方法论进阶）
-- [[yitang-key-assumption]] — 关键假设ABCD体系（业务公式是最后一块拼图）
+- 关键假设ABCD体系（业务公式是最后一块拼图，暂无独立页面）

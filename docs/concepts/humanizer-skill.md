@@ -10,7 +10,7 @@ confidence: high
 
 # Humanizer Skill
 
-> [[index|← Index]] | [[wechat-ai-writer-pipeline|→ 写作管线]]
+> [[index|← Index]]
 
 ## 概要
 
@@ -119,5 +119,5 @@ confidence: high
 
 ## 相关页面
 
-- [[wechat-ai-writer-pipeline]] — 公众号 AI 写作管线
+- 公众号 AI 写作管线（暂无独立页面）
 - [[oscar-research-methodology]] — OSCAR 调研五步法

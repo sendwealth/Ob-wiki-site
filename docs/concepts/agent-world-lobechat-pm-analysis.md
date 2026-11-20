@@ -1,3 +1,11 @@
+---
+title: "LobeChat 模式借鉴到 Agent-World：产品推演与必要性规划"
+created: 2026-05-19
+updated: 2026-11-20
+type: concept
+tags: [lobechat, agent-world, product-management, product-analysis]
+---
+
 # LobeChat 模式借鉴到 Agent-World：产品推演与必要性规划
 
 > 文档版本：v1.0 | 日期：2026-05-19 | 角色：产品经理视角

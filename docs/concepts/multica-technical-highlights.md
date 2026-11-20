@@ -1,6 +1,8 @@
 ---
 title: Multica 项目技术亮点
 created: 2026-05-21
+updated: 2026-11-20
+type: concept
 tags: [multica, architecture, engineering, highlights]
 ---
 

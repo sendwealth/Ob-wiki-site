@@ -1,13 +1,14 @@
 ---
 title: 业务流程经验萃取（Coco Agent）
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-11-20
 type: concept
 tags: [yitang, agent, prompt-engineering, workflow, sop, knowledge-management]
 sources:
   - name: Noah（OPT版）：业务流程萃取Agent设计
     url: https://yitanger.feishu.cn/wiki/XMEiwaaGOiU4TLkdnAZctN7znTk
     author: Noah
+  - raw/yitang/Coco经验萃取Agent-学习笔记.md
 confidence: high
 ---
 
@@ -61,6 +62,7 @@ System Prompt + 五个功能分支提示词，复制给 Claude Code / Trae / Cod
 
 ## 关联
 
+- 原文：[[raw/yitang/Coco经验萃取Agent-学习笔记|学习笔记原文]]
 - [[kecheng-to-ai-tool]] — 把课程变成 AI 工具
 - [[content-growth-loop]] — 内容增长闭环（内容 SOP 用三层标准）
 - [[geo-brand-foundation]] — GEO 品牌地基（FAQ 用 COP 法梳理用户问题）

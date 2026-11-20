@@ -105,7 +105,7 @@ def webhook():
 
 ## 平台市场模式（Stripe Connect）
 
-对于双边市场（如 [[truthverifier]]），用 Checkout + Connect 做分账：
+对于双边市场（如 [[tanzhen]]），用 Checkout + Connect 做分账：
 
 ```python
 session = stripe.checkout.Session.create(
@@ -141,5 +141,5 @@ session = stripe.checkout.Session.create(
 
 ## 关联
 
-- [[truthverifier]] — 探真悬赏验证平台，可用 Checkout + Connect 做支付分账
+- [[tanzhen]] — 探真悬赏验证平台，可用 Checkout + Connect 做支付分账
 - [[content-growth-loop]] — 内容增长闭环，同样涉及 SaaS 工具选型思维

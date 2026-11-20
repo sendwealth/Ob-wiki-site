@@ -1,13 +1,14 @@
 ---
 title: GEO 品牌地基搭建
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-11-20
 type: concept
 tags: [yitang, geo, seo, content-strategy, ai-coding, branding]
 sources:
   - name: 堃堃：当文科生拥抱AI——两天建立品牌GEO地基的完整实录
     url: https://yitanger.feishu.cn/wiki/FE95w8NUxiNF3IkebkkcickvnTe
     author: 堃堃（中版国际）
+  - raw/yitang/GEO品牌地基-学习笔记.md
 confidence: high
 ---
 
@@ -59,5 +60,6 @@ confidence: high
 
 ## 关联
 
+- 原文：[[raw/yitang/GEO品牌地基-学习笔记|学习笔记原文]]
 - [[content-growth-loop]] — 内容增长闭环，GEO 是其中重要一环
 - [[kecheng-to-ai-tool]] — 把课程变成 AI 工具，同样的 AI 延伸能力理念

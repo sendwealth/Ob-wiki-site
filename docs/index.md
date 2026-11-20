@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-11-20 | Total pages: 199
+> Last updated: 2026-11-20 | Total pages: 201
 
 ## Entities
 - [[little-talk]] — 网文写作工具集（自有项目，active）：13 个 story-* Skill + Hook 双守卫 + _tracking-state.json 千章级追踪，《散财成神》至 1210 章、《朕的2027》至 600 章双书并行，直通番茄上传与自动发布
@@ -116,6 +116,7 @@ tags: [index]
 - [[multica-loop-agent]] — Multica Loop Agent 实践：基于 loop-engineering 理论的全闭环 AI 编排系统（感知→验证→停滞检查→分配→反馈五阶段）
 
 - [[yitang-huazong-ama-cost-ai-landing]] — 花总AMA商业突破大航海：双三角方法论、成本与AI落地、数学题vs语文题分类法、14个行业问答精华
+- [[yitang-weekly-review-2026w23]] — 一堂学习周总结（2026W23）：9篇课程横向总结收敛出四个关键词（方法论先行·人在环·显性化·先调研再开枪）
 - [[yitang-ai-data-first-lesson]] — 一堂AI数据第一课（Live251）：ADAPTED 6+1 模型、三层价值假设、湖仓思维、8类AI数据、能力段位图
 - [[yitang-advanced-modeling]] — 一堂高阶建模第一课（Live253）：三阶建模体系（流程→抽象→本质）、千人广场模型、六步建模工作流、十年爬山地图
 - [[yitang-dual-triangle]] — 一堂双三角（Live254，公司级背书）：人类三角（审美/体系/创造力）× AI三角（场景/数据/基本功），五步推导飞轮与AI原生本质，三阶六变落地场景（X光/心法/画布/拼图/地图/底牌）
@@ -149,6 +150,7 @@ tags: [index]
 - [[yitang-mayi-ama-ai-hardware]] — 马易·Uppi AI语音键盘开源分享&AMA：AI硬件创业方法论（硬件三阶段技术开发/工程开发/量产生产、翻译笔+麦克风低成本原型、四大痛点验证、1000台成本账90元/台、成本五块论、华强北抄版模型「量不够不抄你」、开发周期benchmark贴牌3月/IC组装6月、Uppi单元经济299/259、碰一碰vs扫一扫步数分析）（一堂专家分享）
 - [[yitang-truman-ten-ai-tasks]] — 揭秘直播：Truman的十大AI任务（上半场任务1-5，案例开放麦）：「回不去」入门标志、场景梳理三维度、Partner磨课搭子三年演进、DeepDebug/全量复盘/Better-Skill五步法、双三角三阶段肌肉记忆、AI知识库新范式「上下文微操」（里程碑模型×上下文×拆解、文档为驱动+严格编号+清单体、里程碑串行内部并行）
 - [[ai-agent-ecosystem]] — AI Agent 生态概览：从单模型调用到多 Agent 协作 + 工具市场 + 协议层的体系
+- [[mcp-protocol]] — MCP 协议（Model Context Protocol）：Anthropic 开源的 LLM↔工具连接标准，JSON-RPC、Tools/Resources/Prompts 三原语，与 A2A 互补
 - [[llm-ready-data]] — LLM-ready 数据：无需额外清洗即可被 LLM/RAG/Agent 消费的输入格式
 - [[loop-engineering]] — Loop Engineering：以反馈循环为核心、状态管理为基础、可观测性为保障的 AI 系统工程方法（感知→决策→执行→评估闭环）
 - [[langflow-architecture]] — Langflow 项目架构分析

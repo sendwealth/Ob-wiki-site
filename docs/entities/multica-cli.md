@@ -10,7 +10,7 @@ sources:
   - /Applications/Multica.app
 confidence: high
 see_also:
-  - "[[Multica]]"
+  - "[[multica]]"
   - "[[agent-world]]"
 ---
 

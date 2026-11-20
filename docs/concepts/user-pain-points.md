@@ -34,5 +34,5 @@ confidence: medium
 - 老龄化相关服务
 
 ## 关联
-- [[探真产品设计]]
+- [[tanzhen]]
 - [[oscar-research-methodology]]

@@ -1,3 +1,11 @@
+---
+title: "LobeChat 架构分析"
+created: 2026-05-15
+updated: 2026-11-20
+type: concept
+tags: [ai, chatbot, architecture, lobechat, open-source]
+---
+
 # LobeChat 架构分析
 
 > LobeChat 是 LobeHub 开源的高质量 AI 对话应用，支持多种 LLM 提供商、插件系统、多平台部署（Web / Mobile / Desktop）。本文从架构层面分析其设计思路。

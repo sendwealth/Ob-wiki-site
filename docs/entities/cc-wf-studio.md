@@ -197,7 +197,7 @@ Workflow JSON → planWorkflowExportFiles() → generate agent-specific files
 ## See Also
 
 - [[claude-code-workflow]] — Claude Code workflow patterns and conventions
-- [[mcp-server-patterns]] — MCP server design patterns used in this project
+- [[mcp-protocol]] — MCP server design patterns used in this project
 - [[ecc]] — ECC superpowers system (197K⭐), a consumer of cc-wf-studio workflows
 - [[ruflo]] — 48.9K⭐ multi-agent orchestration platform for comparison
 - [[n8n]] — General workflow automation for comparison

@@ -1,6 +1,8 @@
 ---
 title: Multica 如何使用 ACP 连接 Agent
-date: 2026-05-20
+created: 2026-05-20
+updated: 2026-11-20
+type: concept
 tags: [multica, acp, agent, integration, architecture]
 ---
 

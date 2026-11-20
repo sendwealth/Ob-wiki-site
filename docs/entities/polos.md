@@ -108,7 +108,7 @@ Agent 运行在隔离环境，内置一套开箱即用的 `sandboxTools()`：
 - **Prompt 缓存**：官方宣称 **60–80% 成本节省**
 - **并发控制**：跨 Agent 的速率协调，避免 LLM API 限流混乱
 
-底层原理（与 [[temporal]] 一致）：捕获每个副作用结果入 durable log；进程死亡后重放 workflow，对已记录的步骤直接返回缓存值，**本地变量与调用栈在毫秒级恢复**。区别在于 Polos 把"LLM 调用"也视为一种可缓存的副作用——这是通用 workflow 引擎不会做的优化。详见 [[temporal-durability-stability]] 与 [[durable-execution-for-agents]]（待建）。
+底层原理（与 [[temporal]] 一致）：捕获每个副作用结果入 durable log；进程死亡后重放 workflow，对已记录的步骤直接返回缓存值，**本地变量与调用栈在毫秒级恢复**。区别在于 Polos 把"LLM 调用"也视为一种可缓存的副作用——这是通用 workflow 引擎不会做的优化。详见 [[temporal-durability-stability]]。
 
 ### 3. 人在环（Human-in-the-Loop）
 

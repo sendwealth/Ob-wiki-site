@@ -40,4 +40,4 @@ confidence: high
 
 ## 关联
 - [[truth-verification-competitors]]
-- [[探真产品设计]]
+- [[tanzhen]]

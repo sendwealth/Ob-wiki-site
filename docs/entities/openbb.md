@@ -10,7 +10,7 @@ sources:
 confidence: high
 ---
 
-> [[🏠 Wiki Index|← Wiki Index]]
+> [[index|← Wiki Index]]
 
 # OpenBB 学习笔记
 
@@ -485,6 +485,6 @@ OpenBB 对你最有价值的几个点：
 - [[tanzhen]] — 探真：悬赏验证交易平台，可与 OpenBB 的金融数据能力结合
 - [[truth-verification-competitors]] — 真实性验证平台竞品全景对比
 - [[mcp-protocol]] — MCP 协议技术参考
-- [[ai-agent]] — AI Agent 概念与生态总览
+- [[ai-agent-ecosystem]] — AI Agent 概念与生态总览
 - [[a2a-protocol]] — A2A 协议深度技术参考
-- [[openbb-api-mcp-setup]] — OpenBB 本地 API/MCP 部署实践（待创建）
+- OpenBB 本地 API/MCP 部署实践（待创建）

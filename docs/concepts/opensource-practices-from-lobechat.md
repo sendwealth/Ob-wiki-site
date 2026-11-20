@@ -1,3 +1,11 @@
+---
+title: "从 LobeChat 学习开源项目开发维护实践"
+created: 2026-05-15
+updated: 2026-11-20
+type: concept
+tags: [open-source, community, lobechat, engineering-practices]
+---
+
 # 从 LobeChat 学习开源项目开发维护实践
 
 > LobeChat (github.com/lobehub/lobe-chat) 是一个 60k+ star 的开源 AI 对话应用。本文从项目实践中提取可复用的开源项目开发维护方法论。

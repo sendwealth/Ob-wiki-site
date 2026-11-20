@@ -14,11 +14,11 @@ confidence: high
 
 | 阵营 | 代表 | 模式 | 与我们差异 |
 |------|------|------|-----------|
-| 中心化编辑部 | [[Snopes]], [[PolitiFact]], [[Full Fact]] | 编辑选题 | 不接用户需求，无交易 |
-| 平台众包（无偿）| [[X社区笔记]], Wikipedia | 志愿者 | 无报酬，质量天花板低 |
-| B2B企业服务 | [[NewsGuard]] | 卖数据/API | 不对C端 |
-| 政府辟谣 | [[中国辟谣平台]] | 官方运营 | 单向发布 |
-| 威客平台 | [[Fiverr]] | 众包接单 | 无专用验证工具 |
+| 中心化编辑部 | [[snopes]], PolitiFact, [[full-fact]] | 编辑选题 | 不接用户需求，无交易 |
+| 平台众包（无偿）| [[x-community-notes]], Wikipedia | 志愿者 | 无报酬，质量天花板低 |
+| B2B企业服务 | [[newsguard]] | 卖数据/API | 不对C端 |
+| 政府辟谣 | [[china-rumor-platform]] | 官方运营 | 单向发布 |
+| 威客平台 | [[fiverr]] | 众包接单 | 无专用验证工具 |
 
 ## 核心发现
 
@@ -33,5 +33,5 @@ confidence: high
 - 证据链强制 + 多人交叉 + 仲裁
 
 ## 关联页面
-- [[探真产品设计]]
+- [[tanzhen]]
 - [[oscar-research-methodology]]

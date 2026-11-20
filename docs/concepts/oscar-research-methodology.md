@@ -1,3 +1,11 @@
+---
+title: "调研黑客五步曲 · 核心内容全记录"
+created: 2026-05-04
+updated: 2026-11-20
+type: concept
+tags: [research-methodology, oscar, yitang, user-research]
+---
+
 # 调研黑客五步曲 · 核心内容全记录
 
 > 来源：一堂《调研黑客五步曲实操篇》| 主讲：Truman | 2026年5月

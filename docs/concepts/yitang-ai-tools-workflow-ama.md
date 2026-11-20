@@ -443,4 +443,4 @@ Claude Code vs OpenClaw 是**互补关系**：
 
 > 📝 整理自一堂创业课「商业突破大航海」AMA 直播，讲师于陆，2026年5月19日。原始文档：[[yitang-ai-tools-workflow-ama]]
 
-**相关**：[[ai-design-fundamentals-yitang]] | [[superpowers]] | [[skill-system]] | [[acp-protocol]]
+**相关**：[[ai-design-fundamentals-yitang]] | [[superpowers]] | skill-system | [[acp-protocol]]

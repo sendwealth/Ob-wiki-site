@@ -1,6 +1,8 @@
 ---
 title: Multica ACP 工作流程详解
-date: 2026-05-20
+created: 2026-05-20
+updated: 2026-11-20
+type: concept
 tags: [multica, acp, agent, protocol, architecture]
 ---
 

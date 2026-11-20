@@ -1,13 +1,14 @@
 ---
 title: AI 短剧工作流封装
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-11-20
 type: concept
 tags: [yitang, ai-video, market-research, startup, competitive-analysis, director-agent]
 sources:
   - name: 李守彬：AI短剧/漫剧工作流封装工具——细分场景盘点与机会空白分析
     url: https://yitanger.feishu.cn/wiki/F3SPw9stuipLhJkLOsIcyosZnKi
     author: 李守彬（阿里波特）
+  - raw/yitang/AI短剧工作流-学习笔记.md
 confidence: high
 ---
 
@@ -54,6 +55,7 @@ confidence: high
 
 ## 关联
 
+- 原文：[[raw/yitang/AI短剧工作流-学习笔记|学习笔记原文]]
 - [[kecheng-to-ai-tool]] — 把课程变成 AI 工具（调研方法论相通）
 - [[oscar-research-methodology]] — OSCAR 调研方法论
 - [[content-growth-loop]] — 内容增长闭环

@@ -1,3 +1,11 @@
+---
+title: "Temporal 项目亮点分析"
+created: 2026-05-19
+updated: 2026-11-20
+type: concept
+tags: [temporal, architecture, engineering, highlights, open-source]
+---
+
 # Temporal 项目亮点分析
 
 > Temporal 是一个开源的 **durable execution platform**（持久化执行平台），用于构建可靠的大规模分布式应用。

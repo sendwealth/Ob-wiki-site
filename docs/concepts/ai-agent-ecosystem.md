@@ -23,4 +23,4 @@ AI Agent 生态正从“单模型调用”演进为“多 Agent 协作 + 工具�
 - [[firecrawl]] — Firecrawl 深度解析
 - [[browser-use-architecture]] — Browser-Use 技术架构
 - [[a2a-protocol]] — A2A Protocol 深度技术参考
-- [[mcp-native]] — MCP 原生客户端（待补充）
+- MCP 原生客户端（待补充）

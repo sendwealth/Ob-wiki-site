@@ -37,4 +37,4 @@ Snopes 的被动模式（编辑选题）验证了"主动悬赏 + AI 预检"模�
 
 ## 关联
 - [[truth-verification-competitors]]
-- [[探真产品设计]]
+- [[tanzhen]]

@@ -206,7 +206,7 @@ Open WebUI 明确把自身定位为**自托管、单租户、管理员可信**�
 
 | 项目 | 关系 |
 |---|---|
-| [[ollama]] | 本地模型运行时首选伙伴，Open WebUI 原生支持 |
+| Ollama | 本地模型运行时首选伙伴，Open WebUI 原生支持 |
 | [[lobechat-architecture]] | 功能类似的开源 Chat UI 竞品，LobeChat 更偏前端组件生态 |
 | [[dify]] | 低代码 LLMOps 平台，Open WebUI 更偏「聊天中枢」而非可视化工作流 |
 | [[flowise]] | 低代码 LLM 应用构建器，Open WebUI 不主打节点编排 |
@@ -241,7 +241,7 @@ Open WebUI 明确把自身定位为**自托管、单租户、管理员可信**�
 
 ## 相关页面
 
-- [[ollama]]
+- Ollama
 - [[lobechat-architecture]]
 - [[dify]]
 - [[flowise]]

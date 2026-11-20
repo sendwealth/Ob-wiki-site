@@ -1,13 +1,14 @@
 ---
 title: 把课程变成 AI 工具
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-11-20
 type: concept
 tags: [yitang, ai-tooling, skill-system, workflow, learning-methodology]
 sources:
   - name: 专家分享｜我如何把一堂课变成一个 AI 工具
     url: https://yitanger.feishu.cn/wiki/R9NywV2i9izjuqkPd63cWuafn4g
     author: 半肥猫（紫鲸AI创始人）
+  - raw/yitang/把课程变成AI工具-学习笔记.md
 confidence: high
 ---
 
@@ -61,5 +62,6 @@ confidence: high
 
 ## 关联
 
+- 原文：[[raw/yitang/把课程变成AI工具-学习笔记|学习笔记原文]]
 - [[oscar-research-methodology]] — OSCAR 调研五步法，类似的"从模糊到清晰"调研框架
 - [[user-pain-points]] — 用户痛点发现与验证，调研方法的基础

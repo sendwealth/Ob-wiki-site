@@ -11,8 +11,7 @@ sources:
   - https://arxiv.org/abs/2502.11880
 confidence: high
 see_also:
-  - "[[llama.cpp]]"
-  - "[[T-MAC]]"
+  - "[[llama-cpp]]"
 ---
 
 # BitNet (bitnet.cpp)

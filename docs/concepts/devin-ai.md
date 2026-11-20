@@ -9,7 +9,7 @@ sources:
   - https://devin.ai
 confidence: high
 related:
-  - "[[ai-coding-agents]]"
+  - "[[ai-agent-ecosystem]]"
   - "[[agentic-rag]]"
 ---
 

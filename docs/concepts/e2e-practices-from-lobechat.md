@@ -1,3 +1,11 @@
+---
+title: "LobeChat E2E 测试实践"
+created: 2026-05-19
+updated: 2026-11-20
+type: concept
+tags: [e2e-testing, playwright, cucumber, bdd, lobechat]
+---
+
 # LobeChat E2E 测试实践
 
 > 从 LobeChat 项目中学习到的端到端测试实践方法。

@@ -193,8 +193,8 @@ agent 通过 `Agent` dataclass 定义（`coworker/agents/base.py:28`），关键
 
 ## Related Pages
 
-- [[aisuite]] — OpenWorker 底层统一 LLM API 与 agent 工具库
-- [[claude-code]] — 同类型本地编码 agent 体验
+- aisuite — OpenWorker 底层统一 LLM API 与 agent 工具库
+- [[claude-code-workflow]] — 同类型本地编码 agent 体验
 - [[browser-use]] — 网页自动化 agent，可通过 MCP 接入 OpenWorker
 - [[agentspace]] — 组织级 agent-native 协作 workspace
 - [[multica]] — AI 原生任务管理平台

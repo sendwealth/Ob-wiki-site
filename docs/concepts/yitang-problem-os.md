@@ -468,4 +468,4 @@ LLM一样都做不到——它必须逐字平等对待整个上下文窗口，**
 
 > 📝 整理自一堂拆书会第203期，讲师国帅，拆解 ESR《How To Ask Questions The Smart Way》。
 
-**相关**：[[yitang-ai-tools-workflow-ama]] | [[superpowers]] | [[prompt-engineering]] | [[heuristic-learning]]
+**相关**：[[yitang-ai-tools-workflow-ama]] | [[superpowers]] | prompt-engineering | [[heuristic-learning]]

@@ -752,3 +752,21 @@ tags: [log]
 - **待处理**: ①13 页 frontmatter 不全（lobechat/temporal/multica 系列缺 title/created/type 等）；②断链约 30 处（多为指向不存在的 mcp-protocol、skill-system、探真产品设计 等）；③raw/yitang 5 份资料未被任何页面引用（Coco经验萃取Agent、本周学习总结-2026W23、把课程变成AI工具、AI短剧工作流、GEO品牌地基）；④47 页零入链（含 linger、little-talk、openevolve 等新页，部分已入 index）
 - **来源**: 本地扫描脚本（Linger 工作区）
 - **关联**: [[index]], [[SCHEMA]]
+
+---
+
+## 2026-11-20 · raw/yitang 5 份未引用资料归位（Linger）
+- **操作**: 处理全库体检待处理项③——raw/yitang 5 份资料接入 concepts（新建 1 页 + 既有 4 页补链）
+- **文件**: concepts/yitang-weekly-review-2026w23.md（新建）；concepts/kecheng-to-ai-tool.md、concepts/experience-extraction-agent.md、concepts/ai-short-drama-workflow.md、concepts/geo-brand-foundation.md（sources 增加 raw 路径、关联补"原文"wikilink、bump updated）；index.md（Concepts 区 +1，总页数 199→200）
+- **说明**: 4 份学习笔记（Coco经验萃取Agent、把课程变成AI工具、AI短剧工作流、GEO品牌地基）在 2026-06-07 已各有概念页（同源同日期），不重复建页，改为把 raw 原文挂回 sources 与关联；本周学习总结-2026W23 无对应页，新建周总结页
+- **内容**: 新页收敛 2026W23 九篇课程为四个关键词（方法论先行、人在环、显性化、先调研再开枪）+ "用户买的是确定性交付"核心认知，出链 10 个既有页
+- **关联**: [[yitang-weekly-review-2026w23]], [[kecheng-to-ai-tool]], [[experience-extraction-agent]], [[ai-short-drama-workflow]], [[geo-brand-foundation]]
+
+---
+
+## 2026-11-20 · 全库修复：frontmatter 补齐 + 断链修复（Linger）
+- **操作**: ①补齐 13 页 frontmatter（10 页新增、3 页补字段）②全库断链扫描与修复 ③新建 concepts/mcp-protocol.md
+- **文件**: concepts/（lobechat-architecture、temporal-highlights、e2e-practices-from-lobechat、lobechat-highlights、opensource-practices-from-lobechat、agent-world-lobechat-pm-analysis、ai-design-prompt-templates-yitang、oscar-research-methodology、openhuman-highlights、yitang-business-formula、multica-acp-integration、multica-acp-workflow、multica-technical-highlights）+ 新建 concepts/mcp-protocol.md + 断链修复 18 文件（comparisons/truth-verification-competitors、entities/openbb、open-webui、openworker、stripe-hosted-checkout、multica-cli、bitnet、cc-wf-studio、polos、snopes、x-community-notes、devin-ai；concepts/user-pain-points、ai-agent-ecosystem、humanizer-skill、yitang-business-formula、yitang-ai-tools-workflow-ama、yitang-problem-os）
+- **内容**: 13 页补齐 title/created/updated/type/tags（created 取 git 首次提交日期，updated=2026-11-20，type=concept）。新建 mcp-protocol（7 处引用，基于通用知识，confidence: medium），index 总页数 199→200。断链处理：改指向已有页 17 处（探真产品设计→tanzhen×5、truthverifier→tanzhen×2、Fiverr/Snopes/Full Fact/NewsGuard/X社区笔记/中国辟谣平台→对应实体页、🏠 Wiki Index→index、Multica→multica、llama.cpp→llama-cpp、ai-agent→ai-agent-ecosystem、ai-coding-agents→ai-agent-ecosystem、claude-code→claude-code-workflow、mcp-server-patterns→mcp-protocol）；改普通文本 12 处（PolitiFact、T-MAC、ollama×2、aisuite、mcp-native、skill-system、prompt-engineering、wechat-ai-writer-pipeline×2、yitang-key-assumption、openbb-api-mcp-setup、durable-execution-for-agents）
+- **来源**: 本地扫描脚本 + git log --follow（Linger 工作区）
+- **关联**: [[index]], [[SCHEMA]], [[mcp-protocol]]
