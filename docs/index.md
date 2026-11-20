@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-11-20 | Total pages: 170
+> Last updated: 2026-11-20 | Total pages: 199
 
 ## Entities
 - [[little-talk]] — 网文写作工具集（自有项目，active）：13 个 story-* Skill + Hook 双守卫 + _tracking-state.json 千章级追踪，《散财成神》至 1210 章、《朕的2027》至 600 章双书并行，直通番茄上传与自动发布
@@ -148,6 +148,23 @@ tags: [index]
 - [[yitang-ai-10x-flywheel]] — 26秋马·AI十倍速成长全篇（Truman）：AI十倍速飞轮四阶段框架（启动期信心飞轮/加速期双向加强/复利期数据·Agent·团队三种复利/迁移期Y模型×双三角跨界），阶段与飞轮错配是卡点根源；11个完整案例：温童凯/张伟强/蒋之之/叶文彬/廖廖（0-1启动）、砻沣/郁金星/劉衛（互相加强）、天末/半肥猫/贺雷（封装复制）、杨晓光/花辣子米/一堂（跨界迁移）
 - [[yitang-mayi-ama-ai-hardware]] — 马易·Uppi AI语音键盘开源分享&AMA：AI硬件创业方法论（硬件三阶段技术开发/工程开发/量产生产、翻译笔+麦克风低成本原型、四大痛点验证、1000台成本账90元/台、成本五块论、华强北抄版模型「量不够不抄你」、开发周期benchmark贴牌3月/IC组装6月、Uppi单元经济299/259、碰一碰vs扫一扫步数分析）（一堂专家分享）
 - [[yitang-truman-ten-ai-tasks]] — 揭秘直播：Truman的十大AI任务（上半场任务1-5，案例开放麦）：「回不去」入门标志、场景梳理三维度、Partner磨课搭子三年演进、DeepDebug/全量复盘/Better-Skill五步法、双三角三阶段肌肉记忆、AI知识库新范式「上下文微操」（里程碑模型×上下文×拆解、文档为驱动+严格编号+清单体、里程碑串行内部并行）
+- [[ai-agent-ecosystem]] — AI Agent 生态概览：从单模型调用到多 Agent 协作 + 工具市场 + 协议层的体系
+- [[llm-ready-data]] — LLM-ready 数据：无需额外清洗即可被 LLM/RAG/Agent 消费的输入格式
+- [[loop-engineering]] — Loop Engineering：以反馈循环为核心、状态管理为基础、可观测性为保障的 AI 系统工程方法（感知→决策→执行→评估闭环）
+- [[langflow-architecture]] — Langflow 项目架构分析
+- [[lobechat-architecture]] — LobeChat 架构分析
+- [[lobechat-highlights]] — LobeChat 项目亮点深度分析
+- [[e2e-practices-from-lobechat]] — LobeChat E2E 测试实践：Cucumber (BDD) + Playwright
+- [[agent-world-lobechat-pm-analysis]] — LobeChat 模式借鉴到 Agent-World：产品推演与必要性规划
+- [[opensource-practices-from-lobechat]] — 从 LobeChat 学习开源项目实践
+- [[opensource-practices-from-open-design]] — 从 Open Design 学习开源项目实践
+- [[opensource-project-practices-from-langflow]] — 从 Langflow 项目学习开源开发维护实践
+- [[opensource-project-practices-from-temporal]] — 从 Temporal 项目学习开源开发维护实践
+- [[open-design-architecture]] — Open Design 项目架构分析
+- [[temporal-highlights]] — Temporal 项目亮点分析
+- [[temporal-durability-stability]] — Temporal 稳定性与持久性实现机制分析
+- [[kagent-documentation-system]] — Kagent 文档体系深度分析
+- [[ai-design-prompt-templates-yitang]] — 一堂 AI 设计提示词模板集（教育行业视觉设计总监等角色模板）
 
 ## Comparisons
 - [[web-data-api-comparison]] — Web 数据 API 竞品对比：Firecrawl vs Crawl4AI vs ScrapeGraphAI vs Jina Reader
@@ -203,6 +220,10 @@ tags: [index]
 - [[flyte]] — Lyft 云原生 ML/数据工作流平台，强类型（5k+ Stars）
 - [[zenml]] — 可扩展 MLOps 框架，MLOps 连接器（4k+ Stars）
 - [[langfuse]] — 开源 LLM 工程平台（Tracing+Prompt管理+评估，LangSmith 竞品，YC W23）
+- [[bitnet]] — BitNet (bitnet.cpp)：微软 1-bit LLM 官方推理框架，权重量化到 1.58 bit（三值 -1/0/+1）
+- [[devin-ai]] — Devin AI：首个 AI 软件工程师
+- [[multica-a2a]] — Multica A2A Protocol 集成分析
+- [[open-design]] — Open Design：开源设计项目概况
 ## Raw Sources
 - raw/articles/competitive-analysis-2026.md
 - raw/articles/ai4g-workflow-draft.md

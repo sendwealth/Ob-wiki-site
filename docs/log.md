@@ -742,3 +742,13 @@ tags: [log]
 - **摘要**: Claude 级大脑本地运行：PolyStrata MoE 分层换页使 125B 模型跑 12 GB GPU；LoCoMo 95% 的个人 Wiki 共享记忆（Hindsight）；Another Me 主动助理每晚 "Dreaming" 以规则重写实现自进化；Cua 桌面/浏览器操控 + teamhub（Go）+ node-services（agent/memory/llm-wiki/document/voice）架构
 - **来源**: [github.com/simplexai-labs/linger](https://github.com/simplexai-labs/linger), ~/Projects/linger
 - **关联**: [[browser-use]], [[superpowers]], [[agentspace]], [[adapted-6plus1-rss-obsidian-kb]]
+
+---
+
+## 2026-11-20 · 全库体检（Linger）
+- **操作**: 全库健康检查 + index 修正
+- **文件**: index.md
+- **内容**: 扫描 199 页（concepts 99 / entities 92 / comparisons 8）。修正 index.md：总页数 170→199，补录 21 个缺失页面（concepts 17 篇：ai-agent-ecosystem、llm-ready-data、loop-engineering、langflow/lobechat/open-design/temporal/kagent 架构与实践系列、ai-design-prompt-templates-yitang 等；entities 4 篇：bitnet、devin-ai、multica-a2a、open-design）
+- **待处理**: ①13 页 frontmatter 不全（lobechat/temporal/multica 系列缺 title/created/type 等）；②断链约 30 处（多为指向不存在的 mcp-protocol、skill-system、探真产品设计 等）；③raw/yitang 5 份资料未被任何页面引用（Coco经验萃取Agent、本周学习总结-2026W23、把课程变成AI工具、AI短剧工作流、GEO品牌地基）；④47 页零入链（含 linger、little-talk、openevolve 等新页，部分已入 index）
+- **来源**: 本地扫描脚本（Linger 工作区）
+- **关联**: [[index]], [[SCHEMA]]
