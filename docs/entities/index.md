@@ -1,6 +1,6 @@
 # 实体
 
-共 91 篇。
+共 92 篇。
 
 - [[agency-agents|Agency Agents (The Agency)]]
 - [[agent-sandbox|Agent Sandbox (kubernetes-sigs)]]
@@ -48,6 +48,7 @@
 - [[langflow|LangFlow]]
 - [[langfuse|Langfuse]]
 - [[leaferjs|LeaferJS]]
+- [[linger|Linger: 开源本地个人 AI Agent（Claude 级大脑跑在你的电脑上）]]
 - [[llama-index|LlamaIndex]]
 - [[mlflow|MLflow]]
 - [[metaflow|Metaflow]]

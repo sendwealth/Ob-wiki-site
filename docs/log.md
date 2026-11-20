@@ -735,3 +735,10 @@ tags: [log]
 ---
 
 ## 2026-11-11 · openevolve
+
+## 2026-11-20 · linger
+
+- **新增**: `entities/linger.md` — Linger（simplexai-labs）开源本地个人 Agent 深度解析
+- **摘要**: Claude 级大脑本地运行：PolyStrata MoE 分层换页使 125B 模型跑 12 GB GPU；LoCoMo 95% 的个人 Wiki 共享记忆（Hindsight）；Another Me 主动助理每晚 "Dreaming" 以规则重写实现自进化；Cua 桌面/浏览器操控 + teamhub（Go）+ node-services（agent/memory/llm-wiki/document/voice）架构
+- **来源**: [github.com/simplexai-labs/linger](https://github.com/simplexai-labs/linger), ~/Projects/linger
+- **关联**: [[browser-use]], [[superpowers]], [[agentspace]], [[adapted-6plus1-rss-obsidian-kb]]

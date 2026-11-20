@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
 created: 2026-05-04
-updated: 2026-11-16
+updated: 2026-11-20
 tags: [index]
 ---
 
@@ -9,7 +9,7 @@ tags: [index]
 
 # Wiki Index
 
-> Last updated: 2026-11-16 | Total pages: 169
+> Last updated: 2026-11-20 | Total pages: 170
 
 ## Entities
 - [[little-talk]] — 网文写作工具集（自有项目，active）：13 个 story-* Skill + Hook 双守卫 + _tracking-state.json 千章级追踪，《散财成神》至 1210 章、《朕的2027》至 600 章双书并行，直通番茄上传与自动发布
@@ -160,6 +160,7 @@ tags: [index]
 - [[ai-workflow-deep-comparison]] — AI Workflow 开源项目深度对比分析（架构哲学、设计权衡、选型逻辑）
 
 ## Entities
+- [[linger]] — 开源本地个人 AI Agent：125B MoE 跑 12 GB GPU（PolyStrata 分层专家换页），LoCoMo 95% 共享 Wiki 记忆，Another Me 主动助理+每晚规则自进化（Go+TS monorepo）
 - [[volcano]] — Kubernetes 原生批量调度系统（CNCF），gang scheduling + 多级队列 + 公平share + 抢占回收，为 AI/ML/大数据批处理扩展 kube-scheduler
 - [[agentspace]] — 开源 agent-native 协作 workspace：数字员工 + AgentRouter 归一 8 harness + 治理四件套（TS monorepo + PG，Apache-2.0）
 - [[temporal]] — Temporal：持久化执行平台，分布式 Workflow 编排（Go，源自 Uber Cadence）
